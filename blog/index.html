@@ -1,68 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Blog - Riverside Auto Rental in Black River Falls, WI. Helpful articles about van rentals, car rentals, insurance replacement vehicles, and local travel tips.">
-    <title>Blog - Riverside Auto Rental | Black River Falls, WI</title>
-    
-    <link rel="stylesheet" href="../styles.css">
-    
-    <!-- Additional styles to better match homepage background and layout -->
-    <style>
-        body {
-            background-color: #f8f9fa; /* Light background - adjust if your homepage uses a different color */
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        h1, h2 {
-            color: var(--navy, #304B78);
-        }
-        
-        article {
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        a {
-            color: var(--accent-red, #C41E3A);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Riverside Auto Rental – Black River Falls, WI</title>
+  <meta name="description" content="Helpful articles about van rentals, car rentals, insurance replacement vehicles, and local travel tips from Riverside Auto Rental in Black River Falls, WI. Call 715-670-0209.">
+  <meta name="keywords" content="car rental blog Black River Falls, van rental tips Wisconsin, insurance replacement rental, group travel western Wisconsin">
+  <link rel="canonical" href="https://riversideautorental.com/blog/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog | Riverside Auto Rental – Black River Falls, WI">
+  <meta property="og:description" content="Practical guides and local insights about passenger van rentals, car rentals, insurance replacements, and group travel in Black River Falls and western Wisconsin.">
+  <meta property="og:url" content="https://riversideautorental.com/blog/">
+  <meta property="og:image" content="https://riversideautorental.com/images/logo.png">
+
+  <meta name="geo.region" content="US-WI">
+  <meta name="geo.placename" content="Black River Falls">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" sizes="92x92" href="../images/favicon.png">
+  <link rel="apple-touch-icon" href="../images/favicon.png">
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://riversideautorental.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://riversideautorental.com/blog/"}
+    ]
+  }
+  </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Blog - Riverside Auto Rental</h1>
-        
-        <p>Welcome to the Riverside Auto Rental blog. Here you'll find practical guides and local insights about passenger van rentals, car rentals, insurance replacements, and group travel in Black River Falls and western Wisconsin.</p>
-        
-        <h2>Latest Articles</h2>
-        
-        <article>
-            <h3><a href="7-15-passenger-van-rental-black-river-falls.html">7 & 15 Passenger Van Rental in Black River Falls, WI – Affordable Local Options</a></h3>
-            <p>Discover our reliable 7-passenger minivans and 15-passenger vans for family reunions, sports teams, church groups, weddings, and insurance replacement rentals. Family-owned since 1983 at N5856 WI-54. Call 715-670-0209.</p>
-            <p><small>Published: March 2026</small></p>
-        </article>
-        
-        <h2>More Topics Coming Soon</h2>
-        <ul>
-            <li>Insurance Replacement Rentals in Black River Falls</li>
-            <li>Car Rental vs Van Rental: Which is Right for You?</li>
-            <li>Local Tips for Renting in Western Wisconsin</li>
-        </ul>
-        
-        <p><strong>Need a rental or have questions?</strong> Call us at <strong>715-670-0209</strong> or stop by <strong>N5856 WI-54, Black River Falls, WI 54615</strong>.</p>
-        
-        <p><a href="/">← Back to Homepage</a></p>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="Riverside Auto Rental - Home">
+        <img src="../images/logo.png" alt="Riverside Auto Rental logo" width="180" height="50">
+      </a>
+      <nav class="header__nav" id="mainNav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/fleet.html">Fleet &amp; Rates</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/blog/" class="active">Blog</a>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:+17156700209" class="header__phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          715-670-0209
+        </a>
+        <a href="tel:+17156700209" class="btn btn--primary">Call to Reserve</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>Practical guides and local insights about rentals, group travel, and getting around western Wisconsin.</p>
+    </div>
+  </section>
+
+  <!-- ========== BLOG LISTING ========== -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width:800px;margin:0 auto;">
+
+        <article style="margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--light-gray);">
+          <span class="section-label">March 2026</span>
+          <h2 style="margin-bottom:12px;"><a href="7-15-passenger-van-rental-black-river-falls.html" style="color:var(--charcoal);text-decoration:none;">7 &amp; 15 Passenger Van Rental in Black River Falls, WI – Affordable Local Options</a></h2>
+          <p style="color:var(--text-light);margin-bottom:16px;">Discover our reliable 7-passenger minivans and 15-passenger vans for family reunions, sports teams, church groups, weddings, and insurance replacement rentals. Family-owned since 1983 at N5856 WI-54.</p>
+          <a href="7-15-passenger-van-rental-black-river-falls.html" class="btn btn--outline" style="padding:10px 20px;font-size:0.85rem;">Read Article →</a>
+        </article>
+
+        <div style="margin-top:48px;">
+          <span class="section-label">Coming Soon</span>
+          <h2 class="section-title" style="margin-bottom:20px;">More Articles on the Way</h2>
+          <div style="display:grid;gap:16px;">
+            <div style="padding:20px 24px;background:var(--off-white);border-radius:var(--radius-md);border:1px solid var(--light-gray);">
+              <h4 style="margin-bottom:4px;">Insurance Replacement Rentals in Black River Falls</h4>
+              <p style="font-size:0.9rem;color:var(--text-light);margin:0;">How adjusters and body shops work with Riverside Auto Rental for hassle-free replacement vehicles.</p>
+            </div>
+            <div style="padding:20px 24px;background:var(--off-white);border-radius:var(--radius-md);border:1px solid var(--light-gray);">
+              <h4 style="margin-bottom:4px;">Car Rental vs Van Rental: Which Is Right for You?</h4>
+              <p style="font-size:0.9rem;color:var(--text-light);margin:0;">A quick guide to choosing the right vehicle class based on your group size, budget, and trip type.</p>
+            </div>
+            <div style="padding:20px 24px;background:var(--off-white);border-radius:var(--radius-md);border:1px solid var(--light-gray);">
+              <h4 style="margin-bottom:4px;">Local Tips for Renting in Western Wisconsin</h4>
+              <p style="font-size:0.9rem;color:var(--text-light);margin:0;">What to know before you rent — from mileage options to weekend hours and seasonal demand.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;padding:32px;background:var(--navy);border-radius:var(--radius-lg);text-align:center;color:var(--white);">
+          <h3 style="color:var(--white);margin-bottom:8px;">Need a Rental?</h3>
+          <p style="color:rgba(255,255,255,0.8);margin-bottom:20px;">The fastest way to reserve is a phone call.</p>
+          <a href="tel:+17156700209" class="btn btn--primary btn--large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call 715-670-0209
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="../images/logo.png" alt="Riverside Auto Rental" width="160" height="44">
+          <p>Family-owned car rental serving Black River Falls and western Wisconsin since 1983. Cars, minivans, and large passenger vans for daily, weekly, long-term, and insurance replacement needs.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/fleet.html">Fleet &amp; Rates</a></li>
+            <li><a href="/contact.html">Contact &amp; About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="/fleet.html">Daily Rentals</a></li>
+            <li><a href="/fleet.html">Weekly Rentals</a></li>
+            <li><a href="/contact.html">Long-Term Rentals</a></li>
+            <li><a href="/contact.html">Insurance Replacement</a></li>
+            <li><a href="/fleet.html">Passenger Van Rental</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="tel:+17156700209">715-670-0209</a></li>
+            <li><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a></li>
+            <li>N5856 Wi-54<br>Black River Falls, WI 54615</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Riverside Auto Rental. All rights reserved.</span>
+        <span>Established 1983 &middot; Black River Falls, Wisconsin</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Call Banner -->
+  <div class="call-banner">
+    <a href="tel:+17156700209">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call to Reserve — 715-670-0209
+    </a>
+  </div>
+
+  <script src="../script.js"></script>
 </body>
 </html>
