@@ -20,13 +20,37 @@
   </url>
   <url>
     <loc>https://riversideautorental.com/blog/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://riversideautorental.com/blog/7-15-passenger-van-rental-black-river-falls.html</loc>
     <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/insurance-replacement-rental-cars-black-river-falls.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/what-you-need-to-rent-a-car-black-river-falls.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/daily-vs-weekly-car-rental-rates.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/car-rental-vs-van-rental.html</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
