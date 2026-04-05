@@ -1,0 +1,12 @@
+[[redirects]]
+  from = "/fleet"
+  to = "/fleet.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+
+[build.processing.html]
+  pretty_urls = false
