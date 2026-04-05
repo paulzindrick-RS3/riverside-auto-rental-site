@@ -6,17 +6,16 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   // ===== Mobile Navigation Toggle =====
-  const menuToggle = document.getElementById('menuToggle');
-  const mainNav = document.getElementById('mainNav');
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
 
   if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', function () {
-      const isOpen = mainNav.classList.toggle('open');
+      var isOpen = mainNav.classList.toggle('open');
       menuToggle.classList.toggle('active');
       menuToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close nav when clicking a link
     mainNav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         mainNav.classList.remove('open');
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ===== Header Scroll Shadow =====
-  const header = document.getElementById('header');
+  var header = document.getElementById('header');
   if (header) {
     window.addEventListener('scroll', function () {
       if (window.scrollY > 20) {
@@ -37,30 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }, { passive: true });
   }
-
-  // ===== FAQ Accordion =====
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(function (item) {
-    const question = item.querySelector('.faq-question');
-    if (question) {
-      question.addEventListener('click', function () {
-        const isActive = item.classList.contains('active');
-
-        // Close all others
-        faqItems.forEach(function (other) {
-          other.classList.remove('active');
-          var btn = other.querySelector('.faq-question');
-          if (btn) btn.setAttribute('aria-expanded', 'false');
-        });
-
-        // Toggle current
-        if (!isActive) {
-          item.classList.add('active');
-          question.setAttribute('aria-expanded', 'true');
-        }
-      });
-    }
-  });
 
   // ===== Smooth Scroll for Anchor Links =====
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -99,6 +74,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+// ===== FAQ Accordion (Event Delegation) =====
+document.addEventListener('click', function (e) {
+  var button = e.target.closest('.faq-question');
+  if (!button) return;
+
+  var item = button.closest('.faq-item');
+  if (!item) return;
+
+  var isActive = item.classList.contains('active');
+
+  // Close all FAQ items on the page
+  var allItems = document.querySelectorAll('.faq-item');
+  for (var i = 0; i < allItems.length; i++) {
+    allItems[i].classList.remove('active');
+    var btn = allItems[i].querySelector('.faq-question');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+
+  // Toggle the clicked one
+  if (!isActive) {
+    item.classList.add('active');
+    button.setAttribute('aria-expanded', 'true');
+  }
+});
+
 // ===== Contact Form Handler =====
 function handleFormSubmit(e) {
   e.preventDefault();
@@ -116,8 +116,6 @@ function handleFormSubmit(e) {
     return;
   }
 
-  // In production, replace with actual form endpoint (Netlify Forms, Formspree, etc.)
-  // For now, construct a mailto link as fallback
   var subject = document.getElementById('subject');
   var phone = document.getElementById('phone');
 
