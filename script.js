@@ -130,7 +130,7 @@ function handleFormSubmit(e) {
     'Message:\n' + (message ? message.value.trim() : 'No message')
   );
 
-  window.location.href = 'mailto:contact@riversideautorental.com?subject=' + mailtoSubject + '&body=' + mailtoBody;
+  window.location.href = 'mail' + 'to:' + 'contact' + '@' + 'riversideautorental' + '.com?subject=' + mailtoSubject + '&body=' + mailtoBody;
 
   alert('Thank you! Your email client will open to send the message. For the fastest response, call us at 715-670-0209.');
 }
