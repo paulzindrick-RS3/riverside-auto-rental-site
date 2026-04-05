@@ -1,103 +1,74 @@
 /**
  * Riverside Auto Rental – Main JavaScript
- * Handles: mobile nav, FAQ accordions, header scroll, form submission
  */
 
-document.addEventListener('DOMContentLoaded', function () {
+(function() {
 
   // ===== Mobile Navigation Toggle =====
   var menuToggle = document.getElementById('menuToggle');
   var mainNav = document.getElementById('mainNav');
 
   if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', function () {
-      var isOpen = mainNav.classList.toggle('open');
-      menuToggle.classList.toggle('active');
-      menuToggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    mainNav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mainNav.classList.remove('open');
-        menuToggle.classList.remove('active');
+    menuToggle.onclick = function() {
+      if (mainNav.className.indexOf('open') === -1) {
+        mainNav.className = mainNav.className + ' open';
+        menuToggle.className = menuToggle.className + ' active';
+        menuToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        mainNav.className = mainNav.className.replace(' open', '');
+        menuToggle.className = menuToggle.className.replace(' active', '');
         menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
+      }
+    };
+
+    var navLinks = mainNav.getElementsByTagName('a');
+    for (var i = 0; i < navLinks.length; i++) {
+      navLinks[i].onclick = function() {
+        mainNav.className = mainNav.className.replace(' open', '');
+        menuToggle.className = menuToggle.className.replace(' active', '');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      };
+    }
   }
 
   // ===== Header Scroll Shadow =====
   var header = document.getElementById('header');
   if (header) {
-    window.addEventListener('scroll', function () {
+    window.onscroll = function() {
       if (window.scrollY > 20) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    }, { passive: true });
-  }
-
-  // ===== Smooth Scroll for Anchor Links =====
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      var target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  // ===== Intersection Observer for Scroll Animations =====
-  if ('IntersectionObserver' in window) {
-    var animatedElements = document.querySelectorAll(
-      '.vehicle-card, .audience-block, .need-card, .van-spotlight, .insurance-section, .heritage'
-    );
-
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
+        if (header.className.indexOf('scrolled') === -1) {
+          header.className = header.className + ' scrolled';
         }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    animatedElements.forEach(function (el) {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
-    });
+      } else {
+        header.className = header.className.replace(' scrolled', '');
+      }
+    };
   }
 
-});
+  // ===== FAQ Accordion =====
+  var faqButtons = document.getElementsByClassName('faq-question');
+  for (var j = 0; j < faqButtons.length; j++) {
+    faqButtons[j].onclick = function() {
+      var parentItem = this.parentElement;
+      var isActive = parentItem.className.indexOf('active') !== -1;
 
-// ===== FAQ Accordion (Event Delegation) =====
-document.addEventListener('click', function (e) {
-  var button = e.target.closest('.faq-question');
-  if (!button) return;
+      // Close all
+      var allItems = document.getElementsByClassName('faq-item');
+      for (var k = 0; k < allItems.length; k++) {
+        allItems[k].className = allItems[k].className.replace(' active', '');
+        var btn = allItems[k].getElementsByClassName('faq-question')[0];
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
 
-  var item = button.closest('.faq-item');
-  if (!item) return;
-
-  var isActive = item.classList.contains('active');
-
-  // Close all FAQ items on the page
-  var allItems = document.querySelectorAll('.faq-item');
-  for (var i = 0; i < allItems.length; i++) {
-    allItems[i].classList.remove('active');
-    var btn = allItems[i].querySelector('.faq-question');
-    if (btn) btn.setAttribute('aria-expanded', 'false');
+      // Open clicked one
+      if (!isActive) {
+        parentItem.className = parentItem.className + ' active';
+        this.setAttribute('aria-expanded', 'true');
+      }
+    };
   }
 
-  // Toggle the clicked one
-  if (!isActive) {
-    item.classList.add('active');
-    button.setAttribute('aria-expanded', 'true');
-  }
-});
+})();
 
 // ===== Contact Form Handler =====
 function handleFormSubmit(e) {

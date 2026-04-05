@@ -10,3 +10,11 @@
 
 [build.processing.html]
   pretty_urls = false
+
+[build.processing.js]
+  bundle = false
+  minify = false
+
+[build.processing.css]
+  bundle = false
+  minify = false
