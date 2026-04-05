@@ -42,50 +42,69 @@
     "name": "Riverside Auto Rental",
     "url": "https://riversideautorental.com",
     "telephone": "+1-715-670-0209",
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "name": "Intermediate Car – Daily Rental",
-        "description": "5-passenger intermediate sedan with automatic transmission, up to 37 MPG. Local rate $55/day (100 mi limit) or $75/day unlimited miles. Weekly rate $315 with unlimited mileage.",
-        "priceSpecification": [
-          {"@type": "UnitPriceSpecification", "price": "55", "priceCurrency": "USD", "unitText": "DAY", "name": "Local (100 mi/day)"},
-          {"@type": "UnitPriceSpecification", "price": "75", "priceCurrency": "USD", "unitText": "DAY", "name": "Unlimited Miles"},
-          {"@type": "UnitPriceSpecification", "price": "315", "priceCurrency": "USD", "unitText": "WEEK", "name": "Weekly (unlimited mi)"}
-        ],
-        "itemOffered": {"@type": "Car", "name": "Intermediate Car", "seatingCapacity": "5", "vehicleTransmission": "Automatic"}
-      },
-      {
-        "@type": "Offer",
-        "name": "Full-Size Car – Daily Rental",
-        "description": "5-passenger full-size sedan with automatic transmission and spacious trunk. Local rate $65/day (100 mi limit) or $85/day unlimited miles. Weekly rate $350 with unlimited mileage.",
-        "priceSpecification": [
-          {"@type": "UnitPriceSpecification", "price": "65", "priceCurrency": "USD", "unitText": "DAY", "name": "Local (100 mi/day)"},
-          {"@type": "UnitPriceSpecification", "price": "85", "priceCurrency": "USD", "unitText": "DAY", "name": "Unlimited Miles"},
-          {"@type": "UnitPriceSpecification", "price": "350", "priceCurrency": "USD", "unitText": "WEEK", "name": "Weekly (unlimited mi)"}
-        ],
-        "itemOffered": {"@type": "Car", "name": "Full-Size Car", "seatingCapacity": "5", "vehicleTransmission": "Automatic"}
-      },
-      {
-        "@type": "Offer",
-        "name": "7 Passenger Minivan – Daily Rental",
-        "description": "7-passenger minivan with automatic transmission, family-friendly sliding doors. Daily rate $78 plus $0.10 per mile. Weekly rate $400 with unlimited mileage.",
-        "priceSpecification": [
-          {"@type": "UnitPriceSpecification", "price": "78", "priceCurrency": "USD", "unitText": "DAY", "name": "Daily (plus $0.10/mi)"},
-          {"@type": "UnitPriceSpecification", "price": "400", "priceCurrency": "USD", "unitText": "WEEK", "name": "Weekly (unlimited mi)"}
-        ],
-        "itemOffered": {"@type": "Car", "name": "7 Passenger Minivan", "seatingCapacity": "7", "bodyType": "Minivan"}
-      },
-      {
-        "@type": "Offer",
-        "name": "15 Passenger Van – Daily Rental",
-        "description": "Large passenger van seating up to 15 people. Ideal for group travel, family reunions, church groups, and sports teams in western Wisconsin. Daily rate $135 plus $0.10 per mile. Weekly rate $700 with unlimited mileage.",
-        "priceSpecification": [
-          {"@type": "UnitPriceSpecification", "price": "135", "priceCurrency": "USD", "unitText": "DAY", "name": "Daily (plus $0.10/mi)"},
-          {"@type": "UnitPriceSpecification", "price": "700", "priceCurrency": "USD", "unitText": "WEEK", "name": "Weekly (unlimited mi)"}
-        ],
-        "itemOffered": {"@type": "Car", "name": "15 Passenger Van", "seatingCapacity": "15", "bodyType": "Van"}
-      }
-    ]
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "N5856 Wi-54",
+      "addressLocality": "Black River Falls",
+      "addressRegion": "WI",
+      "postalCode": "54615",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.2952,
+      "longitude": -90.8512
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Vehicle Rental Services",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Car Rentals",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Intermediate Car Rental",
+                "description": "5-passenger intermediate sedan with automatic transmission, up to 37 MPG. Local rate $55/day (100 mi limit) or $75/day unlimited miles. Weekly rate $315 with unlimited mileage."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Full-Size Car Rental",
+                "description": "5-passenger full-size sedan with automatic transmission and spacious trunk. Local rate $65/day (100 mi limit) or $85/day unlimited miles. Weekly rate $350 with unlimited mileage."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Van Rentals",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "7 Passenger Minivan Rental",
+                "description": "7-passenger minivan with automatic transmission, family-friendly sliding doors. Daily rate $78 plus $0.10 per mile. Weekly rate $400 with unlimited mileage."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "15 Passenger Van Rental",
+                "description": "Large passenger van seating up to 15 people. Ideal for group travel, family reunions, church groups, and sports teams. Daily rate $135 plus $0.10 per mile. Weekly rate $700 with unlimited mileage."
+              }
+            }
+          ]
+        }
+      ]
+    }
   }
   </script>
 
