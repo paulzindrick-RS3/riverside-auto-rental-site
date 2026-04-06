@@ -606,7 +606,7 @@
           <h4>Contact</h4>
           <ul class="footer__links">
             <li><a href="tel:+17156700209">715-670-0209</a></li>
-            <li><!--email_off--><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a><!--email_on--></li>
+            <li><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a><!--email_on--></li>
             <li>N5856 Wi-54<br>Black River Falls, WI 54615</li>
           </ul>
         </div>
@@ -621,4 +621,36 @@
   <!-- Mobile Call Banner -->
   <div class="call-banner">
     <a href="tel:+17156700209">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.90
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call to Reserve — 715-670-0209
+    </a>
+  </div>
+
+
+  <script>
+  (function(){
+    var a=document.getElementById("menuToggle"),b=document.getElementById("mainNav");
+    if(a&&b){
+      a.onclick=function(){
+        if(b.className.indexOf("open")===-1){b.className+=" open";a.className+=" active";a.setAttribute("aria-expanded","true")}
+        else{b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}
+      };
+      var c=b.getElementsByTagName("a");
+      for(var i=0;i<c.length;i++){c[i].onclick=function(){b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}}
+    }
+    var h=document.getElementById("header");
+    if(h){window.onscroll=function(){if(window.scrollY>20){if(h.className.indexOf("scrolled")===-1)h.className+=" scrolled"}else{h.className=h.className.replace(" scrolled","")}}}
+    var f=document.getElementsByClassName("faq-question");
+    for(var j=0;j<f.length;j++){
+      f[j].onclick=function(){
+        var p=this.parentElement;var x=p.className.indexOf("active")!==-1;
+        var all=document.getElementsByClassName("faq-item");
+        for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}
+        if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}
+      }
+    }
+  })();
+  </script>
+
+</body>
+</html>
