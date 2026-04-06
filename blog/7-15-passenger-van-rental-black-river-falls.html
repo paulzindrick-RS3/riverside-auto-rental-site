@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>7 &amp; 15 Passenger Van Rental in Black River Falls, WI – Affordable Local Options | Riverside Auto Rental</title>
+  <title>Van Rental Black River Falls WI | 7 &amp; 15 Passenger Vans</title>
   <meta name="description" content="Need a 7-passenger minivan or 15-passenger van rental in Black River Falls, WI? Riverside Auto Rental offers affordable daily and weekly rates for families, groups, sports teams, and insurance replacements. Call 715-670-0209.">
   <meta name="keywords" content="15 passenger van rental Black River Falls, 7 passenger minivan rental Wisconsin, group van rental Jackson County, affordable van rental western Wisconsin">
   <link rel="canonical" href="https://riversideautorental.com/blog/7-15-passenger-van-rental-black-river-falls.html">
@@ -285,7 +285,7 @@
           <h4>Contact</h4>
           <ul class="footer__links">
             <li><a href="tel:+17156700209">715-670-0209</a></li>
-            <li><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a></li>
+            <li><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a><!--email_on--></li>
             <li>N5856 Wi-54<br>Black River Falls, WI 54615</li>
           </ul>
         </div>
@@ -305,6 +305,31 @@
     </a>
   </div>
 
-  <script src="../script.js"></script>
+
+  <script>
+  (function(){
+    var a=document.getElementById("menuToggle"),b=document.getElementById("mainNav");
+    if(a&&b){
+      a.onclick=function(){
+        if(b.className.indexOf("open")===-1){b.className+=" open";a.className+=" active";a.setAttribute("aria-expanded","true")}
+        else{b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}
+      };
+      var c=b.getElementsByTagName("a");
+      for(var i=0;i<c.length;i++){c[i].onclick=function(){b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}}
+    }
+    var h=document.getElementById("header");
+    if(h){window.onscroll=function(){if(window.scrollY>20){if(h.className.indexOf("scrolled")===-1)h.className+=" scrolled"}else{h.className=h.className.replace(" scrolled","")}}}
+    var f=document.getElementsByClassName("faq-question");
+    for(var j=0;j<f.length;j++){
+      f[j].onclick=function(){
+        var p=this.parentElement;var x=p.className.indexOf("active")!==-1;
+        var all=document.getElementsByClassName("faq-item");
+        for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}
+        if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}
+      }
+    }
+  })();
+  </script>
+
 </body>
 </html>
