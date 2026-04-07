@@ -6,9 +6,9 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-EDMLSNJ4B9');
-</script><head>
+</script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fleet &amp; Rates | Riverside Auto Rental, Black River Falls</title>
@@ -25,11 +25,16 @@
   <meta name="geo.region" content="US-WI">
   <meta name="geo.placename" content="Black River Falls">
 
+  <!-- Performance: Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <!-- Performance: Preload first vehicle image (LCP element) -->
+  <link rel="preload" as="image" href="images/car-intermediate.jpg">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="92x92" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon.png">
 
-  <!-- JSON-LD: BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,7 +46,6 @@
   }
   </script>
 
-  <!-- JSON-LD: Service offerings -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -71,44 +75,16 @@
           "@type": "OfferCatalog",
           "name": "Car Rentals",
           "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Intermediate Car Rental",
-                "description": "5-passenger intermediate sedan with automatic transmission, up to 37 MPG. Local rate $55/day (100 mi limit) or $75/day unlimited miles. Weekly rate $315 with unlimited mileage."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Full-Size Car Rental",
-                "description": "5-passenger full-size sedan with automatic transmission and spacious trunk. Local rate $65/day (100 mi limit) or $85/day unlimited miles. Weekly rate $350 with unlimited mileage."
-              }
-            }
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Intermediate Car Rental", "description": "5-passenger intermediate sedan with automatic transmission, up to 37 MPG. Local rate $55/day (100 mi limit) or $75/day unlimited miles. Weekly rate $315 with unlimited mileage."}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full-Size Car Rental", "description": "5-passenger full-size sedan with automatic transmission and spacious trunk. Local rate $65/day (100 mi limit) or $85/day unlimited miles. Weekly rate $350 with unlimited mileage."}}
           ]
         },
         {
           "@type": "OfferCatalog",
           "name": "Van Rentals",
           "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "7 Passenger Minivan Rental",
-                "description": "7-passenger minivan with automatic transmission, family-friendly sliding doors. Daily rate $78 plus $0.10 per mile. Weekly rate $400 with unlimited mileage."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "15 Passenger Van Rental",
-                "description": "Large passenger van seating up to 15 people. Ideal for group travel, family reunions, church groups, and sports teams. Daily rate $135 plus $0.10 per mile. Weekly rate $700 with unlimited mileage."
-              }
-            }
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "7 Passenger Minivan Rental", "description": "7-passenger minivan with automatic transmission, family-friendly sliding doors. Daily rate $78 plus $0.10 per mile. Weekly rate $400 with unlimited mileage."}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "15 Passenger Van Rental", "description": "Large passenger van seating up to 15 people. Ideal for group travel, family reunions, church groups, and sports teams. Daily rate $135 plus $0.10 per mile. Weekly rate $700 with unlimited mileage."}}
           ]
         }
       ]
@@ -116,83 +92,22 @@
   }
   </script>
 
-  <!-- JSON-LD: FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does it cost to rent a car in Black River Falls, Wisconsin?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Daily rental rates at Riverside Auto Rental start at competitive prices for intermediate cars starting at $55/day (local) or $75/day (unlimited miles). Full-size cars from $65/day. Minivans $78/day and 15-passenger vans $135/day, plus $0.10/mile. Weekly flat rates include unlimited mileage. Call 715-670-0209."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer weekly rental discounts?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. All weekly rentals (7 days or more) are a flat rate with unlimited mileage: intermediate car $315/week, full-size car $350/week, 7-passenger minivan $400/week, and 15-passenger van $700/week. For rentals beyond one week, call 715-670-0209 for a custom long-term quote."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost to rent a 15-passenger van in Wisconsin?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The 15-passenger van rents for $135 per day plus $0.10 per mile. The weekly rate is $700 with unlimited mileage. We are one of the only providers in the Black River Falls area offering large passenger vans. Book early as these are in high demand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is included in the rental price?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "All vehicles include automatic transmission and are well-maintained. Daily car rentals are available with two mileage options: local use (100 miles per day) or unlimited miles. Daily van rentals include a $0.10 per mile charge. All weekly rentals (7+ days) include unlimited mileage at a flat rate. Renters are responsible for fuel."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I get a long-term rental rate for more than a week?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We offer competitive long-term rates for insurance claims, vehicle replacements, and business use. Long-term rates are quoted individually based on duration and vehicle class. Call 715-670-0209 to discuss your situation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is a security deposit required to rent a car at Riverside Auto Rental?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A security deposit is required for all rentals prior to vehicle dispatch. Local renters pay a $300 deposit. Out-of-town renters pay a $500 deposit. The deposit can be placed on a credit card or debit card."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there a credit card surcharge at Riverside Auto Rental?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A 3% surcharge applies to all payments, extensions, and final settlements made by credit card. This surcharge covers processing fees imposed by credit card companies and is itemized on your final receipt. Debit card transactions are exempt from this surcharge."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use a debit card to rent a car in Black River Falls?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Riverside Auto Rental accepts debit cards for both security deposits and final payment. Debit card users avoid the 3% credit card surcharge. However, debit card deposit holds may take 3 to 7 business days to release after the rental is completed, depending on your bank's processing times."
-        }
-      }
+      {"@type": "Question", "name": "How much does it cost to rent a car in Black River Falls, Wisconsin?", "acceptedAnswer": {"@type": "Answer", "text": "Daily rental rates at Riverside Auto Rental start at $55/day (local) or $75/day (unlimited miles) for intermediate cars. Full-size cars from $65/day. Minivans $78/day and 15-passenger vans $135/day, plus $0.10/mile. Weekly flat rates include unlimited mileage. Call 715-670-0209."}},
+      {"@type": "Question", "name": "Do you offer weekly rental discounts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All weekly rentals (7 days or more) are a flat rate with unlimited mileage: intermediate car $315/week, full-size car $350/week, 7-passenger minivan $400/week, and 15-passenger van $700/week."}},
+      {"@type": "Question", "name": "How much does it cost to rent a 15-passenger van in Wisconsin?", "acceptedAnswer": {"@type": "Answer", "text": "The 15-passenger van rents for $135 per day plus $0.10 per mile. The weekly rate is $700 with unlimited mileage."}},
+      {"@type": "Question", "name": "Is a security deposit required to rent a car at Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Local renters pay a $300 deposit. Out-of-town renters pay a $500 deposit. The deposit can be placed on a credit card or debit card."}},
+      {"@type": "Question", "name": "Is there a credit card surcharge at Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A 3% surcharge applies to all payments made by credit card. Debit card transactions are exempt from this surcharge."}}
     ]
   }
   </script>
 </head>
 <body>
 
-  <!-- ========== HEADER ========== -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="/" class="header__logo" aria-label="Riverside Auto Rental - Home">
@@ -217,7 +132,6 @@
     </div>
   </header>
 
-  <!-- ========== PAGE HEADER ========== -->
   <section class="page-header">
     <div class="container">
       <h1>Fleet &amp; Rates</h1>
@@ -225,7 +139,6 @@
     </div>
   </section>
 
-  <!-- ========== VEHICLE CARDS ========== -->
   <section class="section">
     <div class="container">
       <div class="text-center mb-48">
@@ -235,8 +148,11 @@
       </div>
       <div class="grid-3 mb-48">
 
+        <!-- First vehicle card: fetchpriority="high", NO loading="lazy" — this is the LCP element -->
         <div class="vehicle-card">
-          <div class="vehicle-card__image"><img src="images/car-intermediate.jpg" alt="Intermediate rental car at Riverside Auto Rental, Black River Falls WI" loading="lazy"></div>
+          <div class="vehicle-card__image">
+            <img src="images/car-intermediate.jpg" alt="Intermediate rental car at Riverside Auto Rental, Black River Falls WI" fetchpriority="high">
+          </div>
           <div class="vehicle-card__body">
             <h3 class="vehicle-card__title">Intermediate Car</h3>
             <div class="vehicle-card__specs">
@@ -250,8 +166,11 @@
           </div>
         </div>
 
+        <!-- Remaining vehicle cards keep loading="lazy" — they are below fold -->
         <div class="vehicle-card">
-          <div class="vehicle-card__image"><img src="images/car-fullsize.jpg" alt="Full-size rental car at Riverside Auto Rental, Black River Falls WI" loading="lazy"></div>
+          <div class="vehicle-card__image">
+            <img src="images/car-fullsize.jpg" alt="Full-size rental car at Riverside Auto Rental, Black River Falls WI" loading="lazy">
+          </div>
           <div class="vehicle-card__body">
             <h3 class="vehicle-card__title">Full-Size Car</h3>
             <div class="vehicle-card__specs">
@@ -266,7 +185,9 @@
         </div>
 
         <div class="vehicle-card">
-          <div class="vehicle-card__image"><img src="images/van-7passenger.jpg" alt="7 passenger minivan rental at Riverside Auto Rental, Black River Falls WI" loading="lazy"></div>
+          <div class="vehicle-card__image">
+            <img src="images/van-7passenger.jpg" alt="7 passenger minivan rental at Riverside Auto Rental, Black River Falls WI" loading="lazy">
+          </div>
           <div class="vehicle-card__body">
             <h3 class="vehicle-card__title">7 Passenger Minivan</h3>
             <div class="vehicle-card__specs">
@@ -302,7 +223,6 @@
     </div>
   </section>
 
-  <!-- ========== RATE TABLE ========== -->
   <section class="section section--gray">
     <div class="container">
       <div class="text-center mb-48">
@@ -321,18 +241,8 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Intermediate Car</strong></td>
-              <td class="price">$55/day</td>
-              <td class="price">$75/day</td>
-              <td class="price">$315/week</td>
-            </tr>
-            <tr>
-              <td><strong>Full-Size Car</strong></td>
-              <td class="price">$65/day</td>
-              <td class="price">$85/day</td>
-              <td class="price">$350/week</td>
-            </tr>
+            <tr><td><strong>Intermediate Car</strong></td><td class="price">$55/day</td><td class="price">$75/day</td><td class="price">$315/week</td></tr>
+            <tr><td><strong>Full-Size Car</strong></td><td class="price">$65/day</td><td class="price">$85/day</td><td class="price">$350/week</td></tr>
           </tbody>
         </table>
 
@@ -346,16 +256,8 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>7 Passenger Minivan</strong></td>
-              <td class="price">$78/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td>
-              <td class="price">$400/week</td>
-            </tr>
-            <tr>
-              <td><strong>15 Passenger Van</strong></td>
-              <td class="price">$135/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td>
-              <td class="price">$700/week</td>
-            </tr>
+            <tr><td><strong>7 Passenger Minivan</strong></td><td class="price">$78/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td><td class="price">$400/week</td></tr>
+            <tr><td><strong>15 Passenger Van</strong></td><td class="price">$135/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td><td class="price">$700/week</td></tr>
           </tbody>
         </table>
         <div class="text-center mt-24">
@@ -369,7 +271,6 @@
     </div>
   </section>
 
-  <!-- ========== PAYMENT & DEPOSIT POLICY ========== -->
   <section class="section">
     <div class="container">
       <div style="max-width:800px;margin:0 auto;">
@@ -410,33 +311,19 @@
         <h3 style="margin-top:32px;margin-bottom:16px;">Quick Summary</h3>
         <table class="rate-table" style="margin-bottom:24px;">
           <thead>
-            <tr>
-              <th>Payment Method</th>
-              <th>Surcharge</th>
-              <th>Deposit Note</th>
-            </tr>
+            <tr><th>Payment Method</th><th>Surcharge</th><th>Deposit Note</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Credit Card</strong></td>
-              <td>3% surcharge applies</td>
-              <td>Deposit released at end of rental</td>
-            </tr>
-            <tr>
-              <td><strong>Debit Card</strong></td>
-              <td>No surcharge</td>
-              <td>Hold on bank balance; 3–7 business days to release</td>
-            </tr>
+            <tr><td><strong>Credit Card</strong></td><td>3% surcharge applies</td><td>Deposit released at end of rental</td></tr>
+            <tr><td><strong>Debit Card</strong></td><td>No surcharge</td><td>Hold on bank balance; 3–7 business days to release</td></tr>
           </tbody>
         </table>
 
         <p style="font-size:0.9rem;color:var(--text-light);">We value your business and are committed to transparency in our billing. If you need clarification on accepted payment methods or deposit holds, call <a href="tel:+17156700209" style="font-weight:600;">715-670-0209</a> or <a href="/contact.html" style="font-weight:600;">submit an inquiry through our website</a>.</p>
-
       </div>
     </div>
   </section>
 
-  <!-- ========== VAN SPOTLIGHT ========== -->
   <section class="section">
     <div class="container">
       <div class="van-spotlight">
@@ -468,7 +355,6 @@
     </div>
   </section>
 
-  <!-- ========== FAQ ========== -->
   <section class="section section--gray">
     <div class="container">
       <div class="text-center mb-48">
@@ -498,21 +384,20 @@
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">Is a security deposit required to rent a car?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-answer"><p>Yes. A security deposit is required for all rentals before the vehicle is dispatched. Local renters pay a $300 deposit; out-of-town renters pay a $500 deposit. You can use a credit card or debit card.</p></div>
+          <div class="faq-answer"><p>Yes. Local renters pay a $300 deposit; out-of-town renters pay a $500 deposit. You can use a credit card or debit card.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">Is there a credit card surcharge?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-answer"><p>Yes. A 3% surcharge applies to all payments made by credit card. This covers processing fees and is itemized on your receipt. Debit card transactions are exempt from this surcharge.</p></div>
+          <div class="faq-answer"><p>Yes. A 3% surcharge applies to all payments made by credit card. Debit card transactions are exempt from this surcharge.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">Can I use a debit card to rent a car?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-answer"><p>Yes. Debit cards are accepted for both deposits and final payment, and you avoid the 3% credit card surcharge. Note that debit card deposit holds may take 3–7 business days to release after the rental ends, depending on your bank.</p></div>
+          <div class="faq-answer"><p>Yes. Debit cards are accepted for both deposits and final payment, and you avoid the 3% credit card surcharge. Note that debit card deposit holds may take 3–7 business days to release after the rental ends.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
@@ -520,33 +405,9 @@
           <img src="images/logo.png" alt="Riverside Auto Rental" width="160" height="44">
           <p>Family-owned car rental serving Black River Falls and western Wisconsin since 1983. Cars, minivans, and large passenger vans for daily, weekly, long-term, and insurance replacement needs.</p>
         </div>
-        <div>
-          <h4>Quick Links</h4>
-          <ul class="footer__links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/fleet.html">Fleet &amp; Rates</a></li>
-            <li><a href="/contact.html">Contact &amp; About</a></li>
-            <li><a href="/blog/">Blog</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Services</h4>
-          <ul class="footer__links">
-            <li><a href="/fleet.html">Daily Rentals</a></li>
-            <li><a href="/fleet.html">Weekly Rentals</a></li>
-            <li><a href="/contact.html">Long-Term Rentals</a></li>
-            <li><a href="/contact.html">Insurance Replacement</a></li>
-            <li><a href="/fleet.html">Passenger Van Rental</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul class="footer__links">
-            <li><a href="tel:+17156700209">715-670-0209</a></li>
-            <li><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a><!--email_on--></li>
-            <li>N5856 Wi-54<br>Black River Falls, WI 54615</li>
-          </ul>
-        </div>
+        <div><h4>Quick Links</h4><ul class="footer__links"><li><a href="/">Home</a></li><li><a href="/fleet.html">Fleet &amp; Rates</a></li><li><a href="/contact.html">Contact &amp; About</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+        <div><h4>Services</h4><ul class="footer__links"><li><a href="/fleet.html">Daily Rentals</a></li><li><a href="/fleet.html">Weekly Rentals</a></li><li><a href="/contact.html">Long-Term Rentals</a></li><li><a href="/blog/insurance-replacement-rental-cars-black-river-falls.html">Insurance Replacement</a></li><li><a href="/fleet.html">Passenger Van Rental</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer__links"><li><a href="tel:+17156700209">715-670-0209</a></li><li><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a><!--email_on--></li><li>N5856 Wi-54<br>Black River Falls, WI 54615</li></ul></div>
       </div>
       <div class="footer__bottom">
         <span>&copy; 2026 Riverside Auto Rental. All rights reserved.</span>
@@ -561,7 +422,6 @@
       Call to Reserve — 715-670-0209
     </a>
   </div>
-
 
   <script>
   (function(){

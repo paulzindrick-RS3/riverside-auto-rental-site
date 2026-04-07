@@ -19,17 +19,40 @@
   bundle = false
   minify = false
 
+# Security + compression headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Vary = "Accept-Encoding"
+
+# Preconnect hints + cache for HTML pages
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Vary = "Accept-Encoding"
+    Link = "<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://www.googletagmanager.com>; rel=preconnect"
+
+# Long cache for CSS
 [[headers]]
   for = "/styles.css"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
+    Vary = "Accept-Encoding"
 
+# Long cache for images
 [[headers]]
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
 
+# Long cache for blog CSS (same stylesheet, different path context)
 [[headers]]
-  for = "/*.html"
+  for = "/blog/*.html"
   [headers.values]
     Cache-Control = "public, max-age=3600"
+    Vary = "Accept-Encoding"
+    Link = "<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://www.googletagmanager.com>; rel=preconnect"

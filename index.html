@@ -24,6 +24,12 @@
 <meta name="geo.placename" content="Black River Falls">
 <meta name="geo.position" content="44.2952;-90.8512">
 <meta name="ICBM" content="44.2952, -90.8512">
+<!-- Performance: Preconnect to external domains -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<!-- Performance: Preload hero image -->
+<link rel="preload" as="image" href="images/rent-me-plate.png">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" sizes="92x92" href="images/favicon.png">
 <link rel="apple-touch-icon" href="images/favicon.png">
@@ -222,7 +228,7 @@ Call to Reserve
 </div>
 </div>
 <div class="hero__plate">
-<img src="images/rent-me-plate.png" alt="Wisconsin RENT ME 1 vanity license plate – Riverside Auto Rental" width="384" height="197">
+<img src="images/rent-me-plate.png" alt="Wisconsin RENT ME 1 vanity license plate – Riverside Auto Rental" width="384" height="197" fetchpriority="high">
 </div>
 </div>
 </div>
