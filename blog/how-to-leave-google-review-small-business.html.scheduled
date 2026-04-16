@@ -1,0 +1,393 @@
+PUBLISH_DATE: 2026-04-22
+<!DOCTYPE html>
+<html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDMLSNJ4B9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EDMLSNJ4B9');
+</script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Leave a Google Review for a Small Business | Riverside Auto Rental</title>
+  <meta name="description" content="Leaving a Google review for a local small business takes less than two minutes and makes a real difference. Here's exactly how to do it — and why it matters for businesses like Riverside Auto Rental in Black River Falls.">
+  <meta name="keywords" content="how to leave google review, google review small business, leave review Black River Falls, support local business Wisconsin">
+  <link rel="canonical" href="https://riversideautorental.com/blog/how-to-leave-google-review-small-business.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Leave a Google Review for a Small Business">
+  <meta property="og:description" content="It takes less than two minutes and makes a real difference for local businesses. Here's exactly how to leave a Google review — from phone or desktop.">
+  <meta property="og:url" content="https://riversideautorental.com/blog/how-to-leave-google-review-small-business.html">
+  <meta property="og:image" content="https://riversideautorental.com/images/logo.png">
+
+  <meta name="geo.region" content="US-WI">
+  <meta name="geo.placename" content="Black River Falls">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" sizes="92x92" href="../images/favicon.png">
+  <link rel="apple-touch-icon" href="../images/favicon.png">
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Leave a Google Review for a Small Business",
+    "description": "A simple step-by-step guide to leaving a Google review for a local small business — from your phone or desktop — and why it matters more than most people realize.",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
+    "author": {
+      "@type": "Organization",
+      "name": "Riverside Auto Rental",
+      "url": "https://riversideautorental.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Riverside Auto Rental",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://riversideautorental.com/images/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://riversideautorental.com/blog/how-to-leave-google-review-small-business.html"
+    },
+    "image": "https://riversideautorental.com/images/logo.png"
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I leave a Google review for a small business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On your phone: open Google Maps, search for the business, tap their listing, scroll down to 'Reviews,' and tap 'Write a review.' On desktop: search for the business in Google, find their Knowledge Panel on the right side, click 'Write a review,' and sign in if prompted. The whole process takes about two minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a Google account to leave a review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You need a free Google account (Gmail) to leave a review. If you don't have one, you can create one at accounts.google.com in a few minutes. Reviews left without an account are not accepted by Google."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a Google review help a small business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reviews are one of the strongest local ranking signals Google uses to determine which businesses appear in the Map Pack (the top 3 local results). A business with 20 genuine 5-star reviews will consistently outrank an identical business with zero reviews. For small independent businesses competing against national chains, reviews can be the deciding factor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I leave a Google review for Riverside Auto Rental?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Search for 'Riverside Auto Rental Black River Falls' in Google Maps or Google Search, click on the listing, scroll to Reviews, and click 'Write a review.' You can also call us at 715-396-1466 and we can text you a direct review link."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://riversideautorental.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://riversideautorental.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Leave a Google Review for a Small Business", "item": "https://riversideautorental.com/blog/how-to-leave-google-review-small-business.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="Riverside Auto Rental - Home">
+        <img src="../images/logo.png" alt="Riverside Auto Rental logo" width="180" height="50">
+      </a>
+      <nav class="header__nav" id="mainNav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/fleet.html">Fleet &amp; Rates</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/blog/" class="active">Blog</a>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:+17153961466" class="header__phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          715-396-1466
+        </a>
+        <a href="tel:+17153961466" class="btn btn--primary">Call to Reserve</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="page-header">
+    <div class="container">
+      <p style="margin-bottom:8px;"><a href="/blog/" style="color:rgba(255,255,255,0.7);font-size:0.9rem;text-decoration:none;">← Back to Blog</a></p>
+      <h1>How to Leave a Google Review for a Small Business</h1>
+      <p>It takes less than two minutes — and it makes a bigger difference than most people realize.</p>
+    </div>
+  </section>
+
+  <!-- ========== ARTICLE CONTENT ========== -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width:800px;margin:0 auto;">
+
+        <p>If you've rented from a local business, stayed at an independent hotel, eaten at a family-owned restaurant, or used any small business in your community — leaving them a Google review is one of the most useful things you can do. It costs nothing, takes under two minutes, and has a real, measurable impact on whether that business shows up when someone searches for what they offer.</p>
+
+        <p>We're going to walk through exactly how to do it. And yes — we'll be direct about the fact that as a small business ourselves, we'd genuinely appreciate reviews from people who've rented from us at <strong>Riverside Auto Rental</strong>. But the process works for any local business you want to support.</p>
+
+        <h2>Why Google reviews matter so much for small businesses</h2>
+
+        <p>When someone searches "car rental near me" or "van rental Black River Falls," Google decides which businesses to show in the Map Pack — the three local listings that appear at the top of the results with a map. The businesses in those three spots get the vast majority of clicks.</p>
+
+        <p>One of the strongest signals Google uses to rank those three spots is <strong>reviews</strong> — both the number of them and the rating. A local independent business with 25 genuine reviews and a 4.8 rating will consistently outrank a business with zero reviews, even if the zero-review business has a better website, more accurate information, and a longer history.</p>
+
+        <p>For national chains like Enterprise or Budget, reviews aren't a problem — they have hundreds of them automatically from high customer volume. For a family-owned business that's been operating since 1983 and just recently set up its Google Business Profile, reviews need to be actively asked for. Most satisfied customers never think to leave one unless someone asks.</p>
+
+        <h2>How to leave a Google review on your phone</h2>
+
+        <div class="need-cards" style="margin-bottom:32px;">
+          <div class="need-card">
+            <div class="need-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+            </div>
+            <h3>1. Open Google Maps</h3>
+            <p>Open the Google Maps app on your iPhone or Android phone. If you don't have it, you can also use Google Search in your mobile browser.</p>
+          </div>
+          <div class="need-card">
+            <div class="need-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3>2. Search for the business</h3>
+            <p>Type the business name in the search bar. For us, search <strong>"Riverside Auto Rental Black River Falls"</strong> — be specific so you get the right listing.</p>
+          </div>
+          <div class="need-card">
+            <div class="need-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3>3. Tap the listing, then "Reviews"</h3>
+            <p>Tap on the business card that appears at the bottom of the screen. Scroll down until you see the Reviews section. Tap <strong>"Write a review."</strong></p>
+          </div>
+        </div>
+
+        <p>You'll be asked to sign in with your Google account if you aren't already. Select your star rating (1–5 stars), write a sentence or two about your experience, and tap Post. That's it.</p>
+
+        <h2>How to leave a Google review on a desktop computer</h2>
+
+        <ol style="margin-bottom:24px;padding-left:20px;">
+          <li style="margin-bottom:10px;">Go to <strong>google.com</strong> and search for the business name.</li>
+          <li style="margin-bottom:10px;">Look at the right side of the results page — you'll see the business's Knowledge Panel with their address, hours, and photos.</li>
+          <li style="margin-bottom:10px;">Scroll down in that panel until you see the star rating and a button that says <strong>"Write a review."</strong></li>
+          <li style="margin-bottom:10px;">Click it, sign in to your Google account if prompted, leave your rating and comments, and click Post.</li>
+        </ol>
+
+        <h2>What makes a helpful review</h2>
+
+        <p>You don't need to write a paragraph. A short, honest review is more valuable than a long vague one. A few things that make reviews genuinely useful to both the business and future customers:</p>
+
+        <ul style="margin-bottom:24px;padding-left:20px;">
+          <li style="margin-bottom:8px;"><strong>Mention what you used the business for</strong> — "rented a 15-passenger van for our church trip" tells future customers more than "great place!"</li>
+          <li style="margin-bottom:8px;"><strong>Note anything that stood out</strong> — quick turnaround, fair pricing, friendly staff, easy process</li>
+          <li style="margin-bottom:8px;"><strong>Be specific about location if relevant</strong> — "coming from Tomah, the drive was easy and worth it" helps other nearby customers make decisions</li>
+        </ul>
+
+        <h2>Do I need a Gmail account?</h2>
+
+        <p>Yes — Google reviews require a free Google account. If you don't have one, you can create one at <strong>accounts.google.com</strong> in a few minutes. You don't need to use it for email — it just needs to exist for the review to post. Reviews can't be submitted without an account.</p>
+
+        <h2>A note from Riverside Auto Rental</h2>
+
+        <p>We've been serving Black River Falls and western Wisconsin since 1983. Our Google Business Profile is newly set up — and right now, we have zero reviews. That puts us at a real disadvantage compared to national chains when people search for car or van rentals in our area, even though we've been a trusted community business for over 40 years.</p>
+
+        <p>If you've rented from us — whether it was recently or years ago — we'd genuinely appreciate a Google review. It doesn't need to be long. A rating and one honest sentence about your experience would mean a lot, and it helps other drivers in the region find us when they need a vehicle.</p>
+
+        <!-- CTA Block -->
+        <div style="padding:36px;background:linear-gradient(135deg,var(--navy-dark),var(--navy));border-radius:var(--radius-lg);text-align:center;color:var(--white);margin-top:40px;">
+          <h2 style="color:var(--white);margin-bottom:8px;">Leave Us a Google Review</h2>
+          <p style="color:rgba(255,255,255,0.8);margin-bottom:8px;">Search <strong style="color:#fff;">"Riverside Auto Rental Black River Falls"</strong> in Google Maps and tap Write a Review.</p>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin-bottom:24px;">Or call us and we'll text you a direct link — 715-396-1466.</p>
+          <a href="tel:+17153961466" class="btn btn--primary btn--large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call 715-396-1466
+          </a>
+          <a href="/fleet.html" class="btn btn--white" style="margin-left:12px;">View Fleet &amp; Rates</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div style="max-width:800px;margin:0 auto;">
+        <div class="text-center mb-48">
+          <span class="section-label">Frequently Asked Questions</span>
+          <h2 class="section-title">Questions About Leaving a Google Review</h2>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How do I leave a Google review for a small business?
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>On your phone: open Google Maps, search for the business, tap their listing, scroll to Reviews, and tap "Write a review." On desktop: search Google, find the Knowledge Panel on the right, and click "Write a review." The whole process takes about two minutes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do I need a Google account to leave a review?
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You need a free Google account to post a review. You can create one at accounts.google.com — you don't need to use it for email. Reviews can't be submitted without an account.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How much does a Google review actually help a small business?
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Reviews are one of the strongest signals Google uses to rank local businesses in the Map Pack — the top 3 results that appear when someone searches for a local service. A business with 20 genuine reviews will consistently outrank an identical business with zero reviews. For small independents competing against national chains, this is often the deciding factor.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How do I leave a review specifically for Riverside Auto Rental?
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Search for "Riverside Auto Rental Black River Falls" in Google Maps or Google Search, click the listing, scroll to Reviews, and click "Write a review." You can also call us at <a href="tel:+17153961466" style="color:var(--navy);">715-396-1466</a> and we'll text you a direct link.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="../images/logo.png" alt="Riverside Auto Rental" width="160" height="44">
+          <p>Family-owned car rental serving Black River Falls and western Wisconsin since 1983. Cars, minivans, and large passenger vans for daily, weekly, long-term, and insurance replacement needs.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/fleet.html">Fleet &amp; Rates</a></li>
+            <li><a href="/contact.html">Contact &amp; About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Locations Served</h4>
+          <ul class="footer__links">
+            <li><a href="/locations/">All Locations</a></li>
+            <li><a href="/locations/tomah.html">Tomah, WI</a></li>
+            <li><a href="/locations/sparta.html">Sparta, WI</a></li>
+            <li><a href="/locations/neillsville.html">Neillsville, WI</a></li>
+            <li><a href="/locations/warrens.html">Warrens, WI</a></li>
+            <li><a href="/locations/melrose.html">Melrose, WI</a></li>
+            <li><a href="/locations/osseo.html">Osseo, WI</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="tel:+17153961466">715-396-1466</a></li>
+            <li><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a><!--email_on--></li>
+            <li>N5856 Wi-54<br>Black River Falls, WI 54615</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Riverside Auto Rental. All rights reserved.</span>
+        <span>Established 1983 &middot; Black River Falls, Wisconsin</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Call Banner -->
+  <div class="call-banner">
+    <a href="tel:+17153961466">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call to Reserve — 715-396-1466
+    </a>
+  </div>
+
+  <script>
+  (function(){
+    var a=document.getElementById("menuToggle"),b=document.getElementById("mainNav");
+    if(a&&b){
+      a.onclick=function(){
+        if(b.className.indexOf("open")===-1){b.className+=" open";a.className+=" active";a.setAttribute("aria-expanded","true")}
+        else{b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}
+      };
+      var c=b.getElementsByTagName("a");
+      for(var i=0;i<c.length;i++){c[i].onclick=function(){b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}}
+    }
+    var h=document.getElementById("header");
+    if(h){window.onscroll=function(){if(window.scrollY>20){if(h.className.indexOf("scrolled")===-1)h.className+=" scrolled"}else{h.className=h.className.replace(" scrolled","")}}}
+    var f=document.getElementsByClassName("faq-question");
+    for(var j=0;j<f.length;j++){
+      f[j].onclick=function(){
+        var p=this.parentElement;var x=p.className.indexOf("active")!==-1;
+        var all=document.getElementsByClassName("faq-item");
+        for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}
+        if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}
+      }
+    }
+  })();
+  </script>
+
+  <!-- ========== TEXT US BUBBLE ========== -->
+  <style>
+  #sms-bubble{position:fixed;right:20px;bottom:24px;z-index:9998;}
+  #sms-bubble a{display:flex;align-items:center;gap:10px;background:#304B78;color:#fff;text-decoration:none;padding:13px 20px;border-radius:50px;box-shadow:0 4px 18px rgba(48,75,120,0.45);font-family:'Archivo',sans-serif;font-weight:700;font-size:0.9rem;line-height:1;border:2px solid rgba(255,255,255,0.15);transition:transform 0.2s,box-shadow 0.2s;}
+  #sms-bubble a:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(48,75,120,0.5);}
+  #sms-bubble svg{flex-shrink:0;}
+  @media(max-width:768px){#sms-bubble{bottom:72px;right:16px;}}
+  </style>
+  <div id="sms-bubble">
+    <a href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Text Us
+    </a>
+  </div>
+
+</body>
+</html>
