@@ -1,67 +1,53 @@
 name: Scheduled Post Publisher
-
 on:
   schedule:
     # Runs every Tuesday at 1:00 PM UTC = 8:00 AM Central Time
     - cron: '0 13 * * 2'
   workflow_dispatch:
     # Allows manual trigger from GitHub Actions tab
-
 jobs:
   publish-scheduled-posts:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Check for scheduled posts and publish
         run: |
           TODAY=$(date -u +%Y-%m-%d)
           echo "Today is $TODAY"
           PUBLISHED=0
-
           # Look for any .scheduled files in the blog folder
           for scheduled_file in blog/*.scheduled; do
             [ -f "$scheduled_file" ] || continue
-
             # Extract publish date from first line of file (format: PUBLISH_DATE: YYYY-MM-DD)
             PUBLISH_DATE=$(head -1 "$scheduled_file" | grep "PUBLISH_DATE:" | cut -d' ' -f2)
-
             if [ -z "$PUBLISH_DATE" ]; then
               echo "No publish date found in $scheduled_file, skipping."
               continue
             fi
-
             echo "Found scheduled post: $scheduled_file (publish date: $PUBLISH_DATE)"
-
-            if [ "$PUBLISH_DATE" <= "$TODAY" ]; then
+            if [[ ! "$PUBLISH_DATE" > "$TODAY" ]]; then
               # Strip the .scheduled extension to get the real filename
               REAL_FILE="${scheduled_file%.scheduled}"
               echo "Publishing: $scheduled_file → $REAL_FILE"
-
               # Remove the PUBLISH_DATE header line and save as the real .html file
               tail -n +2 "$scheduled_file" > "$REAL_FILE"
-
               # Remove the .scheduled file
               rm "$scheduled_file"
-
               PUBLISHED=$((PUBLISHED + 1))
               echo "Published: $REAL_FILE"
             else
               echo "Not yet time to publish $scheduled_file (scheduled for $PUBLISH_DATE)"
             fi
           done
-
           if [ $PUBLISHED -gt 0 ]; then
             echo "PUBLISHED_COUNT=$PUBLISHED" >> $GITHUB_ENV
             echo "$PUBLISHED post(s) published today."
           else
             echo "No posts ready to publish today."
           fi
-
       - name: Commit and push published posts
         if: env.PUBLISHED_COUNT > 0
         run: |
