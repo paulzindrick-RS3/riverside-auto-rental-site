@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDMLSNJ4B9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EDMLSNJ4B9');
-</script><head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Riverside Auto Rental – Black River Falls, WI</title>
@@ -17,13 +9,15 @@
   <link rel="canonical" href="https://riversideautorental.com/contact.html">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact & About | Riverside Auto Rental – Black River Falls, WI">
-  <meta property="og:description" content="Call 715-396-1466 or visit N5856 Wi-54, Black River Falls, WI. Insurance adjusters & body shops welcome. Family-owned since 1983.">
+  <meta property="og:title" content="Contact &amp; About | Riverside Auto Rental – Black River Falls, WI">
+  <meta property="og:description" content="Call 715-396-1466 or visit N5856 Wi-54, Black River Falls, WI. Insurance adjusters &amp; body shops welcome. Family-owned since 1983.">
   <meta property="og:url" content="https://riversideautorental.com/contact.html">
   <meta property="og:image" content="https://riversideautorental.com/images/logo.png">
 
   <meta name="geo.region" content="US-WI">
   <meta name="geo.placename" content="Black River Falls">
+  <meta name="geo.position" content="44.2952;-90.8512">
+  <meta name="ICBM" content="44.2952, -90.8512">
 
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="92x92" href="images/favicon.png">
@@ -134,8 +128,28 @@
     ]
   }
   </script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Riverside Auto Rental",
+    "url": "https://riversideautorental.com"
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDMLSNJ4B9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EDMLSNJ4B9');
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
@@ -150,7 +164,7 @@
         <a href="/blog/">Blog</a>
       </nav>
       <div class="header__cta">
-        <a href="tel:+17153961466" class="header__phone">
+        <a href="tel:+17153961466" class="header__phone" aria-label="Call Riverside Auto Rental at 715-396-1466">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           715-396-1466
         </a>
@@ -161,6 +175,8 @@
       </button>
     </div>
   </header>
+
+  <main id="main" tabindex="-1">
 
   <!-- ========== PAGE HEADER ========== -->
   <section class="page-header">
@@ -223,7 +239,7 @@
         </div>
         <div style="text-align:center;">
           <div style="background:var(--navy);border-radius:var(--radius-xl);padding:40px;display:inline-block;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="80" height="80"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="80" height="80" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             <p style="color:white;font-family:'Archivo',sans-serif;font-weight:700;font-size:1.1rem;margin-top:16px;">Trusted Partner<br>Since 1983</p>
           </div>
         </div>
@@ -285,36 +301,39 @@
         <!-- Contact Form -->
         <div class="contact-form">
           <h3 style="margin-bottom:24px;">Send Us a Message</h3>
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@email.com" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
-          </div>
-          <div class="form-group">
-            <label for="subject">What Can We Help With?</label>
-            <select id="subject" name="subject">
-              <option value="">Select a topic...</option>
-              <option value="daily-rental">Daily / Weekly Rental</option>
-              <option value="long-term">Long-Term Rental</option>
-              <option value="insurance">Insurance Replacement</option>
-              <option value="van-rental">Passenger Van Rental</option>
-              <option value="insurance-referral">I'm an Adjuster / Body Shop</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your rental needs, dates, and any questions..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--large" style="width:100%;justify-content:center;" onclick="handleFormSubmit(event)">Send Message</button>
-          <p style="font-size:0.8rem;color:var(--text-light);margin-top:12px;text-align:center;">Prefer a call? Dial <a href="tel:+17153961466" style="font-weight:600;">715-396-1466</a> for the fastest response.</p>
+          <form action="mailto:contact@riversideautorental.com" method="post" enctype="text/plain" aria-labelledby="form-heading" novalidate>
+            <p id="form-heading" class="visually-hidden" style="position:absolute;left:-9999px;">Contact form. Required fields are marked with an asterisk.</p>
+            <div class="form-group">
+              <label for="name">Full Name <span class="required-marker" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="required-marker" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="subject">What Can We Help With?</label>
+              <select id="subject" name="subject">
+                <option value="">Select a topic...</option>
+                <option value="daily-rental">Daily / Weekly Rental</option>
+                <option value="long-term">Long-Term Rental</option>
+                <option value="insurance">Insurance Replacement</option>
+                <option value="van-rental">Passenger Van Rental</option>
+                <option value="insurance-referral">I'm an Adjuster / Body Shop</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your rental needs, dates, and any questions..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large" style="width:100%;justify-content:center;">Send Message</button>
+            <p style="font-size:0.8rem;color:var(--text-light);margin-top:12px;text-align:center;">Prefer a call? Dial <a href="tel:+17153961466" style="font-weight:600;">715-396-1466</a> for the fastest response.</p>
+          </form>
         </div>
       </div>
     </div>
@@ -351,6 +370,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
@@ -428,13 +449,49 @@
     }
     var h=document.getElementById("header");
     if(h){window.onscroll=function(){if(window.scrollY>20){if(h.className.indexOf("scrolled")===-1)h.className+=" scrolled"}else{h.className=h.className.replace(" scrolled","")}}}
+
+    // A11y: mark decorative SVGs as aria-hidden
+    var svgs=document.getElementsByTagName("svg");
+    for(var s=0;s<svgs.length;s++){
+      if(!svgs[s].hasAttribute("aria-hidden")&&!svgs[s].hasAttribute("role")&&!svgs[s].hasAttribute("aria-label")&&!svgs[s].hasAttribute("aria-labelledby")){
+        svgs[s].setAttribute("aria-hidden","true");
+        svgs[s].setAttribute("focusable","false");
+      }
+    }
+
+    // A11y: FAQ ARIA
+    var faqItems=document.getElementsByClassName("faq-item");
+    for(var n=0;n<faqItems.length;n++){
+      var item=faqItems[n];
+      var qbtn=item.getElementsByClassName("faq-question")[0];
+      var qans=item.getElementsByClassName("faq-answer")[0];
+      if(qbtn&&qans){
+        var qid="faq-answer-"+n;
+        qans.setAttribute("id",qid);
+        qans.setAttribute("aria-hidden","true");
+        qans.setAttribute("role","region");
+        qbtn.setAttribute("aria-controls",qid);
+      }
+    }
+
     var f=document.getElementsByClassName("faq-question");
     for(var j=0;j<f.length;j++){
       f[j].onclick=function(){
         var p=this.parentElement;var x=p.className.indexOf("active")!==-1;
         var all=document.getElementsByClassName("faq-item");
-        for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}
-        if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}
+        for(var k=0;k<all.length;k++){
+          all[k].className=all[k].className.replace(" active","");
+          var btn=all[k].getElementsByClassName("faq-question")[0];
+          var ans=all[k].getElementsByClassName("faq-answer")[0];
+          if(btn)btn.setAttribute("aria-expanded","false");
+          if(ans)ans.setAttribute("aria-hidden","true");
+        }
+        if(!x){
+          p.className+=" active";
+          this.setAttribute("aria-expanded","true");
+          var ansOpen=p.getElementsByClassName("faq-answer")[0];
+          if(ansOpen)ansOpen.setAttribute("aria-hidden","false");
+        }
       }
     }
   })();
