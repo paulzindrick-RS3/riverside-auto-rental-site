@@ -110,8 +110,8 @@
           "@type": "OfferCatalog",
           "name": "Car Rentals",
           "itemListElement": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Intermediate Car Rental", "description": "5-passenger intermediate sedan with automatic transmission, up to 37 MPG. Local rate $55/day (100 mi limit) or $75/day unlimited miles. Weekly rate $315 with unlimited mileage."}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full-Size Car Rental", "description": "5-passenger full-size sedan with automatic transmission and spacious trunk. Local rate $65/day (100 mi limit) or $85/day unlimited miles. Weekly rate $350 with unlimited mileage."}}
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Intermediate Car Rental", "description": "5-passenger intermediate sedan with automatic transmission, up to 37 MPG. Daily $55 local (100 mi/day limit) or $75 unlimited miles. Weekly $330 local (100 mi/day limit) or $450 unlimited miles."}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full-Size Car Rental", "description": "5-passenger full-size sedan with automatic transmission and spacious trunk. Daily $65 local (100 mi/day limit) or $85 unlimited miles. Weekly $390 local (100 mi/day limit) or $510 unlimited miles."}}
           ]
         },
         {
@@ -136,8 +136,8 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "How much does it cost to rent a car in Black River Falls, Wisconsin?", "acceptedAnswer": {"@type": "Answer", "text": "Daily rental rates at Riverside Auto Rental start at $55/day (local) or $75/day (unlimited miles) for intermediate cars. Full-size cars from $65/day. Minivans $78/day and 15-passenger vans $135/day, plus $0.10/mile. Weekly flat rates include unlimited mileage. Call 715-396-1466."}},
-      {"@type": "Question", "name": "Do you offer weekly rental discounts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All weekly rentals (7 days or more) are a flat rate with unlimited mileage: intermediate car $315/week, full-size car $350/week, 7-passenger minivan $450/week, and 15-passenger van $750/week."}},
+      {"@type": "Question", "name": "How much does it cost to rent a car in Black River Falls, Wisconsin?", "acceptedAnswer": {"@type": "Answer", "text": "Daily rental rates at Riverside Auto Rental start at $55/day (local) or $75/day (unlimited miles) for intermediate cars. Full-size cars from $65/day. Minivans $78/day and 15-passenger vans $135/day, plus $0.10/mile. Weekly car rates come in Local (100 mi/day limit) and Unlimited tiers; van weekly rates include unlimited mileage. Call 715-396-1466."}},
+      {"@type": "Question", "name": "Do you offer weekly rental discounts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Weekly rentals (7 days or more) are flat rate. Cars are offered in two tiers: Intermediate $330/week local (100 mi/day) or $450/week unlimited; Full-size $390/week local (100 mi/day) or $510/week unlimited. Van weekly rates include unlimited mileage: 7-passenger minivan $450/week and 15-passenger van $750/week."}},
       {"@type": "Question", "name": "How much does it cost to rent a 15-passenger van in Wisconsin?", "acceptedAnswer": {"@type": "Answer", "text": "The 15-passenger van rents for $135 per day plus $0.10 per mile. The weekly rate is $750 with unlimited mileage."}},
       {"@type": "Question", "name": "Is a security deposit required to rent a car at Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Local renters pay a $300 deposit. Out-of-town renters pay a $500 deposit. The deposit can be placed on a credit card or debit card."}},
       {"@type": "Question", "name": "Is there a credit card surcharge at Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A 3% surcharge applies to all payments made by credit card. Debit card transactions are exempt from this surcharge."}}
@@ -318,12 +318,13 @@
               <th>Vehicle Class</th>
               <th>Daily – Local<br><small style="font-weight:400;text-transform:none;letter-spacing:0;">(100 mi/day limit)</small></th>
               <th>Daily – Unlimited<br><small style="font-weight:400;text-transform:none;letter-spacing:0;">(no mileage cap)</small></th>
-              <th>Weekly Rate<br><small style="font-weight:400;text-transform:none;letter-spacing:0;">(7+ days, unlimited mi)</small></th>
+              <th>Weekly – Local<br><small style="font-weight:400;text-transform:none;letter-spacing:0;">(100 mi/day limit)</small></th>
+              <th>Weekly – Unlimited<br><small style="font-weight:400;text-transform:none;letter-spacing:0;">(no mileage cap)</small></th>
             </tr>
           </thead>
           <tbody>
-            <tr><td><strong>Intermediate Car</strong></td><td class="price">$55/day</td><td class="price">$75/day</td><td class="price">$315/week</td></tr>
-            <tr><td><strong>Full-Size Car</strong></td><td class="price">$65/day</td><td class="price">$85/day</td><td class="price">$350/week</td></tr>
+            <tr><td><strong>Intermediate Car</strong></td><td class="price">$55/day</td><td class="price">$75/day</td><td class="price">$330/week</td><td class="price">$450/week</td></tr>
+            <tr><td><strong>Full-Size Car</strong></td><td class="price">$65/day</td><td class="price">$85/day</td><td class="price">$390/week</td><td class="price">$510/week</td></tr>
           </tbody>
         </table>
 
@@ -342,7 +343,7 @@
           </tbody>
         </table>
         <div class="text-center mt-24">
-          <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:20px;">All weekly rentals (7+ days) include unlimited mileage. Daily van rentals include a $0.10 per mile charge. Rates subject to availability. Taxes and fees may apply. Long-term and insurance rental rates quoted by phone.</p>
+          <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:20px;">Car rentals offer Local (100 mi/day limit) or Unlimited mileage tiers on both daily and weekly rates. Van weekly rentals (7+ days) include unlimited mileage; daily van rentals include a $0.10 per mile charge. Rates subject to availability. Taxes and fees may apply. Long-term and insurance rental rates quoted by phone.</p>
           <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:20px;">Need help choosing? Read our <a href="/blog/daily-vs-weekly-car-rental-rates.html" style="color:var(--navy);font-weight:600;">breakdown of daily vs. weekly rental rates</a> or our <a href="/blog/car-rental-vs-van-rental.html" style="color:var(--navy);font-weight:600;">car vs. van rental guide</a>.</p>
           <a href="tel:+17153961466" class="btn btn--primary btn--large">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -532,11 +533,11 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">How much does it cost to rent a car in Black River Falls?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-answer"><p>Daily rates start at $55/day for an intermediate car (local, 100 mi/day limit) or $75/day unlimited. Full-size cars from $65/day. Minivans $78/day and 15-passenger vans $135/day, both plus $0.10/mile. Weekly flat rates include unlimited mileage.</p></div>
+          <div class="faq-answer"><p>Daily rates start at $55/day for an intermediate car (local, 100 mi/day limit) or $75/day unlimited. Full-size cars from $65/day. Minivans $78/day and 15-passenger vans $135/day, both plus $0.10/mile. Weekly car rates come in Local (100 mi/day limit) and Unlimited tiers; van weekly rates are flat with unlimited mileage.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">Do you offer weekly rental discounts?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-answer"><p>Yes. All weekly rentals (7+ days) are flat rate with unlimited mileage: intermediate car $315, full-size car $350, minivan $450, 15-passenger van $750. For longer-term needs, call 715-396-1466.</p></div>
+          <div class="faq-answer"><p>Yes. Weekly rentals (7+ days) are flat rate. Intermediate car: $330/wk local (100 mi/day) or $450/wk unlimited. Full-size car: $390/wk local (100 mi/day) or $510/wk unlimited. Minivan $450/wk and 15-passenger van $750/wk both include unlimited mileage. For longer-term needs, call 715-396-1466.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">How much does a 15-passenger van rental cost?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
@@ -544,7 +545,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">What is included in the rental price?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-answer"><p>All vehicles include automatic transmission. Daily car rentals offer two tiers: local (100 mi/day limit) or unlimited miles. Van daily rates include a per-mile charge. All weekly rentals (7+ days) are flat rate with unlimited mileage. Renters are responsible for fuel.</p></div>
+          <div class="faq-answer"><p>All vehicles include automatic transmission. Car rentals — both daily and weekly — offer two tiers: Local (100 mi/day limit) or Unlimited miles. Van daily rates include a per-mile charge; van weekly rates are flat with unlimited mileage. Renters are responsible for fuel.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">Can I get a long-term rental rate for more than a week?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
