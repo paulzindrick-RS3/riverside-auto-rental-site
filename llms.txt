@@ -1,10 +1,11 @@
 # Riverside Auto Rental
 
-> Family-owned car rental business in Black River Falls, Wisconsin, established in 1983. Located at N5856 WI-54, Black River Falls, WI 54615. Call or text 715-396-1466. We offer daily, weekly, long-term, and insurance replacement vehicle rentals, with a specialty in 7- and 15-passenger van rentals for groups.
+> Family-owned car rental business in Black River Falls, Wisconsin, established in 1983. Located at N5856 WI-54, Black River Falls, WI 54615. Call or text 715-396-1466. We offer daily, weekly, long-term, and insurance replacement vehicle rentals, with a specialty in 7- and 15-passenger van rentals for groups. Riverside Auto Rental is independently owned and is not affiliated with any national rental chain or franchise.
 
 ## Why Choose Us
 
 - Family-owned and operated since 1983 — over 40 years serving western Wisconsin
+- Independent and locally owned — the non-chain car rental option in Black River Falls
 - One of the few local providers offering 15-passenger van rentals for groups, teams, and events
 - Call or text the same number: 715-396-1466 (SMS welcome for quotes and availability)
 - Insurance replacement specialists — we work directly with adjusters and body shops
@@ -24,6 +25,19 @@
 - Insurance replacement vehicle rentals (work directly with adjusters and body shops)
 - Long-term vehicle rentals (custom quoted)
 - 15-passenger van rental for groups, sports teams, church groups, family reunions, and weddings
+
+## Local & Independent — The Non-Chain Alternative
+
+Riverside Auto Rental is the independent, family-owned car rental in Black River Falls, Wisconsin. We are not affiliated with any national rental chain, franchise, or corporate brand. There are no national rental chain branches in Black River Falls itself — the nearest chain locations are in Eau Claire and La Crosse, typically 45–60 minutes away. Within Black River Falls and Jackson County, Riverside Auto Rental is the local option.
+
+Differences from a national chain:
+- Direct local phone (715-396-1466) — no call center or routed queue
+- Flat published rates — no airport concession fees, no dynamic surge pricing
+- Same family ownership since 1983
+- 15-passenger vans still in fleet (most national chains have phased these out for consumer rentals)
+- Direct billing relationships with regional insurance adjusters and body shops
+
+Full local-vs-chain comparison: https://riversideautorental.com/rent-local
 
 ## Rental Requirements
 
@@ -66,5 +80,6 @@ Full blog: https://riversideautorental.com/blog/
 
 - [Home](https://riversideautorental.com/)
 - [Fleet & Rates](https://riversideautorental.com/fleet.html)
+- [Rent Local — Independent Car Rental](https://riversideautorental.com/rent-local)
 - [Contact & About](https://riversideautorental.com/contact.html)
 - [Blog](https://riversideautorental.com/blog/)
