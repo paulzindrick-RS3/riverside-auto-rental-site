@@ -60,27 +60,6 @@
 "openingHoursSpecification": [
 {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
 {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
-],
-"aggregateRating": {
-"@type": "AggregateRating",
-"ratingValue": "5.0",
-"reviewCount": "2",
-"bestRating": "5",
-"worstRating": "1"
-},
-"review": [
-{
-"@type": "Review",
-"author": {"@type": "Person", "name": "Ben Hogan"},
-"reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-"reviewBody": "Highly recommend Riverside Auto Rental in Black River Falls, WI. I rented a 15-passenger van for a family trip taking my daughters to a volleyball tournament in Kansas City. The entire rental process was completely seamless. Staff is super friendly, quick paperwork, and no hassle at all."
-},
-{
-"@type": "Review",
-"author": {"@type": "Person", "name": "Jim"},
-"reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-"reviewBody": "My car broke down late at night on my way to a business meeting in Eau Claire. I called Riverside Auto Rental and was able to reach Tas after hours. She immediately arranged a reliable rental car for early the next morning. They truly go above and beyond."
-}
 ]
 }
 </script>
@@ -92,7 +71,7 @@
 "mainEntity": [
 {"@type": "Question", "name": "Where can I rent a car near Osseo, WI?", "acceptedAnswer": {"@type": "Answer", "text": "The nearest independent car rental to Osseo is Riverside Auto Rental in Black River Falls — about 30 miles south on I-94, roughly a 30-minute drive. Cars from $55/day. Call 715-396-1466."}},
 {"@type": "Question", "name": "How do I get from Osseo to Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Take I-94 South to Exit 116 (Highway 54 / Black River Falls). Turn left (north) and we're at N5856 WI-54 on the right, sharing a building with Riverside Auto Sales."}},
-{"@type": "Question", "name": "Can I rent a 15-passenger van near Osseo, WI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Riverside Auto Rental offers 15-passenger vans at $135/day + $0.10/mi or $700/week with unlimited mileage. Call 715-396-1466 to check availability."}},
+{"@type": "Question", "name": "Can I rent a 15-passenger van near Osseo, WI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Riverside Auto Rental offers 15-passenger vans at $135/day + $0.10/mi or $750/week with unlimited mileage. Call 715-396-1466 to check availability."}},
 {"@type": "Question", "name": "Do you handle insurance replacement rentals for Trempealeau County drivers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work with adjusters and body shops throughout Trempealeau County. Call 715-396-1466 to arrange a replacement rental. See our guide to insurance replacement rentals at riversideautorental.com/blog/insurance-replacement-rental-cars-black-river-falls.html"}},
 {"@type": "Question", "name": "What do I need to rent a vehicle?", "acceptedAnswer": {"@type": "Answer", "text": "Three things: a valid driver's license, a major credit card or bank-issued debit card linked to a checking account, and proof of auto insurance showing your policy number and expiration date."}}
 ]
@@ -174,7 +153,8 @@
 <th scope="col">Vehicle</th>
 <th scope="col">Daily — Local<br><span style="font-weight:400;font-size:0.8rem;">(100 mi/day)</span></th>
 <th scope="col">Daily — Unlimited</th>
-<th scope="col">Weekly Rate<br><span style="font-weight:400;font-size:0.8rem;">(7+ days, unl. mi)</span></th>
+<th scope="col">Weekly — Local<br><span style="font-weight:400;font-size:0.8rem;">(100 mi/day)</span></th>
+<th scope="col">Weekly — Unlimited<br><span style="font-weight:400;font-size:0.8rem;">(no mileage cap)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -182,23 +162,25 @@
 <td>Intermediate Car</td>
 <td class="price">$55</td>
 <td class="price">$75</td>
-<td class="price">$315</td>
+<td class="price">$330</td>
+<td class="price">$450</td>
 </tr>
 <tr>
 <td>Full-Size Car</td>
 <td class="price">$65</td>
 <td class="price">$85</td>
-<td class="price">$350</td>
+<td class="price">$390</td>
+<td class="price">$510</td>
 </tr>
 <tr>
 <td>7-Passenger Minivan</td>
 <td class="price" colspan="2">$78/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td>
-<td class="price">$400</td>
+<td class="price" colspan="2">$450 <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">(7+ days, unl. mi)</span></td>
 </tr>
 <tr>
 <td>15-Passenger Van</td>
 <td class="price" colspan="2">$135/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td>
-<td class="price">$700</td>
+<td class="price" colspan="2">$750 <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">(7+ days, unl. mi)</span></td>
 </tr>
 </tbody>
 </table>
@@ -274,7 +256,7 @@ Can I rent a 15-passenger van near Osseo, WI?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
 <div class="faq-answer">
-<p>Yes. Riverside Auto Rental offers 15-passenger vans at $135/day + $0.10/mi or $700/week with unlimited mileage. Call 715-396-1466 to check availability.</p>
+<p>Yes. Riverside Auto Rental offers 15-passenger vans at $135/day + $0.10/mi or $750/week with unlimited mileage. Call 715-396-1466 to check availability.</p>
 </div>
 </div>
 

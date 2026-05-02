@@ -60,27 +60,6 @@
 "openingHoursSpecification": [
 {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
 {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
-],
-"aggregateRating": {
-"@type": "AggregateRating",
-"ratingValue": "5.0",
-"reviewCount": "2",
-"bestRating": "5",
-"worstRating": "1"
-},
-"review": [
-{
-"@type": "Review",
-"author": {"@type": "Person", "name": "Ben Hogan"},
-"reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-"reviewBody": "Highly recommend Riverside Auto Rental in Black River Falls, WI. I rented a 15-passenger van for a family trip taking my daughters to a volleyball tournament in Kansas City. The entire rental process was completely seamless. Staff is super friendly, quick paperwork, and no hassle at all."
-},
-{
-"@type": "Review",
-"author": {"@type": "Person", "name": "Jim"},
-"reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-"reviewBody": "My car broke down late at night on my way to a business meeting in Eau Claire. I called Riverside Auto Rental and was able to reach Tas after hours. She immediately arranged a reliable rental car for early the next morning. They truly go above and beyond."
-}
 ]
 }
 </script>
@@ -92,7 +71,7 @@
 "mainEntity": [
 {"@type": "Question", "name": "Is there a car rental in Sparta, WI?", "acceptedAnswer": {"@type": "Answer", "text": "Sparta does not have a local car rental company. The nearest independent option is Riverside Auto Rental in Black River Falls — about 25 minutes away via WI-27 North to I-90/I-94 East. Call 715-396-1466 to reserve."}},
 {"@type": "Question", "name": "Where is the nearest car rental to Sparta, Wisconsin?", "acceptedAnswer": {"@type": "Answer", "text": "Riverside Auto Rental in Black River Falls is approximately 23 miles from Sparta — about a 25-minute drive via WI-27 North to I-90 East, then I-94 East to Exit 116 (Highway 54)."}},
-{"@type": "Question", "name": "Can I rent a 15-passenger van near Sparta, WI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Riverside Auto Rental offers 15-passenger vans at $135/day + $0.10/mi or $700/week with unlimited mileage. We're 25 minutes from Sparta. Call 715-396-1466 to reserve."}},
+{"@type": "Question", "name": "Can I rent a 15-passenger van near Sparta, WI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Riverside Auto Rental offers 15-passenger vans at $135/day + $0.10/mi or $750/week with unlimited mileage. We're 25 minutes from Sparta. Call 715-396-1466 to reserve."}},
 {"@type": "Question", "name": "Do you handle insurance replacement rentals for Sparta residents?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work with adjusters and body shops throughout Monroe County, including the Sparta area. Call 715-396-1466. See our guide to insurance replacement rentals at riversideautorental.com/blog/insurance-replacement-rental-cars-black-river-falls.html"}},
 {"@type": "Question", "name": "What do I need to rent a vehicle?", "acceptedAnswer": {"@type": "Answer", "text": "Three things: a valid driver's license, a major credit card or bank-issued debit card linked to a checking account, and proof of auto insurance showing your policy number and expiration date."}}
 ]
@@ -155,10 +134,6 @@
 <p style="margin-bottom:8px;"><a href="/locations/" style="color:rgba(255,255,255,0.85);font-size:0.9rem;text-decoration:none;">← All Locations</a></p>
 <h1>Car Rental Near Sparta, WI</h1>
 <p>No local rental in Sparta? Riverside Auto Rental is just 25 minutes away in Black River Falls — with cars, minivans, and 15-passenger vans ready to go.</p>
-<div style="display:flex;align-items:center;gap:8px;margin-top:14px;">
-<span style="color:#f59e0b;font-size:1.1rem;letter-spacing:2px;" aria-label="5 out of 5 stars">★★★★★</span>
-<span style="color:rgba(255,255,255,0.9);font-family:'Archivo',sans-serif;font-weight:600;font-size:0.9rem;">5.0 on Google</span>
-</div>
 </div>
 </section>
 
@@ -178,7 +153,8 @@
 <th scope="col">Vehicle</th>
 <th scope="col">Daily — Local<br><span style="font-weight:400;font-size:0.8rem;">(100 mi/day)</span></th>
 <th scope="col">Daily — Unlimited</th>
-<th scope="col">Weekly Rate<br><span style="font-weight:400;font-size:0.8rem;">(7+ days, unl. mi)</span></th>
+<th scope="col">Weekly — Local<br><span style="font-weight:400;font-size:0.8rem;">(100 mi/day)</span></th>
+<th scope="col">Weekly — Unlimited<br><span style="font-weight:400;font-size:0.8rem;">(no mileage cap)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -186,23 +162,25 @@
 <td>Intermediate Car</td>
 <td class="price">$55</td>
 <td class="price">$75</td>
-<td class="price">$315</td>
+<td class="price">$330</td>
+<td class="price">$450</td>
 </tr>
 <tr>
 <td>Full-Size Car</td>
 <td class="price">$65</td>
 <td class="price">$85</td>
-<td class="price">$350</td>
+<td class="price">$390</td>
+<td class="price">$510</td>
 </tr>
 <tr>
 <td>7-Passenger Minivan</td>
 <td class="price" colspan="2">$78/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td>
-<td class="price">$400</td>
+<td class="price" colspan="2">$450 <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">(7+ days, unl. mi)</span></td>
 </tr>
 <tr>
 <td>15-Passenger Van</td>
 <td class="price" colspan="2">$135/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td>
-<td class="price">$700</td>
+<td class="price" colspan="2">$750 <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">(7+ days, unl. mi)</span></td>
 </tr>
 </tbody>
 </table>
@@ -226,21 +204,6 @@
 <li style="margin-bottom:8px;">Extended travel while between vehicles</li>
 <li style="margin-bottom:8px;">Business use — daily driver while your work vehicle is out of service</li>
 </ul>
-
-<h2>What Renters Are Saying</h2>
-<div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
-<span style="color:#f59e0b;font-size:1.1rem;letter-spacing:1px;" aria-label="5 out of 5 stars">★★★★★</span>
-<span style="font-family:'Archivo',sans-serif;font-weight:600;color:var(--text-light);font-size:0.9rem;">5.0 on Google</span>
-</div>
-<div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid var(--navy);border-radius:8px;padding:24px;margin-bottom:20px;">
-<p style="font-style:italic;color:var(--text);line-height:1.7;margin-bottom:16px;">"I rented a 15-passenger van for a family trip taking my daughters to a volleyball tournament in Kansas City. The entire rental process was completely seamless. Staff is super friendly, quick paperwork, and no hassle at all. The van was a perfect fit for our needs."</p>
-<div style="font-family:'Archivo',sans-serif;font-weight:700;color:var(--navy);">Ben H. <span style="font-weight:400;color:var(--text-light);font-size:0.9rem;">— 15-Passenger Van Rental</span></div>
-</div>
-<div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid var(--navy);border-radius:8px;padding:24px;margin-bottom:20px;">
-<p style="font-style:italic;color:var(--text);line-height:1.7;margin-bottom:16px;">"My car broke down late at night on my way to a business meeting in Eau Claire. I called Riverside Auto Rental and was able to reach Tas after hours. She immediately arranged a reliable rental for early the next morning. They truly go above and beyond — saved the day and made a stressful situation stress-free."</p>
-<div style="font-family:'Archivo',sans-serif;font-weight:700;color:var(--navy);">Jim <span style="font-weight:400;color:var(--text-light);font-size:0.9rem;">— After-Hours Emergency Rental</span></div>
-</div>
-<p style="margin-bottom:32px;"><a href="https://search.google.com/local/reviews?placeid=ChIJe_gqTAjk_ocRVVpllXYH-zQ" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Read all reviews on Google →</a></p>
 
 <h2>Directions from Sparta to Riverside Auto Rental</h2>
 <p>From Sparta, head north on <strong>WI-27</strong> to <strong>I-90 East</strong>, then take <strong>I-94 East</strong> to <strong>Exit 116 (Highway 54 / Black River Falls)</strong>. Turn left (north) — we're at <strong>N5856 WI-54</strong> on the right, sharing a building with Riverside Auto Sales. About 25 minutes total. Call <a href="tel:+17153961466" style="color:var(--navy);">715-396-1466</a> if you need guidance.</p>
@@ -294,7 +257,7 @@ Can I rent a 15-passenger van near Sparta, WI?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
 <div class="faq-answer">
-<p>Yes. Riverside Auto Rental offers 15-passenger vans at $135/day + $0.10/mi or $700/week with unlimited mileage. We're 25 minutes from Sparta. Call 715-396-1466 to reserve.</p>
+<p>Yes. Riverside Auto Rental offers 15-passenger vans at $135/day + $0.10/mi or $750/week with unlimited mileage. We're 25 minutes from Sparta. Call 715-396-1466 to reserve.</p>
 </div>
 </div>
 

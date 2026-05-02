@@ -60,27 +60,6 @@
 "openingHoursSpecification": [
 {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
 {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
-],
-"aggregateRating": {
-"@type": "AggregateRating",
-"ratingValue": "5.0",
-"reviewCount": "2",
-"bestRating": "5",
-"worstRating": "1"
-},
-"review": [
-{
-"@type": "Review",
-"author": {"@type": "Person", "name": "Ben Hogan"},
-"reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-"reviewBody": "Highly recommend Riverside Auto Rental in Black River Falls, WI. I rented a 15-passenger van for a family trip taking my daughters to a volleyball tournament in Kansas City. The entire rental process was completely seamless. Staff is super friendly, quick paperwork, and no hassle at all."
-},
-{
-"@type": "Review",
-"author": {"@type": "Person", "name": "Jim"},
-"reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-"reviewBody": "My car broke down late at night on my way to a business meeting in Eau Claire. I called Riverside Auto Rental and was able to reach Tas after hours. She immediately arranged a reliable rental car for early the next morning. They truly go above and beyond."
-}
 ]
 }
 </script>
@@ -174,7 +153,8 @@
 <th scope="col">Vehicle</th>
 <th scope="col">Daily — Local<br><span style="font-weight:400;font-size:0.8rem;">(100 mi/day)</span></th>
 <th scope="col">Daily — Unlimited</th>
-<th scope="col">Weekly Rate<br><span style="font-weight:400;font-size:0.8rem;">(7+ days, unl. mi)</span></th>
+<th scope="col">Weekly — Local<br><span style="font-weight:400;font-size:0.8rem;">(100 mi/day)</span></th>
+<th scope="col">Weekly — Unlimited<br><span style="font-weight:400;font-size:0.8rem;">(no mileage cap)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -182,23 +162,25 @@
 <td>Intermediate Car</td>
 <td class="price">$55</td>
 <td class="price">$75</td>
-<td class="price">$315</td>
+<td class="price">$330</td>
+<td class="price">$450</td>
 </tr>
 <tr>
 <td>Full-Size Car</td>
 <td class="price">$65</td>
 <td class="price">$85</td>
-<td class="price">$350</td>
+<td class="price">$390</td>
+<td class="price">$510</td>
 </tr>
 <tr>
 <td>7-Passenger Minivan</td>
 <td class="price" colspan="2">$78/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td>
-<td class="price">$400</td>
+<td class="price" colspan="2">$450 <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">(7+ days, unl. mi)</span></td>
 </tr>
 <tr>
 <td>15-Passenger Van</td>
 <td class="price" colspan="2">$135/day <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">+ $0.10/mi</span></td>
-<td class="price">$700</td>
+<td class="price" colspan="2">$750 <span style="font-weight:400;font-size:0.85rem;color:var(--text-light);">(7+ days, unl. mi)</span></td>
 </tr>
 </tbody>
 </table>
