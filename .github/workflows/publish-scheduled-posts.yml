@@ -9,7 +9,8 @@ jobs:
   publish-scheduled-posts:
     runs-on: ubuntu-latest
     permissions:
-         contents: writesteps:
+      contents: write
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
