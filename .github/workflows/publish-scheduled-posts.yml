@@ -8,7 +8,8 @@ on:
 jobs:
   publish-scheduled-posts:
     runs-on: ubuntu-latest
-    steps:
+    permissions:
+         contents: writesteps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
