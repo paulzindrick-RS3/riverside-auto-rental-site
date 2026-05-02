@@ -1,4 +1,4 @@
-Scheduled Post Publisher
+name: Scheduled Post Publisher
 on:
   schedule:
     # Runs every Tuesday at 1:00 PM UTC = 8:00 AM Central Time
