@@ -507,7 +507,11 @@ Reserve a Van — 715-396-1466
 <span style="font-family:'Archivo',sans-serif;font-weight:600;color:var(--text-light);">5.0 on Google</span>
 </div>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1280px;margin:0 auto;">
+<style>
+.testimonials-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:1100px; margin:0 auto; }
+@media (max-width:720px) { .testimonials-grid { grid-template-columns:1fr; } }
+</style>
+<div class="testimonials-grid">
 <!-- Review 1: Ben - Van/Family Trip -->
 <div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid var(--navy);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
 <div style="color:#f59e0b;font-size:1.1rem;letter-spacing:1px;margin-bottom:12px;" aria-label="5 out of 5 stars">★★★★★</div>
