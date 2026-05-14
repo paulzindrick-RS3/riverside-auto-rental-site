@@ -101,7 +101,7 @@
 "aggregateRating": {
 "@type": "AggregateRating",
 "ratingValue": "5.0",
-"reviewCount": "3",
+"reviewCount": "4",
 "bestRating": "5",
 "worstRating": "1"
 },
@@ -123,6 +123,12 @@
 "author": {"@type": "Person", "name": "Maya Tewy"},
 "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
 "reviewBody": "I had a state wrestling tournament and My dad's car broke down, we had a flat tire, it broke about a mile away from Black River fall, we were trying to get any kind of help, there was no one willing to come out there and help, they were lovely and my dad told that they rushed to get us a car as fast as possible so I can get to my tournament, They were great and a great service!! The car was clean and it smelled good, I would definitely recommend it !!"
+},
+{
+"@type": "Review",
+"author": {"@type": "Person", "name": "Sal Ha"},
+"reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+"reviewBody": "We needed a 7-passenger minivan for our family trip to my nephew Rob's graduation party and Riverside Auto Rental in Black River Falls was fantastic from start to finish. I spoke with Tas, who was extremely helpful and answered all of our questions right away. The minivan we rented was spotless, clean, and in perfect working order — ready to go with no issues at all."
 }
 ],
 "sameAs": []
@@ -501,7 +507,7 @@ Reserve a Van — 715-396-1466
 <span style="font-family:'Archivo',sans-serif;font-weight:600;color:var(--text-light);">5.0 on Google</span>
 </div>
 </div>
-<div class="grid-3" style="gap:24px;max-width:1200px;margin:0 auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1280px;margin:0 auto;">
 <!-- Review 1: Ben - Van/Family Trip -->
 <div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid var(--navy);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
 <div style="color:#f59e0b;font-size:1.1rem;letter-spacing:1px;margin-bottom:12px;" aria-label="5 out of 5 stars">★★★★★</div>
@@ -539,8 +545,21 @@ Reserve a Van — 715-396-1466
 </div>
 </div>
 </div>
+<!-- Review 4: Sal - Graduation/7-Passenger Minivan -->
+<div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid var(--navy);border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+<div style="color:#f59e0b;font-size:1.1rem;letter-spacing:1px;margin-bottom:12px;" aria-label="5 out of 5 stars">★★★★★</div>
+<p style="font-style:italic;color:var(--text);line-height:1.7;margin-bottom:20px;">"We needed a 7-passenger minivan for our family trip to my nephew's graduation party and Riverside Auto Rental was fantastic from start to finish. Tas was extremely helpful and answered all of our questions right away. The minivan was spotless, clean, and in perfect working order — ready to go with no issues at all."</p>
+<div style="border-top:1px solid #f0f0f0;padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+<div>
+<div style="font-family:'Archivo',sans-serif;font-weight:700;color:var(--navy);">Sal H.</div>
+<div style="font-size:0.85rem;color:var(--text-light);">7-Passenger Minivan Rental</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="#4285F4" aria-hidden="true" focusable="false"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+</div>
+</div>
+</div>
 <div class="text-center" style="margin-top:36px;">
-<a href="https://search.google.com/local/reviews?placeid=ChIJe_gqTAjk_ocRVVpllXYH-zQ" target="_blank" rel="noopener" style="font-family:'Archivo',sans-serif;font-weight:600;color:var(--navy);text-decoration:underline;">Read all reviews on Google →</a>
+<a href="https://search.google.com/local/reviews?placeid=ChIJe_gqTAjn_ocRVVpllXYH-zQ" target="_blank" rel="noopener" style="font-family:'Archivo',sans-serif;font-weight:600;color:var(--navy);text-decoration:underline;">Read all reviews on Google →</a>
 </div>
 </div>
 </section>
@@ -730,143 +749,6 @@ Where is Riverside Auto Rental located?
 </div>
 </section>
 
-<!-- ========================================================
-     GOOGLE REVIEWS SECTION
-     ========================================================
-     PASTE LOCATION: Just BEFORE the line `<footer class="footer">`
-     in index.html (the homepage on the main branch — the May 4
-     version `61904f2` is the right baseline).
-
-     TO ADD A NEW REVIEW LATER:
-       1. Copy any one of the four <article class="review-card">
-          blocks below.
-       2. Paste it directly above the comment marked
-          "ADD NEW REVIEW CARDS ABOVE THIS LINE".
-       3. Change the stars, text, name, and month/year.
-       4. Commit and push — Netlify redeploys automatically.
-
-     The relative dates from Google (e.g. "2 weeks ago") are
-     converted to month/year so cards don't age awkwardly.
-     ========================================================  -->
-
-<section class="section" style="background:var(--off-white);">
-  <div class="container">
-    <div style="max-width:1100px;margin:0 auto;">
-      <div style="text-align:center;margin-bottom:40px;">
-        <span class="section-label">Customer Reviews</span>
-        <h2 class="section-title" style="margin-bottom:8px;">What Our Customers Say on Google</h2>
-        <p style="color:var(--text-light);margin:0;font-size:1rem;">
-          <span style="color:#FBBC04;letter-spacing:2px;font-size:1.1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          &nbsp;5.0 average from real customers in western Wisconsin
-        </p>
-      </div>
-
-      <div class="reviews-grid">
-
-        <!-- REVIEW CARD - Sal H. -->
-        <article class="review-card">
-          <div class="review-card__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-card__text">&ldquo;We needed a 7-passenger minivan for our family trip to my nephew&rsquo;s graduation party and Riverside Auto Rental was fantastic from start to finish. Tas was extremely helpful. The minivan was spotless, clean, and in perfect working order &mdash; ready to go with no issues at all.&rdquo;</p>
-          <div class="review-card__author">
-            <strong>Sal H.</strong>
-            <span class="review-card__meta">Local Guide &middot; May 2026</span>
-          </div>
-        </article>
-
-        <!-- REVIEW CARD - Ben H. -->
-        <article class="review-card">
-          <div class="review-card__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-card__text">&ldquo;Highly recommend! I rented a 15-passenger van for a family trip taking my daughters to a volleyball tournament in Kansas City. The entire rental process was completely seamless. Staff is super friendly, quick paperwork, and no hassle at all.&rdquo;</p>
-          <div class="review-card__author">
-            <strong>Ben H.</strong>
-            <span class="review-card__meta">April 2026</span>
-          </div>
-        </article>
-
-        <!-- REVIEW CARD - Jim -->
-        <article class="review-card">
-          <div class="review-card__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-card__text">&ldquo;My car broke down late at night on the way to a business meeting in Eau Claire. I reached Tas after hours and she immediately arranged a rental for early the next morning. Mike even picked me up at my hotel. The whole experience was incredibly efficient.&rdquo;</p>
-          <div class="review-card__author">
-            <strong>Jim</strong>
-            <span class="review-card__meta">April 2026</span>
-          </div>
-        </article>
-
-        <!-- REVIEW CARD - Maya T. -->
-        <article class="review-card">
-          <div class="review-card__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-card__text">&ldquo;I had a state wrestling tournament and my dad&rsquo;s car broke down. They rushed to get us a car as fast as possible so I could get to my tournament. They were great and a great service! The car was clean and it smelled good.&rdquo;</p>
-          <div class="review-card__author">
-            <strong>Maya T.</strong>
-            <span class="review-card__meta">April 2026</span>
-          </div>
-        </article>
-
-        <!-- ADD NEW REVIEW CARDS ABOVE THIS LINE -->
-
-      </div>
-
-      <div style="text-align:center;margin-top:40px;">
-        <a href="https://search.google.com/local/reviews?placeid=ChIJe_gqTAjn_ocRVVpllXYH-zQ" target="_blank" rel="noopener" class="btn btn--outline">
-          Read All Reviews on Google &rarr;
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-.reviews-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-.review-card {
-  background: var(--white);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-md);
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-.review-card__stars {
-  color: #FBBC04;
-  font-size: 1.15rem;
-  letter-spacing: 2px;
-  margin-bottom: 14px;
-  line-height: 1;
-}
-.review-card__text {
-  color: var(--charcoal);
-  line-height: 1.65;
-  margin: 0 0 20px 0;
-  flex: 1;
-  font-size: 0.95rem;
-}
-.review-card__author {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding-top: 16px;
-  border-top: 1px solid var(--light-gray);
-}
-.review-card__author strong {
-  color: var(--navy);
-  font-size: 0.95rem;
-  font-weight: 700;
-}
-.review-card__meta {
-  font-size: 0.8rem;
-  color: var(--text-light);
-}
-@media (max-width: 720px) {
-  .reviews-grid { grid-template-columns: 1fr; }
-  .review-card { padding: 22px; }
-}
-</style>
-<!-- ========== END GOOGLE REVIEWS SECTION ========== -->
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
 <div class="container">
