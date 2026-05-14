@@ -13,11 +13,11 @@
 
 ## Fleet
 
-- Intermediate Car: $55/day local (100 mi limit), $75/day unlimited, $315/week unlimited
-- Full-Size Car: $65/day local (100 mi limit), $85/day unlimited, $350/week unlimited
-- 7 Passenger Minivan: $78/day + $0.10/mile, $400/week unlimited
-- 15 Passenger Van: $135/day + $0.10/mile, $700/week unlimited
-- All weekly rentals (7+ days) include unlimited mileage
+- Intermediate Car: $55/day local (100 mi limit), $75/day unlimited, $330/week local, $450/week unlimited
+- Full-Size Car: $65/day local (100 mi limit), $85/day unlimited, $390/week local, $510/week unlimited
+- 7 Passenger Minivan: $78/day + $0.10/mile, $450/week unlimited
+- 15 Passenger Van: $135/day + $0.10/mile, $750/week unlimited
+- All weekly van rentals include unlimited mileage
 
 ## Services
 
@@ -60,15 +60,31 @@ Full local-vs-chain comparison: https://riversideautorental.com/rent-local
 
 ## Blog & Resources
 
-We publish weekly guides on vehicle rental topics. Recent and upcoming posts cover:
+We publish regular guides on vehicle rental topics. Recent and upcoming posts cover:
 
-- 15-passenger van rental planning for groups
-- Insurance replacement rental process and working with adjusters
-- First-timer's guide to renting a vehicle
+- Pre-planning a summer vacation rental (lead times, peak weekends, vehicle choice)
+- 7-passenger minivan rental — who it's for, what it fits, what it costs
+- Memorial Day weekend rentals — cabin trips, lake weekends, family gatherings
+- Graduation travel — rental cars and vans for the big weekend
+- Car rental vs. van rental — side-by-side comparison
 - Daily vs. weekly rental rate comparison
-- Choosing between a car and a van for your trip
+- First-timer's guide to renting a vehicle
+- Insurance replacement rental process and working with adjusters
+- 15-passenger van rental planning for groups
 
 Full blog: https://riversideautorental.com/blog/
+
+## Recent Blog Posts
+
+- https://riversideautorental.com/blog/book-summer-vacation-rental-black-river-falls.html — Pre-Planning a Summer Vacation Rental (May 29, 2026)
+- https://riversideautorental.com/blog/7-passenger-minivan-rental-black-river-falls.html — The 7-Passenger Minivan: When It's the Right Rental (May 26, 2026)
+- https://riversideautorental.com/blog/memorial-day-weekend-rentals-black-river-falls.html — Memorial Day Weekend Rentals (May 19, 2026)
+- https://riversideautorental.com/blog/graduation-travel-rental-cars-vans-black-river-falls.html — Graduation Travel from Black River Falls (May 15, 2026)
+- https://riversideautorental.com/blog/car-rental-vs-van-rental.html — Car Rental vs. Van Rental: How to Choose (April 29, 2026)
+- https://riversideautorental.com/blog/daily-vs-weekly-car-rental-rates.html — Daily vs. Weekly Car Rental Rates (April 21, 2026)
+- https://riversideautorental.com/blog/what-you-need-to-rent-a-car-black-river-falls.html — What You Need to Rent a Car: A First-Timer's Guide (April 15, 2026)
+- https://riversideautorental.com/blog/insurance-replacement-rental-cars-black-river-falls.html — Insurance Replacement Rental Cars in Black River Falls (April 8, 2026)
+- https://riversideautorental.com/blog/7-15-passenger-van-rental-black-river-falls.html — 7 & 15 Passenger Van Rental in Black River Falls
 
 ## Contact
 
