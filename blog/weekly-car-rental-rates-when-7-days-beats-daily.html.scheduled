@@ -110,7 +110,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 </a>
 <nav class="header__nav" id="mainNav" aria-label="Main navigation">
 <a href="/">Home</a>
-<a href="/fleet.html">Fleet &amp; Rates</a>
+<a href="/fleet">Fleet &amp; Rates</a>
 <a href="/contact.html">Contact</a>
 <a href="/blog/" class="active">Blog</a>
 </nav>
@@ -126,25 +126,19 @@ gtag('config', 'G-EDMLSNJ4B9');
 </button>
 </div>
 </header>
-
 <section class="page-header">
 <div class="container">
-<p style="margin-bottom:8px;"><a href="/blog/" style="color:rgba(255,255,255,0.7);font-size:0.9rem;text-decoration:none;">← Back to Blog</a></p>
+<p style="margin-bottom:8px;"><a href="/blog/" style="color:rgba(255,255,255,0.7);font-size:0.9rem;text-decoration:none;">&larr; Back to Blog</a></p>
 <h1>Weekly Car Rental Rates Explained — When 7 Days Beats Daily Pricing</h1>
 <p>Two-tier weekly pricing for cars, single weekly rate for vans. Here's how to pick the right one for your trip.</p>
 </div>
 </section>
-
 <section class="section">
 <div class="container">
 <div style="max-width:800px;margin:0 auto;">
-
 <p>"Should I rent daily or weekly?" is one of the most common questions we get. The honest answer is: it depends on three things — how many days you actually need the vehicle, how far you plan to drive, and whether you want to lock in a flat price up front or pay as you go.</p>
-
 <p>Our pricing has a structure most rental companies don't offer: <strong>two weekly tiers for cars</strong> — a lower-priced local rate (capped at 100 miles per day) and an unlimited-mileage rate. That means if you're staying close to Black River Falls, you don't pay for road-trip mileage you won't use. And if you ARE going on a road trip, you pay one flat price with no surprises at return.</p>
-
 <p>This post walks through the math with worked examples. By the end you'll know exactly which tier fits your trip.</p>
-
 <h2>The four pricing tiers</h2>
 <p>For cars (intermediate and full-size), we offer two daily and two weekly rates:</p>
 <p><strong>Daily — Local.</strong> Lower per-day price. Capped at 100 miles per day; mileage above the cap is $0.10/mile. Good for short trips and stay-close use.</p>
@@ -152,7 +146,6 @@ gtag('config', 'G-EDMLSNJ4B9');
 <p><strong>Weekly — Local.</strong> Best flat price for week-long stay-close use. 100 mi/day cap still applies, with overage at $0.10/mile.</p>
 <p><strong>Weekly — Unlimited.</strong> Flat price, no mileage cap. Best for longer trips or any week with multiple long-driving days.</p>
 <p>For vans (7-passenger minivan and 15-passenger), there's a single weekly rate that includes unlimited mileage at 7+ days. Daily van rates have a per-mile charge of $0.10/mile from mile one, so weekly is usually the better deal for any van rental over a few days.</p>
-
 <h2>Our weekly rates at a glance</h2>
 <div style="background:#f8f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:24px;margin-bottom:32px;">
 <div style="display:grid;grid-template-columns:1fr auto;gap:12px 24px;font-family:'Archivo',sans-serif;font-size:0.95rem;">
@@ -173,43 +166,39 @@ gtag('config', 'G-EDMLSNJ4B9');
 </div>
 <p style="margin:20px 0 0;font-size:0.85rem;color:var(--text-light);">Local-tier rates capped at 100 mi/day; overage at $0.10/mile. Van daily rates: $78/day (7-pass) or $135/day (15-pass), both plus $0.10/mile from mile one.</p>
 </div>
-
 <h2>Worked example: intermediate car for the week</h2>
 <p>You need a car for 7 days — maybe your spouse is borrowing yours, your car is in the shop, or you're hosting out-of-town family. You'll mostly be running errands and driving around Black River Falls and Tomah, with one day-trip to Wausau (~150 miles round trip).</p>
 <p>Here's how the four pricing options compare for the same 7-day window:</p>
 <div style="background:#f8f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:24px;margin-bottom:32px;">
 <ul style="list-style:none;padding:0;margin:0;">
-<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily Local (×7):</strong> $55 × 7 = $385 — but the Wausau day pushes you over 100 miles, adding ~$5 in overage. Effective: <strong>~$390</strong></li>
-<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily Unlimited (×7):</strong> $75 × 7 = <strong>$525</strong> — no mileage worries</li>
-<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Weekly Local:</strong> $330 flat — but you'll pay overage for the Wausau day (~$5). Effective: <strong>~$335</strong></li>
-<li style="padding:10px 0;"><strong>Weekly Unlimited:</strong> <strong>$450</strong> — flat, no math, no surprises</li>
+<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily Local (&times;7):</strong> $55 &times; 7 = $385 &mdash; but the Wausau day pushes you over 100 miles, adding ~$5 in overage. Effective: <strong>~$390</strong></li>
+<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily Unlimited (&times;7):</strong> $75 &times; 7 = <strong>$525</strong> &mdash; no mileage worries</li>
+<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Weekly Local:</strong> $330 flat &mdash; but you'll pay overage for the Wausau day (~$5). Effective: <strong>~$335</strong></li>
+<li style="padding:10px 0;"><strong>Weekly Unlimited:</strong> <strong>$450</strong> &mdash; flat, no math, no surprises</li>
 </ul>
 </div>
 <p>For this trip, <strong>Weekly Local wins</strong> at ~$335. You save $55 over daily local, $190 over daily unlimited, and $115 over weekly unlimited. The 100 mi/day cap rarely bites with normal local use.</p>
-
 <h2>Worked example: longer-mileage week</h2>
 <p>Same intermediate car, same 7 days — but this time you're planning a Madison weekend (~250 mi round trip) plus daily commutes to a job site in La Crosse (~80 mi/day, 5 days).</p>
-<p>Daily mileage estimate: 80 × 5 (commute) + 250 (Madison) + ~50 (general use) = roughly 700 miles total. That's ~100 mi/day on average — but the Madison weekend alone exceeds the daily cap on those two days.</p>
+<p>Daily mileage estimate: 80 &times; 5 (commute) + 250 (Madison) + ~50 (general use) = roughly 700 miles total. That's ~100 mi/day on average — but the Madison weekend alone exceeds the daily cap on those two days.</p>
 <div style="background:#f8f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:24px;margin-bottom:32px;">
 <ul style="list-style:none;padding:0;margin:0;">
-<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily Local (×7) + overage:</strong> $385 + ~$30 overage = <strong>~$415</strong></li>
-<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily Unlimited (×7):</strong> <strong>$525</strong></li>
+<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily Local (&times;7) + overage:</strong> $385 + ~$30 overage = <strong>~$415</strong></li>
+<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily Unlimited (&times;7):</strong> <strong>$525</strong></li>
 <li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Weekly Local + overage:</strong> $330 + ~$30 = <strong>~$360</strong></li>
 <li style="padding:10px 0;"><strong>Weekly Unlimited:</strong> <strong>$450</strong> flat</li>
 </ul>
 </div>
 <p>This is where it gets interesting. <strong>Weekly Local still comes out cheapest</strong> at ~$360 even with the overage — but only by ~$90. If your trip ends up needing more miles than expected, weekly unlimited at $450 protects you from any further overage charges. For a high-mileage week with uncertain plans, paying $90 for peace of mind is reasonable.</p>
-
 <h2>Worked example: 15-passenger van for a family reunion</h2>
 <p>Your extended family is gathering in northern Wisconsin for a long weekend. You need the van for 4 days, expect to drive about 150 miles per day. Daily on the van is $135 + $0.10/mile, weekly is $750 flat with unlimited mileage.</p>
 <div style="background:#f8f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:24px;margin-bottom:32px;">
 <ul style="list-style:none;padding:0;margin:0;">
-<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily approach (4 days):</strong> ($135 × 4) + (150 × 4 × $0.10) = $540 + $60 = <strong>$600</strong></li>
+<li style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><strong>Daily approach (4 days):</strong> ($135 &times; 4) + (150 &times; 4 &times; $0.10) = $540 + $60 = <strong>$600</strong></li>
 <li style="padding:10px 0;"><strong>Weekly approach:</strong> <strong>$750</strong> flat for 7+ days, unlimited mi</li>
 </ul>
 </div>
-<p>For a 4-day trip, daily wins at $600 vs. $750. But push that out to 6 days and the math flips: ($135 × 6) + (150 × 6 × $0.10) = $810 + $90 = $900 daily, vs. $750 weekly. Once you cross 5-6 days with normal mileage, the van's weekly rate is almost always the better play — and it's even better when mileage runs high.</p>
-
+<p>For a 4-day trip, daily wins at $600 vs. $750. But push that out to 6 days and the math flips: ($135 &times; 6) + (150 &times; 6 &times; $0.10) = $810 + $90 = $900 daily, vs. $750 weekly. Once you cross 5-6 days with normal mileage, the van's weekly rate is almost always the better play — and it's even better when mileage runs high.</p>
 <h2>The breakeven cheat sheet</h2>
 <p>Roughly when each weekly option becomes the better deal vs. its daily equivalent:</p>
 <ul style="margin-bottom:24px;padding-left:20px;">
@@ -221,30 +210,26 @@ gtag('config', 'G-EDMLSNJ4B9');
 <li style="margin-bottom:8px;"><strong>15-Passenger Van ($750/week)</strong> vs. Daily ($135 + mi): saves money starting day 6 with normal mileage, earlier with high mileage</li>
 </ul>
 <p>If you've already passed day 5 and you'll need the vehicle through day 7 or beyond, call us at <a href="tel:+17153961466"><strong>715-396-1466</strong></a> and we'll convert your reservation to weekly pricing. It's not automatic — but we'll do it if you ask.</p>
-
 <h2>What our renters say</h2>
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
-<span style="color:#f59e0b;font-size:1.1rem;letter-spacing:1px;" aria-label="5 out of 5 stars">★★★★★</span>
+<span style="color:#f59e0b;font-size:1.1rem;letter-spacing:1px;" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
 <span style="font-family:'Archivo',sans-serif;font-weight:600;color:var(--text-light);font-size:0.9rem;">5.0 on Google</span>
 </div>
 <div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid var(--navy);border-radius:8px;padding:24px;margin-bottom:20px;">
 <p style="font-style:italic;color:var(--text);line-height:1.7;margin-bottom:16px;">"I rented a 15-passenger van for a family trip taking my daughters to a volleyball tournament in Kansas City. The entire rental process was completely seamless. Staff is super friendly, quick paperwork, and no hassle at all. The van was a perfect fit for our needs."</p>
-<div style="font-family:'Archivo',sans-serif;font-weight:700;color:var(--navy);">Ben H. <span style="font-weight:400;color:var(--text-light);font-size:0.9rem;">— Weekly 15-Passenger Van Rental</span></div>
+<div style="font-family:'Archivo',sans-serif;font-weight:700;color:var(--navy);">Ben H. <span style="font-weight:400;color:var(--text-light);font-size:0.9rem;">&mdash; Weekly 15-Passenger Van Rental</span></div>
 </div>
 <div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid var(--navy);border-radius:8px;padding:24px;margin-bottom:20px;">
 <p style="font-style:italic;color:var(--text);line-height:1.7;margin-bottom:16px;">"My car broke down late at night on my way to a business meeting in Eau Claire. I called Riverside Auto Rental and was able to reach Tas after hours. She immediately arranged a reliable rental for early the next morning. They truly go above and beyond."</p>
-<div style="font-family:'Archivo',sans-serif;font-weight:700;color:var(--navy);">Jim <span style="font-weight:400;color:var(--text-light);font-size:0.9rem;">— After-Hours Emergency Rental</span></div>
+<div style="font-family:'Archivo',sans-serif;font-weight:700;color:var(--navy);">Jim <span style="font-weight:400;color:var(--text-light);font-size:0.9rem;">&mdash; After-Hours Emergency Rental</span></div>
 </div>
-<p style="margin-bottom:32px;"><a href="https://search.google.com/local/reviews?placeid=ChIJe_gqTAjk_ocRVVpllXYH-zQ" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Read all reviews on Google →</a></p>
-
+<p style="margin-bottom:32px;"><a href="https://search.google.com/local/reviews?placeid=ChIJe_gqTAjn_ocRVVpllXYH-zQ" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Read all reviews on Google &rarr;</a></p>
 <h2>What about insurance replacement rentals?</h2>
 <p>Most insurance replacement claims default to daily pricing. If your repair will take more than 4-5 days — which is normal for collision work — ask the adjuster whether your policy will cover the weekly rate instead. Most policies will, and you'll often save the insurance company money on the overall claim.</p>
-
 <h2>The simple version</h2>
 <p>If you'll have the vehicle 4 days or fewer, daily pricing usually wins. If you'll have it 6 days or more, weekly almost always beats daily. Day 5 is a tossup.</p>
 <p>For cars: pick weekly local if you're staying close (under 100 mi/day), weekly unlimited if you're road-tripping. For vans: the weekly rate is the better deal for nearly every multi-day rental.</p>
 <p>Not sure which fits your trip? Call us at <a href="tel:+17153961466"><strong>715-396-1466</strong></a> and we'll do the math with you in two minutes.</p>
-
 <div style="margin-top:48px;">
 <h2>Frequently Asked Questions</h2>
 <div class="faq-list">
@@ -270,11 +255,27 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">Can I convert a daily rental to weekly?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>Yes — call us before day 7 and we'll convert the reservation to weekly pricing if it saves you money.</p></div>
+<div class="faq-answer"><p>Yes &mdash; call us before day 7 and we'll convert the reservation to weekly pricing if it saves you money.</p></div>
 </div>
 </div>
 </div>
-
+<div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--light-gray);">
+<h2 style="margin-bottom:20px;">Related Articles</h2>
+<div style="display:grid;gap:16px;">
+<a href="daily-vs-weekly-car-rental-rates.html" style="display:block;padding:20px 24px;background:var(--off-white);border-radius:var(--radius-md);border:1px solid var(--light-gray);text-decoration:none;color:var(--charcoal);">
+<h3 style="margin-bottom:4px;font-size:1.05rem;color:var(--navy);">Daily vs. Weekly Car Rental Rates: Which Saves You More? &rarr;</h3>
+<p style="font-size:0.9rem;color:var(--text-light);margin:0;">The foundational comparison &mdash; daily and weekly tiers across all vehicle classes with the math.</p>
+</a>
+<a href="car-rental-vs-van-rental.html" style="display:block;padding:20px 24px;background:var(--off-white);border-radius:var(--radius-md);border:1px solid var(--light-gray);text-decoration:none;color:var(--charcoal);">
+<h3 style="margin-bottom:4px;font-size:1.05rem;color:var(--navy);">Car Rental vs. Van Rental: How to Choose &rarr;</h3>
+<p style="font-size:0.9rem;color:var(--text-light);margin:0;">Pick the vehicle class first, then pick the tier. Cars, minivans, and 15-passenger vans compared side-by-side.</p>
+</a>
+<a href="insurance-replacement-rental-cars-black-river-falls.html" style="display:block;padding:20px 24px;background:var(--off-white);border-radius:var(--radius-md);border:1px solid var(--light-gray);text-decoration:none;color:var(--charcoal);">
+<h3 style="margin-bottom:4px;font-size:1.05rem;color:var(--navy);">Insurance Replacement Rental Cars &rarr;</h3>
+<p style="font-size:0.9rem;color:var(--text-light);margin:0;">When your repair runs over 4-5 days, the weekly rate often saves the insurance company money &mdash; here's how to ask.</p>
+</a>
+</div>
+</div>
 <div style="margin-top:48px;padding:32px;background:linear-gradient(135deg,var(--navy) 0%,#1e3a5f 100%);color:#fff;border-radius:12px;text-align:center;">
 <h3 style="color:#fff;margin-bottom:12px;">Need a vehicle for the week?</h3>
 <p style="color:rgba(255,255,255,0.9);margin-bottom:24px;">Pick your tier, lock in the flat rate. We'll do the math with you on the phone.</p>
@@ -283,11 +284,9 @@ gtag('config', 'G-EDMLSNJ4B9');
 Call 715-396-1466
 </a>
 </div>
-
 </div>
 </div>
 </section>
-
 <footer class="footer">
 <div class="container">
 <div class="footer__grid">
@@ -299,7 +298,7 @@ Call 715-396-1466
 <h4>Quick Links</h4>
 <ul class="footer__links">
 <li><a href="/">Home</a></li>
-<li><a href="/fleet.html">Fleet &amp; Rates</a></li>
+<li><a href="/fleet">Fleet &amp; Rates</a></li>
 <li><a href="/contact.html">Contact &amp; About</a></li>
 <li><a href="/blog/">Blog</a></li>
 </ul>
@@ -329,7 +328,7 @@ Call 715-396-1466
 </div>
 </div>
 </footer>
-
+<div class="call-banner"><a href="tel:+17153961466"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call to Reserve &mdash; 715-396-1466</a></div>
 <script>
 (function(){
 var a=document.getElementById("menuToggle"),b=document.getElementById("mainNav");
@@ -340,5 +339,19 @@ var f=document.getElementsByClassName("faq-question");
 for(var j=0;j<f.length;j++){f[j].onclick=function(){var p=this.parentElement;var x=p.className.indexOf("active")!==-1;var all=document.getElementsByClassName("faq-item");for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}}}
 })();
 </script>
+<!-- ========== TEXT US BUBBLE ========== -->
+<style>
+#sms-bubble{position:fixed;right:20px;bottom:24px;z-index:9998;}
+#sms-bubble a{display:flex;align-items:center;gap:10px;background:#304B78;color:#fff;text-decoration:none;padding:13px 20px;border-radius:50px;box-shadow:0 4px 18px rgba(48,75,120,0.45);font-family:'Archivo',sans-serif;font-weight:700;font-size:0.9rem;line-height:1;border:2px solid rgba(255,255,255,0.15);transition:transform 0.2s,box-shadow 0.2s;}
+#sms-bubble a:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(48,75,120,0.5);}
+#sms-bubble svg{flex-shrink:0;}
+@media(max-width:768px){#sms-bubble{bottom:72px;right:16px;}}
+</style>
+<div id="sms-bubble">
+<a href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+Text Us
+</a>
+</div>
 </body>
 </html>
