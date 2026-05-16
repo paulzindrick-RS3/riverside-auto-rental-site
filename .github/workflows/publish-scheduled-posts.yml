@@ -8,6 +8,7 @@ on:
 jobs:
   publish-scheduled-posts:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       contents: write
     steps:
@@ -57,4 +58,5 @@ jobs:
           git config user.email "action@github.com"
           git add -A
           git commit -m "Auto-publish scheduled post(s) — $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
