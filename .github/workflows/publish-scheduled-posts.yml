@@ -1,8 +1,11 @@
 name: Scheduled Post Publisher
 on:
   schedule:
-    # Runs every Tuesday at 1:00 PM UTC = 8:00 AM Central Time
-    - cron: '0 13 * * 2'
+    # Runs every Tuesday at 1:17 PM UTC = 8:17 AM Central Time.
+    # The :17 minute (not :00) is intentional — GitHub Actions docs
+    # warn that scheduled workflows at the start of an hour are
+    # skipped during peak load. Off-minute timing is more reliable.
+    - cron: '17 13 * * 2'
   workflow_dispatch:
     # Allows manual trigger from GitHub Actions tab
 jobs:
@@ -24,8 +27,8 @@ jobs:
           # Look for any .scheduled files in the blog folder
           for scheduled_file in blog/*.scheduled; do
             [ -f "$scheduled_file" ] || continue
-            # Extract publish date from first line of file (format: PUBLISH_DATE: YYYY-MM-DD)
-            PUBLISH_DATE=$(head -1 "$scheduled_file" | grep "PUBLISH_DATE:" | cut -d' ' -f2)
+            # Extract publish date from first line. Strip any \r (CRLF safety).
+            PUBLISH_DATE=$(head -1 "$scheduled_file" | tr -d '\r' | grep "PUBLISH_DATE:" | cut -d' ' -f2)
             if [ -z "$PUBLISH_DATE" ]; then
               echo "No publish date found in $scheduled_file, skipping."
               continue
