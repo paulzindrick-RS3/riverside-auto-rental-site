@@ -111,7 +111,8 @@
           "name": "Car Rentals",
           "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Intermediate Car Rental", "description": "5-passenger intermediate sedan with automatic transmission, up to 37 MPG. Daily $55 local (100 mi/day limit) or $75 unlimited miles. Weekly $330 local (100 mi/day limit) or $450 unlimited miles."}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full-Size Car Rental", "description": "5-passenger full-size sedan with automatic transmission and spacious trunk. Daily $65 local (100 mi/day limit) or $85 unlimited miles. Weekly $390 local (100 mi/day limit) or $510 unlimited miles."}}
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full-Size Car Rental", "description": "5-passenger full-size sedan with automatic transmission and spacious trunk. Daily $65 local (100 mi/day limit) or $85 unlimited miles. Weekly $390 local (100 mi/day limit) or $510 unlimited miles."}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SUV Rental", "description": "5-passenger Ford Edge midsize SUV with automatic transmission, elevated seating, and extra cargo room. Daily $80 local (100 mi/day limit) or $100 unlimited miles. Weekly $480 local (100 mi/day limit) or $600 unlimited miles."}}
           ]
         },
         {
@@ -293,6 +294,23 @@
 
         <div class="vehicle-card">
           <div class="vehicle-card__image">
+            <img src="images/suv-ford-edge.jpg" alt="Ford Edge SUV rental at Riverside Auto Rental, Black River Falls WI" loading="lazy">
+          </div>
+          <div class="vehicle-card__body">
+            <h3 class="vehicle-card__title">SUV (Ford Edge)</h3>
+            <div class="vehicle-card__specs">
+              <div class="vehicle-card__spec"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 5 Passengers</div>
+              <div class="vehicle-card__spec"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3h-8l-2 4h12z"/></svg> Extra Cargo</div>
+              <div class="vehicle-card__spec"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg> Automatic</div>
+              <div class="vehicle-card__spec"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg> Up to 29 MPG</div>
+            </div>
+            <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:12px;">Comfortable midsize SUV with elevated seating and extra cargo room. Great for road trips, winter driving, and hauling gear.</p>
+            <div class="vehicle-card__price">From $80 <span>/ day</span></div>
+          </div>
+        </div>
+
+        <div class="vehicle-card">
+          <div class="vehicle-card__image">
             <img src="images/van-7passenger.jpg" alt="7 passenger minivan rental at Riverside Auto Rental, Black River Falls WI" loading="lazy">
           </div>
           <div class="vehicle-card__body">
@@ -352,6 +370,7 @@
           <tbody>
             <tr><td><strong>Intermediate Car</strong></td><td class="price">$55/day</td><td class="price">$75/day</td><td class="price">$330/week</td><td class="price">$450/week</td></tr>
             <tr><td><strong>Full-Size Car</strong></td><td class="price">$65/day</td><td class="price">$85/day</td><td class="price">$390/week</td><td class="price">$510/week</td></tr>
+            <tr><td><strong>SUV (Ford Edge)</strong></td><td class="price">$80/day</td><td class="price">$100/day</td><td class="price">$480/week</td><td class="price">$600/week</td></tr>
           </tbody>
         </table>
 
