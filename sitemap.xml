@@ -26,9 +26,21 @@
   </url>
   <url>
     <loc>https://riversideautorental.com/blog/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/family-reunion-van-rental-black-river-falls.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/wisconsin-dells-family-trip-rental-black-river-falls.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://riversideautorental.com/blog/summer-road-trip-rental-vehicle-guide-western-wisconsin.html</loc>
@@ -93,6 +105,12 @@
   <url>
     <loc>https://riversideautorental.com/blog/what-you-need-to-rent-a-car-black-river-falls.html</loc>
     <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/how-to-leave-google-review-small-business.html</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
