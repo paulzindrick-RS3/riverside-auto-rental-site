@@ -16,6 +16,7 @@
 
 - Intermediate Car: $55/day local (100 mi limit), $75/day unlimited; $330/week local, $450/week unlimited
 - Full-Size Car: $65/day local (100 mi limit), $85/day unlimited; $390/week local, $510/week unlimited
+- SUV / AWD (two Ford Edge SUVs, one AWD Subaru Outback): $80/day local (100 mi limit), $100/day unlimited; $480/week local, $600/week unlimited
 - 7 Passenger Minivan: $78/day + $0.10/mile; $450/week unlimited
 - 15 Passenger Van: $135/day + $0.10/mile; $750/week unlimited
 - All weekly van rentals include unlimited mileage
