@@ -19,47 +19,21 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Check for scheduled posts and publish
+      - name: Publish scheduled posts and wire them in
         run: |
-          TODAY=$(date -u +%Y-%m-%d)
-          echo "Today is $TODAY"
-          PUBLISHED=0
-          # Look for any .scheduled files in the blog folder
-          for scheduled_file in blog/*.scheduled; do
-            [ -f "$scheduled_file" ] || continue
-            # Extract publish date from first line. Strip any \r (CRLF safety).
-            PUBLISH_DATE=$(head -1 "$scheduled_file" | tr -d '\r' | grep "PUBLISH_DATE:" | cut -d' ' -f2)
-            if [ -z "$PUBLISH_DATE" ]; then
-              echo "No publish date found in $scheduled_file, skipping."
-              continue
-            fi
-            echo "Found scheduled post: $scheduled_file (publish date: $PUBLISH_DATE)"
-            if [[ ! "$PUBLISH_DATE" > "$TODAY" ]]; then
-              # Strip the .scheduled extension to get the real filename
-              REAL_FILE="${scheduled_file%.scheduled}"
-              echo "Publishing: $scheduled_file → $REAL_FILE"
-              # Remove the PUBLISH_DATE header line and save as the real .html file
-              tail -n +2 "$scheduled_file" > "$REAL_FILE"
-              # Remove the .scheduled file
-              rm "$scheduled_file"
-              PUBLISHED=$((PUBLISHED + 1))
-              echo "Published: $REAL_FILE"
-            else
-              echo "Not yet time to publish $scheduled_file (scheduled for $PUBLISH_DATE)"
-            fi
-          done
-          if [ $PUBLISHED -gt 0 ]; then
-            echo "PUBLISHED_COUNT=$PUBLISHED" >> $GITHUB_ENV
-            echo "$PUBLISHED post(s) published today."
-          else
-            echo "No posts ready to publish today."
-          fi
+          # Flips blog/*.scheduled -> .html (strips PUBLISH_DATE header) AND
+          # updates blog/index.html (article card + Coming Soon teaser removal),
+          # sitemap.xml (new <url> entry), and llms.txt (Live Blog Posts line).
+          # Wiring steps are idempotent and non-fatal — a wiring hiccup shows
+          # as a ::warning:: in the run log but never blocks publishing.
+          COUNT_FILE=/tmp/published_count python3 .github/workflows/wire_in_posts.py
+          echo "PUBLISHED_COUNT=$(cat /tmp/published_count)" >> $GITHUB_ENV
       - name: Commit and push published posts
         if: env.PUBLISHED_COUNT > 0
         run: |
           git config user.name "Scheduled Publisher"
           git config user.email "action@github.com"
           git add -A
-          git commit -m "Auto-publish scheduled post(s) — $(date -u +%Y-%m-%d)"
+          git commit -m "Auto-publish + wire in scheduled post(s) — $(date -u +%Y-%m-%d)"
           git pull --rebase origin main
           git push
