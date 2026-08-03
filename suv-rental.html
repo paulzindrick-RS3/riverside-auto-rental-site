@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--
+  Riverside Auto Rental — SUV & AWD Rental (NEW MONEY PAGE)
+  =========================================================
+  Drop-in file for site root: /suv-rental.html
+  Uses the live site's styles.css class vocabulary (header, section,
+  vehicle-card, faq-item, call-banner, etc.) so it inherits the real
+  design with no extra CSS beyond the small inline block below.
+
+  DEPLOY NOTES FOR PAUL:
+  - Upload to site root alongside index/fleet/contact.
+  - Update the footer "SUV & AWD Rental" link site-wide from /fleet
+    to /suv-rental.html when convenient (this page's own footer
+    already points here).
+  - JSON-LD provider references the single business entity
+    "@id": "https://riversideautorental.com/#business" (same as the
+    homepage) to keep entity recognition consolidated.
+  - geo meta uses the real GBP pin (44.2837, -90.8662). The homepage
+    still carries the old 44.2952/-90.8512 coords - worth aligning.
+  - Add to sitemap.xml.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://riversideautorental.com/suv-rental.html">
+  <title>SUV &amp; AWD Rental Black River Falls WI | Riverside Auto Rental</title>
+  <meta name="description" content="Rent an SUV or AWD vehicle in Black River Falls, WI from $80/day. Ford Edge SUVs and an all-wheel-drive Subaru Outback for winter roads, gravel, and hunting land. Family-owned since 1983.">
+  <meta name="keywords" content="SUV rental Black River Falls WI, AWD rental Wisconsin, all-wheel drive rental near me, Ford Edge rental, Subaru Outback rental, winter car rental Wisconsin, SUV rental Jackson County">
+  <meta name="ICBM" content="44.2837, -90.8662">
+  <meta name="geo.region" content="US-WI">
+  <meta name="geo.placename" content="Black River Falls">
+  <meta name="geo.position" content="44.2837;-90.8662">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Riverside Auto Rental">
+  <meta property="og:title" content="SUV &amp; AWD Rental in Black River Falls, WI | Riverside Auto Rental">
+  <meta property="og:description" content="Ford Edge SUVs and an AWD Subaru Outback from $80/day. Built for Wisconsin winters, gravel roads, and hunting-land access. Family-owned since 1983.">
+  <meta property="og:image" content="https://riversideautorental.com/images/suv-awd-rental-ford-edge-subaru-outback-black-river-falls.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://riversideautorental.com/suv-rental.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SUV &amp; AWD Rental in Black River Falls, WI">
+  <meta name="twitter:description" content="Ford Edge SUVs and an AWD Subaru Outback from $80/day. Family-owned since 1983.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .rates-table { width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; }
+    .rates-table th, .rates-table td { padding:14px 18px; text-align:left; border-bottom:1px solid #e4e8ef; }
+    .rates-table th { background:#304B78; color:#fff; font-weight:700; }
+    .rates-table tr:last-child td { border-bottom:none; }
+    .rates-note { max-width:760px; margin:16px auto 0; font-size:0.9rem; color:#5a6478; text-align:center; }
+    @media (max-width:600px) { .rates-table th, .rates-table td { padding:10px 12px; font-size:0.92rem; } }
+  </style>
+
+  <!-- ============ JSON-LD: Service (single-entity provider) ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://riversideautorental.com/suv-rental.html#service",
+    "name": "SUV and AWD Vehicle Rental",
+    "serviceType": "SUV rental",
+    "url": "https://riversideautorental.com/suv-rental.html",
+    "provider": {
+      "@type": "AutoRental",
+      "@id": "https://riversideautorental.com/#business",
+      "name": "Riverside Auto Rental",
+      "telephone": "+1-715-396-1466",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "N5856 Wi-54",
+        "addressLocality": "Black River Falls",
+        "addressRegion": "WI",
+        "postalCode": "54615",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 44.2837, "longitude": -90.8662 }
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Black River Falls", "sameAs": "https://en.wikipedia.org/wiki/Black_River_Falls,_Wisconsin" },
+      { "@type": "AdministrativeArea", "name": "Jackson County, WI" },
+      { "@type": "City", "name": "Tomah, WI" },
+      { "@type": "City", "name": "Sparta, WI" },
+      { "@type": "City", "name": "Neillsville, WI" }
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Ford Edge SUV rental" },
+        "priceCurrency": "USD",
+        "price": "80",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "80", "priceCurrency": "USD", "unitText": "per day, from" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "All-wheel-drive Subaru Outback rental" },
+        "priceCurrency": "USD",
+        "price": "80",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "80", "priceCurrency": "USD", "unitText": "per day, from" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ============ JSON-LD: FAQPage ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I rent an SUV in Black River Falls, WI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Riverside Auto Rental keeps two Ford Edge SUVs and an all-wheel-drive Subaru Outback in its Black River Falls fleet, with SUV and AWD rentals starting at $80 per day. Call 715-396-1466 to reserve."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you rent all-wheel-drive vehicles for Wisconsin winter driving?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The AWD Subaru Outback and Ford Edge SUVs are popular choices for snow, ice, and winter travel on I-94 and rural western Wisconsin roads."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I take a rental SUV on gravel roads or to hunting land?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. SUV and AWD rentals are frequently used for gravel access to hunting land and rural properties around Jackson County and the Black River State Forest area."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do daily SUV rentals include mileage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SUVs are available with a local daily rate that includes 100 miles per day, or an unlimited-mileage daily rate. Weekly rentals of 7 days or more include unlimited mileage at a flat rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I need to rent an SUV from Riverside Auto Rental?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three things: a valid driver's license, a major credit card or bank-issued debit card linked to a checking account, and proof of auto insurance showing your policy number and expiration date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get an SUV as an insurance replacement vehicle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Riverside Auto Rental works directly with insurance adjusters and body shops across western Wisconsin. Ask your adjuster about an SUV or AWD replacement while your vehicle is being repaired."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ============ JSON-LD: Breadcrumbs ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://riversideautorental.com/"},
+      {"@type": "ListItem", "position": 2, "name": "SUV & AWD Rental", "item": "https://riversideautorental.com/suv-rental.html"}
+    ]
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDMLSNJ4B9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EDMLSNJ4B9');
+  </script>
+</head>
+<body>
+
+<header class="header" id="header">
+<div class="container header__inner">
+<a href="/" class="header__logo" aria-label="Riverside Auto Rental - Home">
+<img src="images/logo.png" alt="Riverside Auto Rental logo – Established 1983, Black River Falls, Wisconsin" width="180" height="50">
+</a>
+<nav class="header__nav" id="mainNav" aria-label="Main navigation">
+<a href="/">Home</a>
+<a href="/fleet">Fleet &amp; Rates</a>
+<a href="/contact.html">Contact</a>
+<a href="/blog/">Blog</a>
+</nav>
+<div class="header__cta">
+<a href="tel:+17153961466" class="header__phone" aria-label="Call Riverside Auto Rental at 715-396-1466">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+715-396-1466
+</a>
+<a href="tel:+17153961466" class="btn btn--primary">Call to Reserve</a>
+</div>
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+<div class="container hero__grid">
+<div class="hero__content">
+<p class="hero__label">Black River Falls, Wisconsin</p>
+<h1>SUV &amp; AWD Rental Built for Wisconsin Roads</h1>
+<p class="hero__text">Ford Edge SUVs and an all-wheel-drive Subaru Outback from $80/day. Snow, ice, gravel, and hunting-land access — rented from the family that's served Black River Falls since 1983.</p>
+<div class="hero__actions">
+<a href="tel:+17153961466" class="btn btn--primary btn--large">Call to Reserve</a>
+<a href="/fleet" class="btn btn--outline btn--large">See Full Fleet &amp; Rates</a>
+</div>
+</div>
+<div class="hero__plate">
+<img src="images/suv-awd-rental-ford-edge-subaru-outback-black-river-falls.jpg" alt="Ford Edge SUV and all-wheel-drive Subaru Outback available to rent at Riverside Auto Rental in Black River Falls, WI" loading="eager">
+</div>
+</div>
+</section>
+
+<div class="trust-bar">
+<div class="container trust-bar__inner">
+<div class="trust-bar__item">Family-Owned Since 1983</div>
+<div class="trust-bar__item">AWD Available Year-Round</div>
+<div class="trust-bar__item">100 Mi/Day or Unlimited Mileage</div>
+<div class="trust-bar__item">Insurance Replacements</div>
+</div>
+</div>
+
+<!-- ============ SUV FLEET ============ -->
+<section class="section">
+<div class="container">
+<p class="section-label">The SUV &amp; AWD Fleet</p>
+<h2 class="section-title">Two Ford Edges. One AWD Outback. Zero Airport Markup.</h2>
+<p class="section-subtitle">Every SUV and AWD vehicle is maintained on-site and ready for whatever western Wisconsin throws at it.</p>
+<div class="grid-3">
+
+<div class="vehicle-card">
+<div class="vehicle-card__image">
+<img src="images/suv-awd-rental-ford-edge-subaru-outback-black-river-falls.jpg" alt="Ford Edge SUV rental in Black River Falls, WI" loading="lazy">
+</div>
+<div class="vehicle-card__body">
+<h3 class="vehicle-card__title">Ford Edge SUV</h3>
+<div class="vehicle-card__specs">
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+5 Passengers
+</div>
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3h-8l-2 4h12z"/></svg>
+Extra Cargo Room
+</div>
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+Automatic
+</div>
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+Two in Fleet
+</div>
+</div>
+<div class="vehicle-card__price">From $80 <span>/ day</span></div>
+</div>
+</div>
+
+<div class="vehicle-card">
+<div class="vehicle-card__image">
+<img src="images/suv-awd-rental-ford-edge-subaru-outback-black-river-falls.jpg" alt="All-wheel-drive Subaru Outback rental in Black River Falls, WI" loading="lazy">
+</div>
+<div class="vehicle-card__body">
+<h3 class="vehicle-card__title">Subaru Outback AWD</h3>
+<div class="vehicle-card__specs">
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+5 Passengers
+</div>
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3h-8l-2 4h12z"/></svg>
+Full-Time AWD
+</div>
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+Automatic
+</div>
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+Winter Favorite
+</div>
+</div>
+<div class="vehicle-card__price">From $80 <span>/ day</span></div>
+</div>
+</div>
+
+<div class="vehicle-card">
+<div class="vehicle-card__image">
+<img src="images/car-fullsize.jpg" alt="Full-size rental car alternative at Riverside Auto Rental in Black River Falls, WI" loading="lazy">
+</div>
+<div class="vehicle-card__body">
+<h3 class="vehicle-card__title">Need Something Smaller?</h3>
+<div class="vehicle-card__specs">
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+Intermediate &amp; Full-Size Cars
+</div>
+<div class="vehicle-card__spec">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+Up to 37 MPG
+</div>
+</div>
+<div class="vehicle-card__price">From $55 <span>/ day</span></div>
+<p style="margin-top:12px;"><a href="/fleet">Compare the full fleet →</a></p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ============ WHY SUV / AWD HERE ============ -->
+<section class="section section--gray">
+<div class="container">
+<p class="section-label">Why Rent an SUV Here</p>
+<h2 class="section-title">When Western Wisconsin Calls for More Than a Sedan</h2>
+<div class="need-cards">
+
+<div class="need-card">
+<h3>Winter Driving on I-94 and County Roads</h3>
+<p>Lake-effect snow, black ice, and drifting on open stretches between Black River Falls, Tomah, and Osseo. AWD and higher ground clearance make the difference from November through March.</p>
+</div>
+
+<div class="need-card">
+<h3>Gravel Access to Hunting Land</h3>
+<p>Gun deer season fills Jackson County every November. An SUV handles the gravel and dirt access roads to hunting land and cabins around the Black River State Forest without worry.</p>
+</div>
+
+<div class="need-card">
+<h3>Trail &amp; Forest Visitors</h3>
+<p>Heading to the Black River State Forest, area campgrounds, or ATV trailheads? Extra cargo room swallows gear, coolers, and muddy boots that a sedan trunk can't.</p>
+</div>
+
+<div class="need-card">
+<h3>Insurance Replacement Upgrades</h3>
+<p>If your SUV or truck is in the body shop, ask your adjuster about a comparable replacement. We work directly with adjusters and shops across western Wisconsin.</p>
+<a href="/blog/insurance-replacement-rental-cars-black-river-falls.html">How insurance replacement rentals work →</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ============ RATES ============ -->
+<section class="section">
+<div class="container">
+<p class="section-label">Straightforward Rates</p>
+<h2 class="section-title">SUV &amp; AWD Rental Rates</h2>
+<table class="rates-table">
+<tr><th>Rate Option</th><th>Price</th><th>Mileage</th></tr>
+<tr><td>Daily — Local</td><td>From $80 / day</td><td>100 miles per day included</td></tr>
+<tr><td>Daily — Unlimited</td><td>Call for rate</td><td>Unlimited mileage</td></tr>
+<tr><td>Weekly (7+ days)</td><td>Flat weekly rate — call</td><td>Unlimited mileage included</td></tr>
+</table>
+<p class="rates-note">No airport fees, no surge pricing, no call center. Rates confirmed when you reserve at 715-396-1466. See the <a href="/blog/daily-vs-weekly-car-rental-rates.html">daily vs. weekly rates breakdown</a> to pick the right option.</p>
+</div>
+</section>
+
+<!-- ============ LOCAL VS CHAIN ============ -->
+<section class="section section--gray">
+<div class="container text-center">
+<p class="section-label">Local, Not Chain</p>
+<h2 class="section-title">The Same Family, the Same Phone Number, Since 1983</h2>
+<p class="section-subtitle">Riverside Auto Rental shares its Highway 54 location with Riverside Auto Sales — one building, one family, four decades in Black River Falls. Renters from <a href="/locations/tomah.html">Tomah</a>, <a href="/locations/sparta.html">Sparta</a>, <a href="/locations/neillsville.html">Neillsville</a>, <a href="/locations/warrens.html">Warrens</a>, <a href="/locations/melrose.html">Melrose</a>, and <a href="/locations/osseo.html">Osseo</a> drive past the chains to pick up here.</p>
+<a href="/rent-local" class="btn btn--secondary">Why Rent Local, Not Chain</a>
+</div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+<div class="container">
+<p class="section-label">SUV Rental Questions</p>
+<h2 class="section-title">SUV &amp; AWD Rental FAQs</h2>
+<div class="faq-list">
+
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+Can I rent an SUV in Black River Falls, WI?
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-answer">
+<p>Yes. We keep two Ford Edge SUVs and an all-wheel-drive Subaru Outback in the fleet, starting at $80/day. Call 715-396-1466 to reserve.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+Do you rent all-wheel-drive vehicles for winter driving?
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-answer">
+<p>Yes. The AWD Subaru Outback and Ford Edge SUVs are the vehicles our renters ask for when snow and ice hit I-94 and the county roads around Jackson County.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+Can I take a rental SUV on gravel roads or to hunting land?
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-answer">
+<p>Yes. SUV and AWD rentals are regularly used for gravel access to hunting land and rural properties around the Black River State Forest area — especially during deer season.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+Do daily SUV rentals include mileage?
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-answer">
+<p>SUVs come with a local daily rate that includes 100 miles per day, or an unlimited-mileage daily rate. Weekly rentals of 7 days or more include unlimited mileage at a flat rate.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+What do I need to rent an SUV?
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-answer">
+<p>Three things: a valid driver's license, a major credit card or bank-issued debit card linked to a checking account, and proof of auto insurance. First time renting? Read the <a href="/blog/what-you-need-to-rent-a-car-black-river-falls.html">first-timer's guide</a>.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+Can I get an SUV as an insurance replacement?
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-answer">
+<p>Yes. We work directly with insurance adjusters and body shops across western Wisconsin. Ask your adjuster about a comparable SUV or AWD replacement while your vehicle is repaired.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section section--gray">
+<div class="container text-center">
+<h2 class="section-title">Reserve Your SUV or AWD Vehicle</h2>
+<p class="section-subtitle">Open Mon–Fri 8am–5pm, Saturday 8am–Noon, Sunday by appointment. N5856 Wi-54, Black River Falls — right off Highway 54 near I-94.</p>
+<a href="tel:+17153961466" class="btn btn--primary btn--large">Call to Reserve — 715-396-1466</a>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<div class="footer__grid">
+<div class="footer__brand">
+<img src="images/logo.png" alt="Riverside Auto Rental" width="160" height="44">
+<p>Family-owned car rental serving Black River Falls and western Wisconsin since 1983. Cars, SUVs, minivans, and large passenger vans for daily, weekly, long-term, and insurance replacement needs.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul class="footer__links">
+<li><a href="/">Home</a></li>
+<li><a href="/fleet">Fleet &amp; Rates</a></li>
+<li><a href="/contact.html">Contact &amp; About</a></li>
+<li><a href="/blog/">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4>Services</h4>
+<ul class="footer__links">
+<li><a href="/fleet">Daily Rentals</a></li>
+<li><a href="/fleet">Weekly Rentals</a></li>
+<li><a href="/suv-rental.html">SUV &amp; AWD Rental</a></li>
+<li><a href="/contact.html">Long-Term Rentals</a></li>
+<li><a href="/blog/insurance-replacement-rental-cars-black-river-falls.html">Insurance Replacement</a></li>
+<li><a href="/van-rental.html">Passenger Van Rental</a></li>
+</ul>
+</div>
+<div>
+<h4>Locations Served</h4>
+<ul class="footer__links">
+<li><a href="/locations/">All Locations</a></li>
+<li><a href="/locations/tomah.html">Tomah, WI</a></li>
+<li><a href="/locations/sparta.html">Sparta, WI</a></li>
+<li><a href="/locations/neillsville.html">Neillsville, WI</a></li>
+<li><a href="/locations/warrens.html">Warrens, WI</a></li>
+<li><a href="/locations/melrose.html">Melrose, WI</a></li>
+<li><a href="/locations/osseo.html">Osseo, WI</a></li>
+</ul>
+</div>
+<div>
+<h4>Contact</h4>
+<ul class="footer__links">
+<li><a href="tel:+17153961466">715-396-1466</a></li>
+<li><a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a></li>
+<li>N5856 Wi-54<br>Black River Falls, WI 54615</li>
+</ul>
+</div>
+</div>
+<div class="footer__bottom">
+<span>&copy; 2026 Riverside Auto Rental. All rights reserved.</span>
+<span>Established 1983 &middot; Black River Falls, Wisconsin</span>
+</div>
+</div>
+</footer>
+
+<div class="call-banner">
+<a href="tel:+17153961466">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+Call to Reserve — 715-396-1466
+</a>
+</div>
+
+<div id="sms-bubble">
+<a href="sms:+17153961466" aria-label="Text Riverside Auto Rental">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+Text Us
+</a>
+</div>
+<style>
+#sms-bubble{position:fixed;right:20px;bottom:24px;z-index:9998;}
+#sms-bubble a{display:flex;align-items:center;gap:10px;background:#304B78;color:#fff;text-decoration:none;padding:13px 20px;border-radius:50px;box-shadow:0 4px 18px rgba(48,75,120,0.45);font-family:'Archivo',sans-serif;font-weight:700;font-size:0.9rem;line-height:1;border:2px solid rgba(255,255,255,0.15);transition:transform 0.2s,box-shadow 0.2s;}
+#sms-bubble a:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(48,75,120,0.5);}
+#sms-bubble svg{flex-shrink:0;}
+@media(max-width:768px){#sms-bubble{bottom:72px;right:16px;}}
+</style>
+
+<script>
+(function(){
+var a=document.getElementById("menuToggle"),b=document.getElementById("mainNav");
+if(a&&b){
+a.onclick=function(){
+if(b.className.indexOf("open")===-1){b.className+=" open";a.className+=" active";a.setAttribute("aria-expanded","true")}
+else{b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}
+};
+var c=b.getElementsByTagName("a");
+for(var i=0;i<c.length;i++){c[i].onclick=function(){b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}}
+}
+var h=document.getElementById("header");
+if(h){window.onscroll=function(){if(window.scrollY>20){if(h.className.indexOf("scrolled")===-1)h.className+=" scrolled"}else{h.className=h.className.replace(" scrolled","")}}}
+var f=document.getElementsByClassName("faq-question");
+for(var j=0;j<f.length;j++){
+f[j].onclick=function(){
+var p=this.parentElement;var x=p.className.indexOf("active")!==-1;
+var all=document.getElementsByClassName("faq-item");
+for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}
+if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}
+}
+}
+})();
+</script>
+
+</body>
+</html>
