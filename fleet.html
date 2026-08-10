@@ -25,8 +25,8 @@
   <!-- Geo Tags -->
   <meta name="geo.region" content="US-WI">
   <meta name="geo.placename" content="Black River Falls">
-  <meta name="geo.position" content="44.2952;-90.8512">
-  <meta name="ICBM" content="44.2952, -90.8512">
+  <meta name="geo.position" content="44.2837;-90.8662">
+  <meta name="ICBM" content="44.2837, -90.8662">
 
   <!-- Performance: Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,8 +75,8 @@
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 44.2952,
-      "longitude": -90.8512
+      "latitude": 44.2837,
+      "longitude": -90.8662
     },
     "areaServed": [
       {"@type": "City", "name": "Black River Falls", "sameAs": "https://en.wikipedia.org/wiki/Black_River_Falls,_Wisconsin"},
@@ -169,7 +169,8 @@
       {"@type": "Question", "name": "Do you offer weekly rental discounts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Weekly rentals (7 days or more) are flat rate. Cars are offered in two tiers: Intermediate $330/week local (100 mi/day) or $450/week unlimited; Full-size $390/week local (100 mi/day) or $510/week unlimited; SUV/AWD $480/week local (100 mi/day) or $600/week unlimited. Van weekly rates include unlimited mileage: 7-passenger minivan $450/week and 15-passenger van $750/week."}},
       {"@type": "Question", "name": "How much does it cost to rent a 15-passenger van in Wisconsin?", "acceptedAnswer": {"@type": "Answer", "text": "The 15-passenger van rents for $135 per day plus $0.10 per mile. The weekly rate is $750 with unlimited mileage."}},
       {"@type": "Question", "name": "Is a security deposit required to rent a car at Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Local renters pay a $300 deposit. Out-of-town renters pay a $500 deposit. The deposit can be placed on a credit card or debit card."}},
-      {"@type": "Question", "name": "Is there a credit or debit card surcharge at Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A 3% processing fee applies to all credit card and debit card transactions. The fee is passed through and itemized on your final receipt."}}
+      {"@type": "Question", "name": "Is there a credit card surcharge at Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "A 3% surcharge applies to credit card transactions. It is disclosed before your payment is processed and itemized on your receipt. Debit cards and prepaid cards are not surcharged."}},
+      {"@type": "Question", "name": "Can I use a debit card to rent a car at Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Debit cards are accepted for both deposits and final payment, and no surcharge applies to debit transactions. Debit card deposit holds may take 3 to 7 business days to release after the rental ends, depending on your bank."}}
     ]
   }
   </script>
@@ -515,22 +516,23 @@
         <p>You may use a credit card or a debit card for your security deposit. However, if you choose to use a <strong>debit card</strong>, please be aware that the deposit amount will be authorized and held against your active bank balance.</p>
         <p>When the rental is completed and Riverside Auto Rental releases the deposit, <strong>the funds will not be immediately available in your account.</strong> The time it takes for the hold to clear depends entirely on your financial institution's processing times (typically 3 to 7 business days). Riverside Auto Rental has no control over how quickly your bank releases these funds.</p>
 
-        <h3 style="margin-top:32px;margin-bottom:16px;">Card Processing Fee Policy</h3>
+        <h3 style="margin-top:32px;margin-bottom:16px;">Credit Card Surcharge Policy</h3>
         <div style="padding:24px;background:var(--navy-wash);border-radius:var(--radius-md);border-left:4px solid var(--navy);margin-bottom:24px;">
-          <p style="font-family:'Archivo',sans-serif;font-weight:700;font-size:1.1rem;color:var(--charcoal);margin-bottom:8px;">3% processing fee on all credit and debit card transactions</p>
-          <p style="font-size:0.95rem;color:var(--text);margin-bottom:0;">This fee covers the processing costs imposed by card networks and applies to all payments, extensions, and final settlements made by credit card or debit card. The fee is passed through directly to the customer and will be itemized on your final receipt.</p>
+          <p style="font-family:'Archivo',sans-serif;font-weight:700;font-size:1.1rem;color:var(--charcoal);margin-bottom:8px;">3% surcharge on credit card transactions only</p>
+          <p style="font-size:0.95rem;color:var(--text);margin-bottom:0;">A 3% surcharge applies to credit card payments, including deposits, extensions, and final settlement. The surcharge is disclosed before the transaction is processed and appears as a separate line item on your receipt.</p>
         </div>
 
-        <p>The 3% fee applies equally to credit and debit cards — there is no debit-card exemption. The fee is the actual processor cost passed through to the customer, with no markup.</p>
+        <p><strong>Debit cards and prepaid cards are never surcharged.</strong> This includes a debit card run as "credit" at the terminal — if the card is tied to a checking account, no surcharge applies. There is no fee to pay by debit, cash, or check.</p>
 
         <h3 style="margin-top:32px;margin-bottom:16px;">Quick Summary</h3>
         <table class="rate-table" style="margin-bottom:24px;">
           <thead>
-            <tr><th>Payment Method</th><th>Processing Fee</th><th>Deposit Note</th></tr>
+            <tr><th>Payment Method</th><th>Surcharge</th><th>Deposit Note</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>Credit Card</strong></td><td>3% fee applies</td><td>Deposit released at end of rental</td></tr>
-            <tr><td><strong>Debit Card</strong></td><td>3% fee applies</td><td>Hold on bank balance; 3–7 business days to release</td></tr>
+            <tr><td><strong>Credit Card</strong></td><td>3% surcharge</td><td>Deposit released at end of rental</td></tr>
+            <tr><td><strong>Debit Card</strong></td><td>No surcharge</td><td>Hold on bank balance; 3–7 business days to release</td></tr>
+            <tr><td><strong>Cash or Check</strong></td><td>No surcharge</td><td>Deposit still required</td></tr>
           </tbody>
         </table>
 
@@ -676,12 +678,12 @@
           <div class="faq-answer"><p>Yes. Local renters pay a $300 deposit; out-of-town renters pay a $500 deposit. You can use a credit card or debit card.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Is there a credit or debit card processing fee?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-answer"><p>Yes. A 3% processing fee applies to all credit card and debit card transactions. The fee covers card network processing costs and is passed through and itemized on your final receipt.</p></div>
+          <button class="faq-question" aria-expanded="false">Is there a credit card surcharge?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-answer"><p>A 3% surcharge applies to credit card transactions. It's disclosed before your payment is processed and itemized on your receipt. Debit cards and prepaid cards are not surcharged.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">Can I use a debit card to rent a car?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-answer"><p>Yes. Debit cards are accepted for both deposits and final payment. The same 3% processing fee that applies to credit cards also applies to debit card transactions. Note that debit card deposit holds may take 3–7 business days to release after the rental ends.</p></div>
+          <div class="faq-answer"><p>Yes. Debit cards are accepted for both deposits and final payment, and no surcharge applies to debit transactions. Note that debit card deposit holds may take 3–7 business days to release after the rental ends, depending on your bank.</p></div>
         </div>
       </div>
     </div>
