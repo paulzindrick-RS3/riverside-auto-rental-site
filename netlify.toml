@@ -1,12 +1,40 @@
 [[redirects]]
   from = "/fleet"
   to = "/fleet.html"
+  status = 200
+
+[[redirects]]
+  from = "/fleet.html"
+  to = "/fleet"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/contact"
   to = "/contact.html"
   status = 301
+
+[[redirects]]
+  from = "/blog/same-day-insurance-replacement-rental-black-river-falls"
+  to = "/blog/same-day-insurance-replacement-rental-black-river-falls.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/closer-than-you-think-tomah-sparta-neillsville-car-rental"
+  to = "/blog/closer-than-you-think-tomah-sparta-neillsville-car-rental.html"
+  status = 301
+
+[[redirects]]
+  from = "/README.md"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/blog/*.scheduled"
+  to = "/404"
+  status = 404
+  force = true
 
 [build.processing.html]
   pretty_urls = false
