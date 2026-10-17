@@ -25,6 +25,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://riversideautorental.com/insurance-replacement-rental.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://riversideautorental.com/rent-local</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -38,7 +44,7 @@
   </url>
   <url>
     <loc>https://riversideautorental.com/blog/</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -191,6 +197,18 @@
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/closer-than-you-think-tomah-sparta-neillsville-car-rental.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://riversideautorental.com/blog/same-day-insurance-replacement-rental-black-river-falls.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://riversideautorental.com/blog/7-15-passenger-van-rental-black-river-falls.html</loc>
