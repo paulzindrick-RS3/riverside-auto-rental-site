@@ -21,9 +21,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish scheduled posts and wire them in
         run: |
-          # Flips blog/*.scheduled -> .html (strips PUBLISH_DATE header) AND
-          # updates blog/index.html (article card + Coming Soon teaser removal),
-          # sitemap.xml (new <url> entry), and llms.txt (Live Blog Posts line).
+          # Flips .scheduled/blog/*.html.scheduled -> blog/*.html (strips the
+          # PUBLISH_DATE header; the public date is the run date) AND updates
+          # blog/index.html (article card + Coming Soon teaser removal),
+          # the homepage Latest guides block, sitemap.xml (rebuilt, so /blog/
+          # and / pick up this run's lastmod), and llms.txt (Live Blog Posts line).
           # Wiring steps are idempotent and non-fatal — a wiring hiccup shows
           # as a ::warning:: in the run log but never blocks publishing.
           COUNT_FILE=/tmp/published_count python3 .github/workflows/wire_in_posts.py
