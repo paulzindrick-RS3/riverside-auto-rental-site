@@ -116,7 +116,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 "name": "Do weekly rentals include unlimited miles?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Yes. Local weekly rentals of 7+ days include unlimited mileage, including $450/week for the minivan and $750/week for the 15-passenger van. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate."
+"text": "Yes. Local weekly rentals of 7+ days include unlimited mileage, including $450/week for the minivan and $750/week for the 15-passenger van. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI."
 }
 },
 {
@@ -124,7 +124,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 "name": "Are you open on Thanksgiving?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. We're closed Thanksgiving Day, Thursday, November 26. Pick up by Wednesday. Otherwise we keep normal hours: Monday–Friday 8:00 AM–5:00 PM, Saturday 8:00 AM–noon, and Sunday closed."
+"text": "No. We're closed Thanksgiving Day, Thursday, November 26. Pick up by Wednesday. Otherwise we keep normal hours: Monday–Friday 8:00 AM–5:00 PM, Saturday 8:00 AM–noon, and Sunday closed. After-hours drop-off returns are available."
 }
 },
 {
@@ -182,9 +182,9 @@ gtag('config', 'G-EDMLSNJ4B9');
 <li><strong>The whole extended family to one table:</strong> the <a href="15-passenger-van-rental-cost-black-river-falls.html" style="color:var(--navy);font-weight:600;">15-passenger van</a> ($135/day + $0.10/mile).</li>
 </ul>
 <h2>Take the whole week</h2>
-<p>Holiday trips have a way of stretching &mdash; Wednesday pickup, Black Friday errands, the Sunday drive home. Local weekly rates include unlimited mileage: $450/week for the minivan, $750/week for the 15-passenger van, and $390/week for a full-size car. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. See <a href="weekly-car-rental-rates-when-7-days-beats-daily.html" style="color:var(--navy);font-weight:600;">when weekly beats daily</a>.</p>
+<p>Holiday trips have a way of stretching &mdash; Wednesday pickup, Black Friday errands, the Sunday drive home. Local weekly rates include unlimited mileage: $450/week for the minivan, $750/week for the 15-passenger van, and $390/week for a full-size car. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI. See <a href="weekly-car-rental-rates-when-7-days-beats-daily.html" style="color:var(--navy);font-weight:600;">when weekly beats daily</a>.</p>
 <h2>Plan around holiday hours</h2>
-<p><strong>We're closed Thanksgiving Day, Thursday, November 26.</strong> Plan to pick up by Wednesday, and set a return for Friday or later. The rest of the week we're on our normal hours: Monday&ndash;Friday 8:00 AM&ndash;5:00 PM, Saturday 8:00 AM&ndash;noon, and Sunday closed. Line up your pickup and return times when you book and we'll make it work.</p>
+<p><strong>We're closed Thanksgiving Day, Thursday, November 26.</strong> Plan to pick up by Wednesday, and set a return for Friday or later. The rest of the week we're on our normal hours: Monday&ndash;Friday 8:00 AM&ndash;5:00 PM, Saturday 8:00 AM&ndash;noon, and Sunday closed. After-hours drop-off returns are available. Line up your pickup and return times when you book and we'll make it work.</p>
 <h2>Book now, not Tuesday</h2>
 <p>The 15-passenger van and the AWD Outback are one-of-a-kind in our fleet, and both are in demand from hunters the same week. The week before Thanksgiving is too late for either. Call now and it's handled.</p>
 <p><strong>Call or text 715-396-1466</strong> &mdash; family-owned in Black River Falls since 1983. Happy Thanksgiving from the Riverside crew.</p>
@@ -201,13 +201,13 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">Do weekly rentals include unlimited miles?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>Yes. Local weekly rentals of 7+ days include unlimited mileage, including $450/week for the minivan and $750/week for the 15-passenger van. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate.</p></div>
+<div class="faq-answer"><p>Yes. Local weekly rentals of 7+ days include unlimited mileage, including $450/week for the minivan and $750/week for the 15-passenger van. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Are you open on Thanksgiving?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>No. We're closed Thanksgiving Day, Thursday, November 26. Pick up by Wednesday. Otherwise we keep normal hours: Monday&ndash;Friday 8:00 AM&ndash;5:00 PM, Saturday 8:00 AM&ndash;noon, and Sunday closed.</p></div>
+<div class="faq-answer"><p>No. We're closed Thanksgiving Day, Thursday, November 26. Pick up by Wednesday. Otherwise we keep normal hours: Monday&ndash;Friday 8:00 AM&ndash;5:00 PM, Saturday 8:00 AM&ndash;noon, and Sunday closed. After-hours drop-off returns are available.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">What's the best rental for a big family Thanksgiving?

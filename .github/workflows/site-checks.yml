@@ -1,0 +1,18 @@
+name: Site checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # lastmod is compared to git history; a shallow checkout would
+          # date every file to the tip commit.
+          fetch-depth: 0
+      - name: Sitemap, canonicals, and llms.txt
+        run: python3 scripts/check_site.py

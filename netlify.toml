@@ -13,16 +13,30 @@
   from = "/contact"
   to = "/contact.html"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/rent-local"
+  to = "/rent-local.html"
+  status = 200
+
+[[redirects]]
+  from = "/rent-local.html"
+  to = "/rent-local"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/blog/same-day-insurance-replacement-rental-black-river-falls"
   to = "/blog/same-day-insurance-replacement-rental-black-river-falls.html"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/blog/closer-than-you-think-tomah-sparta-neillsville-car-rental"
   to = "/blog/closer-than-you-think-tomah-sparta-neillsville-car-rental.html"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/README.md"
@@ -30,8 +44,10 @@
   status = 404
   force = true
 
+# Drafts live in .scheduled/ and must not be served. The splat is at the
+# end of the path, which is the form Netlify actually matches.
 [[redirects]]
-  from = "/blog/*.scheduled"
+  from = "/.scheduled/*"
   to = "/404"
   status = 404
   force = true
