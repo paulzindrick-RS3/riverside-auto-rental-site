@@ -43,15 +43,16 @@ Full local-vs-chain comparison: https://riversideautorental.com/rent-local
 
 ## Rental Requirements
 
+- Renters must be 25 or older
 - Valid U.S. driver's license
 - Major credit card or bank-issued debit card linked to checking account
 - Proof of auto insurance with policy number and expiration date
 
 ## Hours
 
-- Monday–Friday: 8:00 AM – 5:00 PM
-- Saturday: 8:00 AM – 12:00 PM (noon)
-- Sunday: Closed / By Appointment Only
+- Monday–Friday: 8:00 AM–5:00 PM
+- Saturday: 8:00 AM–noon
+- Sunday: Closed
 
 ## Location
 
