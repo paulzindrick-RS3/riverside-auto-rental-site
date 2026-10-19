@@ -19,6 +19,8 @@ PINNED = [
     f"{SITE}/fleet",
     f"{SITE}/suv-rental.html",
     f"{SITE}/van-rental.html",
+    f"{SITE}/full-size-car-rental.html",
+    f"{SITE}/young-driver-car-rental.html",
     f"{SITE}/insurance-replacement-rental.html",
     f"{SITE}/rent-local",
     f"{SITE}/contact.html",
