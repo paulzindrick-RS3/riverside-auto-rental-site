@@ -16,3 +16,5 @@ jobs:
           fetch-depth: 0
       - name: Sitemap, canonicals, and llms.txt
         run: python3 scripts/check_site.py
+      - name: Scheduled publish does not restamp unchanged lastmods
+        run: python3 scripts/test_publish_lastmod.py
