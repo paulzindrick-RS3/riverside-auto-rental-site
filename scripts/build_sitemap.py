@@ -5,10 +5,18 @@ lastmod is the file's last git commit date. A dirty or untracked file uses
 today (or $PUBLISH_TODAY), so a publish that edits the homepage and /blog/
 records that run's date before the commit. changefreq and priority are kept
 from the current sitemap when the URL already exists.
+
+A depth-1 checkout hides parent commits, so the tip looks like it added
+every file and git log dates unchanged pages to that tip. That is what
+stamped 2026-10-20 on 37 unchanged URLs (commit 055eb40). A date that
+comes only from a shallow boundary is ignored; the lastmod already in
+sitemap.xml is kept. The publisher checks out full history so a real
+edit still records that commit's date.
 """
 import os
 import re
 import subprocess
+import sys
 from datetime import date
 
 SITE = "https://riversideautorental.com"
@@ -59,6 +67,60 @@ def iter_html():
                 yield os.path.normpath(os.path.join(root, name))
 
 
+_sitemap_lastmods = None
+
+
+def sitemap_lastmods(path="sitemap.xml"):
+    found = {}
+    if not os.path.exists(path):
+        return found
+    text = open(path, encoding="utf-8").read()
+    for block in re.findall(r"<url>(.*?)</url>", text, re.S):
+        loc = re.search(r"<loc>(.*?)</loc>", block)
+        last = re.search(r"<lastmod>(.*?)</lastmod>", block)
+        if loc and last:
+            found[loc.group(1).strip()] = last.group(1).strip()
+    return found
+
+
+_shallow_commits = None
+
+
+def reset_sitemap_lastmod_cache():
+    global _sitemap_lastmods, _shallow_commits
+    _sitemap_lastmods = None
+    _shallow_commits = None
+
+
+def shallow_boundary_commits():
+    """Commits whose parents were not fetched. They are not real edits of every file."""
+    global _shallow_commits
+    if _shallow_commits is not None:
+        return _shallow_commits
+    path = subprocess.check_output(
+        ["git", "rev-parse", "--git-path", "shallow"], text=True
+    ).strip()
+    if not path or not os.path.isfile(path):
+        _shallow_commits = set()
+        return _shallow_commits
+    _shallow_commits = {
+        line.strip() for line in open(path, encoding="utf-8") if line.strip()
+    }
+    return _shallow_commits
+
+
+def preserved_lastmod(path):
+    """lastmod already published for this file, when git history is missing."""
+    global _sitemap_lastmods
+    if _sitemap_lastmods is None:
+        _sitemap_lastmods = sitemap_lastmods()
+    text = open(path, encoding="utf-8").read()
+    cans = canonicals(text)
+    if len(cans) != 1:
+        return ""
+    return _sitemap_lastmods.get(cans[0], "")
+
+
 def git_lastmod(path):
     status = subprocess.check_output(
         ["git", "status", "--porcelain", "--", path], text=True
@@ -66,10 +128,23 @@ def git_lastmod(path):
     if status.strip():
         return today_iso()
     log = subprocess.check_output(
-        ["git", "log", "-1", "--format=%cs", "--", path], text=True
+        ["git", "log", "-1", "--format=%H %cs", "--", path], text=True
     ).strip()
     if log:
-        return log
+        commit, day = log.split()
+        # A shallow boundary lists every file as added in the tip commit.
+        # That date is not evidence the page changed.
+        if commit not in shallow_boundary_commits():
+            return day
+    kept = preserved_lastmod(path)
+    if kept:
+        print(
+            f"sitemap lastmod: shallow history does not show when {path} last changed; keeping {kept}",
+            file=sys.stderr,
+        )
+        return kept
+    if log:
+        return log.split()[1]
     return date.fromtimestamp(os.path.getmtime(path)).isoformat()
 
 
@@ -174,6 +249,7 @@ def render(pages, meta):
 
 
 def main():
+    reset_sitemap_lastmod_cache()
     pages = sort_pages(collect())
     xml = render(pages, load_meta())
     with open("sitemap.xml", "w", encoding="utf-8", newline="\n") as f:

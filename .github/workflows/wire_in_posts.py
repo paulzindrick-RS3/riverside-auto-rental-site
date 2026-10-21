@@ -10,8 +10,12 @@ the homepage Latest guides block, sitemap.xml, and llms.txt. Run from repo root.
   matching Coming Soon teaser (matched by post <h1> == teaser <h4>, with a
   word-subset fallback).
 - Refreshes the homepage Latest guides list from the first six blog cards.
-- Regenerates sitemap.xml so the new post, /blog/, and the homepage share
-  this run's lastmod.
+- Regenerates sitemap.xml. The new post, /blog/, and the homepage get this
+  run's date because their content changed. Every other URL keeps the
+  lastmod check_site.py expects: that page's last git commit date. A
+  depth-1 checkout makes the tip look like it added every file; a date
+  that comes only from that shallow boundary is ignored and the existing
+  lastmod is kept.
 - Adds a line under "## Live Blog Posts" in llms.txt.
 All wiring steps are idempotent (skipped if the slug is already present) and
 non-fatal: a wiring failure prints ::warning:: but never blocks publishing.
