@@ -38,6 +38,19 @@
   status = 301
   force = true
 
+# Duplicate of /van-rental.html. The post used the same title and old weekly rates.
+[[redirects]]
+  from = "/blog/7-15-passenger-van-rental-black-river-falls"
+  to = "/van-rental.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/7-15-passenger-van-rental-black-river-falls.html"
+  to = "/van-rental.html"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/README.md"
   to = "/404"
