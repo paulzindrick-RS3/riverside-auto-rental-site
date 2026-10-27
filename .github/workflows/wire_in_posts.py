@@ -26,10 +26,10 @@ import html
 import os
 import re
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 
 SITE = "https://riversideautorental.com"
-TODAY = os.environ.get("PUBLISH_TODAY") or date.today().isoformat()
+TODAY = os.environ.get("PUBLISH_TODAY") or datetime.now(timezone.utc).date().isoformat()
 GUIDES_START = "<!-- LATEST_GUIDES:START -->"
 GUIDES_END = "<!-- LATEST_GUIDES:END -->"
 

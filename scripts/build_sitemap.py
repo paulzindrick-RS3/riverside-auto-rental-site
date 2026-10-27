@@ -17,7 +17,7 @@ import os
 import re
 import subprocess
 import sys
-from datetime import date
+from datetime import date, datetime, timezone
 
 SITE = "https://riversideautorental.com"
 SKIP_DIRS = {".git", ".github", ".scheduled", "node_modules"}
@@ -46,7 +46,8 @@ LOCATIONS = [
 
 
 def today_iso():
-    return os.environ.get("PUBLISH_TODAY") or date.today().isoformat()
+    # UTC, so a dirty file gets the same day its commit will carry below.
+    return os.environ.get("PUBLISH_TODAY") or datetime.now(timezone.utc).date().isoformat()
 
 
 def canonicals(text):
@@ -127,8 +128,14 @@ def git_lastmod(path):
     )
     if status.strip():
         return today_iso()
+    # %cs is the committer date in the committer's own zone. A GitHub squash
+    # merge is stamped in the merger's zone (-0400), while agent and runner
+    # commits are UTC, so the same instant gave 2026-10-26 on main and
+    # 2026-10-27 on the PR branch. Always read the commit day in UTC.
     log = subprocess.check_output(
-        ["git", "log", "-1", "--format=%H %cs", "--", path], text=True
+        ["git", "log", "-1", "--format=%H %cd", "--date=format-local:%Y-%m-%d", "--", path],
+        text=True,
+        env={**os.environ, "TZ": "UTC"},
     ).strip()
     if log:
         commit, day = log.split()
