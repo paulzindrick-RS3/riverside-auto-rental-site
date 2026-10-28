@@ -12,6 +12,8 @@ jobs:
   publish-scheduled-posts:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      TZ: UTC
     permissions:
       contents: write
     steps:
