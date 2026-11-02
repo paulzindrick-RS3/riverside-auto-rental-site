@@ -26,9 +26,28 @@
   status = 301
   force = true
 
+# Retired posts. Same-day steps and the adjuster/body-shop notes now live on the service page.
 [[redirects]]
   from = "/blog/same-day-insurance-replacement-rental-black-river-falls"
-  to = "/blog/same-day-insurance-replacement-rental-black-river-falls.html"
+  to = "/insurance-replacement-rental.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/same-day-insurance-replacement-rental-black-river-falls.html"
+  to = "/insurance-replacement-rental.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/insurance-replacement-rental-cars-black-river-falls"
+  to = "/insurance-replacement-rental.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/insurance-replacement-rental-cars-black-river-falls.html"
+  to = "/insurance-replacement-rental.html"
   status = 301
   force = true
 
