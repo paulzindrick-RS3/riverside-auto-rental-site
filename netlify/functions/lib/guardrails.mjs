@@ -332,6 +332,16 @@ function confirmsBooking(text) {
   return /\b(you(?:'re| are) booked|reservation is confirmed|i(?:'ve| have) reserved|vehicle is reserved|car is reserved|we(?:'ve| have) held)\b/i.test(text);
 }
 
+const DIRECT_BILL_PROMISE =
+  /\b(?:in most cases[,]?\s+)?(?:we(?:'ll| will)?\s+)?bill\s+(?:most major\s+)?carriers\s+directly\b/gi;
+
+function softenDirectBilling(text) {
+  DIRECT_BILL_PROMISE.lastIndex = 0;
+  if (!DIRECT_BILL_PROMISE.test(text)) return null;
+  DIRECT_BILL_PROMISE.lastIndex = 0;
+  return text.replace(DIRECT_BILL_PROMISE, "We work directly with adjusters from most major carriers");
+}
+
 export function applyOutputGuards(reply, allowedCents) {
   const original = String(reply || "").trim();
   if (!original) return { text: PHONE_FALLBACK, reason: "empty" };
@@ -342,6 +352,8 @@ export function applyOutputGuards(reply, allowedCents) {
     if (!allowed.has(cents)) return { text: PHONE_FALLBACK, reason: "dollar", detail: String(cents) };
   }
   if (namesInsurer(original)) return { text: CARRIER_SAFE, reason: "insurer" };
+  const billing = softenDirectBilling(original);
+  if (billing) return { text: billing, reason: "billing" };
   if (badDepositClaim(original)) {
     if (allowed.has(30000)) return { text: DEPOSIT_SAFE, reason: "deposit" };
     return { text: PHONE_FALLBACK, reason: "deposit" };

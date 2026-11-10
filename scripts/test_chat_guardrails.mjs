@@ -138,6 +138,19 @@ test("output guards keep posted rates and replace invented ones", () => {
   assert.match(applyOutputGuards("Yes, we can set up a one-way rental.", allowed).text, /don't offer one-way/i);
   assert.equal(applyOutputGuards("We don't offer one-way rentals.", allowed).reason, null);
   assert.match(applyOutputGuards("State Farm will cover the rental.", allowed).text, /most major carriers/);
+  const flat = applyOutputGuards("In most cases we bill most major carriers directly.", allowed);
+  assert.equal(flat.reason, "billing");
+  assert.match(flat.text, /We work directly with adjusters from most major carriers/);
+  assert.doesNotMatch(flat.text, /bill (?:most major )?carriers directly/i);
+  const carriers = applyOutputGuards("We bill carriers directly.", allowed);
+  assert.equal(carriers.reason, "billing");
+  assert.doesNotMatch(carriers.text, /bill carriers directly/i);
+  const approved = applyOutputGuards(
+    "We work directly with adjusters from most major carriers. We'll call your adjuster to verify direct billing.",
+    allowed,
+  );
+  assert.equal(approved.reason, null);
+  assert.match(approved.text, /verify direct billing/);
   assert.equal(applyOutputGuards("We don't offer a discount.", allowed).reason, null);
   assert.equal(applyOutputGuards("Use coupon SAVE10 for 10% off.", allowed).reason, "discount");
   assert.match(applyOutputGuards("You're booked for Friday.", allowed).text, /can't confirm a booking/i);
@@ -214,7 +227,12 @@ test("a posted rate is returned and an invented price is replaced", async () => 
   assert.equal(badBody.fallback, true);
   const prompt = fetch.calls.find((call) => String(call.url).includes("chat/completions")).body;
   assert.match(prompt.messages[0].content, /\$55\/day/);
-  assert.match(prompt.messages[0].content, /most major carriers/);
+  assert.match(prompt.messages[0].content, /We work directly with adjusters from most major carriers/);
+  assert.match(prompt.messages[0].content, /We'll call your adjuster to verify direct billing/);
+  assert.match(prompt.messages[0].content, /Never state direct billing as a flat promise/);
+  assert.match(prompt.messages[0].content, /we bill carriers directly/);
+  assert.match(prompt.messages[0].content, /we bill most major carriers directly/);
+  assert.match(prompt.messages[0].content, /Never name an insurer/);
   assert.match(prompt.messages[0].content, /Riverside Rental Help/);
   assert.match(prompt.messages[0].content, /automated assistant/);
   assert.match(prompt.messages[0].content, /text us at 715-396-1466/i);
