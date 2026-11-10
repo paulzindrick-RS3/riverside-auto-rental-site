@@ -48,7 +48,7 @@
   }
   </script>
 
-  <!-- CONFIRM: Many pages load Google tag G-EDMLSNJ4B9. This page does not describe that tag. Say so here only if Paul wants it in the visible text. -->
+  <!-- CONFIRM: Google tag G-EDMLSNJ4B9 is on this page and many others. The visible text says only that the site uses Google Analytics. How long Google keeps that data is not set in this repo. -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDMLSNJ4B9"></script>
   <script>
@@ -95,35 +95,34 @@
 
     <section class="section">
       <div class="container" style="max-width:800px;">
-        <p>Riverside Auto Rental is at N5856 WI-54, Black River Falls, WI 54615. This page describes the contact form on this website and, once the chat feature is turned on, the chat and callback form. Until chat is turned on, this website does not send chat messages to an AI provider.</p>
+        <p>Riverside Auto Rental is at N5856 WI-54, Black River Falls, WI 54615. This page describes the contact form on this website and, once it is turned on, Riverside Rental Help. Until that automated assistant is turned on, this website does not send chat messages to OpenAI.</p>
+        <p>This website uses Google Analytics to understand how visitors use the site.</p>
 
         <h2>Contact form</h2>
         <p>The <a href="/contact.html">contact page</a> has a form that opens the email program on your device, addressed to <a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a>. The fields are your name, email address, phone number, a topic, and a message. This website does not store that form on a server.</p>
         <!-- CONFIRM: How long contact@riversideautorental.com keeps mail is not set in this repo. -->
 
-        <h2>Callback request</h2>
-        <p>When the chat feature is turned on, you can ask for a callback in the chat window. The form asks for your name, phone number, and question. You can also add an email address, a time that is good for a call, and a copy of the chat. The address of the page you were on is included. The request is submitted as a form on this website named chat-handoff.</p>
-        <p>The chat code does not keep its own copy of that form. It does not write your name, phone number, or question into its status log.</p>
-        <!-- CONFIRM: The chat-handoff Netlify Form notification address and how long Netlify keeps form submissions are site settings, not set in the repo. The plan says the notification should go to contact@riversideautorental.com. -->
+        <h2>Reaching a person</h2>
+        <p>When Riverside Rental Help is turned on, a visitor who wants a person can text or call <a href="tel:+17153961466">715-396-1466</a>. That text or call goes to the business directly, not through this website.</p>
 
         <h2>Chat messages</h2>
-        <p>When the chat feature is turned on, the question you type is sent to OpenAI so it can write a reply from the pages published on this website. The latest eight messages in that conversation are sent with the question. Before the reply is written, the question is also sent to OpenAI for a moderation check. Numbers that look like a payment card or a Social Security number are removed first.</p>
+        <p>When Riverside Rental Help is turned on, the question you type is sent to OpenAI so it can write a reply from the pages published on this website. The question is sent with up to the eight most recent messages already in that conversation. Before the reply is written, the question is also sent to OpenAI for a moderation check. Numbers that look like a payment card or a Social Security number are removed first.</p>
         <p>This website's code does not set how long OpenAI keeps those requests. The key used to call OpenAI stays in the site's hosting settings. It is not placed in the page you see.</p>
         <!-- CONFIRM: OpenAI API retention, including any zero-retention setting, is chosen in the OpenAI project, not in this repo. -->
 
-        <p>While the chat window is open, the conversation stays in the browser for that visit. A session id is stored in the browser's session storage and is removed when you close the tab. The chat code does not set a cookie for that id. A copy of the chat is sent with a callback request only if you check the box to include it.</p>
+        <p>While the chat window is open, the conversation stays in the browser for that visit. A session id is stored in the browser's session storage and is removed when you close the tab. The chat code does not set a cookie for that id.</p>
 
-        <p>Each chat request writes a short status line, such as whether a limit was hit or which model answered. That line does not include your message, your name, or your phone number. The host may still record the time of the request and a status in its own logs. How long those logs are kept is not set in this website's code.</p>
+        <p>Each chat request writes a short status line, such as whether a limit was hit or which model answered. That line does not include your message. The host may still record the time of the request and a status in its own logs. How long those logs are kept is not set in this website's code.</p>
         <!-- CONFIRM: Netlify function log retention depends on the Netlify plan and is not configured in the repo. -->
 
         <p>The chat function also stores counters so it can limit how many messages are sent and the daily cost of answers. A counter is a count and a time, or a daily total. It is tied to a shortened hash of the network address or the session id, not to your name. The counters do not include the text of your messages. The code does not delete old counters.</p>
         <!-- CONFIRM: Netlify Blobs store "chat-limits" has no expiration in the code. Any platform retention is not set in the repo. -->
 
         <h2>Sensitive numbers</h2>
-        <p>Don't type a driver's license number, a payment card number, a Social Security number, or other sensitive numbers into the chat or into a form. The chat function removes a number that looks like a payment card or a Social Security number before it is sent on. Don't rely on that to catch every number.</p>
+        <p>Don't type a driver's license number, a payment card number, a Social Security number, or other sensitive numbers into the chat or into the contact form. The chat function removes a number that looks like a payment card or a Social Security number before it is sent on. Don't rely on that to catch every number.</p>
 
         <h2>Privacy questions</h2>
-        <p>For a privacy question, or to ask that a callback request or a chat transcript be deleted, call or text <a href="tel:+17153961466">715-396-1466</a> or email <a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a>. This website does not have a button that deletes a chat or a callback request.</p>
+        <p>For a privacy question, call or text <a href="tel:+17153961466">715-396-1466</a> or email <a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a>. This website does not keep a copy of the chat, and it does not have a button that deletes a question sent to OpenAI.</p>
       </div>
     </section>
   </main>
