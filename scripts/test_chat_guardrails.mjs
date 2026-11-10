@@ -1,13 +1,14 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  IDENTITY_SAFE,
   PHONE_FALLBACK,
   applyOutputGuards,
   costMicro,
   dollarCents,
   originAllowed,
 } from "../netlify/functions/lib/guardrails.mjs";
-import { handleChat, handleHandoff, handleStatus } from "../netlify/functions/lib/handler.mjs";
+import { handleChat, handleStatus } from "../netlify/functions/lib/handler.mjs";
 import { spendKey } from "../netlify/functions/lib/limits.mjs";
 import { createMemoryStore } from "../netlify/functions/lib/store.mjs";
 
@@ -134,6 +135,10 @@ test("output guards keep posted rates and replace invented ones", () => {
   assert.equal(applyOutputGuards("We don't offer a discount.", allowed).reason, null);
   assert.equal(applyOutputGuards("Use coupon SAVE10 for 10% off.", allowed).reason, "discount");
   assert.match(applyOutputGuards("You're booked for Friday.", allowed).text, /can't confirm a booking/i);
+  assert.equal(applyOutputGuards("I'm a real person at the desk.", allowed).text, IDENTITY_SAFE);
+  assert.equal(applyOutputGuards("I'm an AI and the rate is $40.", allowed).text, IDENTITY_SAFE);
+  assert.match(PHONE_FALLBACK, /Text us at 715-396-1466/);
+  assert.doesNotMatch(PHONE_FALLBACK, /leave your name|callback form/i);
 });
 
 test("origin allowlist", () => {
@@ -204,6 +209,10 @@ test("a posted rate is returned and an invented price is replaced", async () => 
   const prompt = fetch.calls.find((call) => String(call.url).includes("chat/completions")).body;
   assert.match(prompt.messages[0].content, /\$55\/day/);
   assert.match(prompt.messages[0].content, /most major carriers/);
+  assert.match(prompt.messages[0].content, /Riverside Rental Help/);
+  assert.match(prompt.messages[0].content, /automated assistant/);
+  assert.match(prompt.messages[0].content, /text us at 715-396-1466/i);
+  assert.doesNotMatch(prompt.messages[0].content, /callback request|in-chat callback/i);
   assert.match(prompt.messages.at(-1).content, /untrusted visitor input/);
   assert.equal(JSON.stringify(prompt).includes(KEY), false);
   assert.equal(prompt.model, "gpt-5-mini");
@@ -348,51 +357,13 @@ test("rejects a foreign origin", async () => {
   assert.equal(fetch.calls.length, 0);
 });
 
-test("handoff strips card numbers, drops a honeypot, and stays off when chat is disabled", async () => {
-  const fetch = fetchMock(async () => ({ body: { ok: true } }));
-  const sent = await handleHandoff(
-    request("POST", "https://riversideautorental.com/api/chat-handoff", {
-      name: "Ada Lovelace",
-      phone: "(715) 555-0100",
-      email: "ada@example.com",
-      preferred_time: "Friday morning",
-      question: "Do you have a van next week? 4242424242424242",
-      transcript: "Visitor asked about vans.",
-      page_url: "https://riversideautorental.com/van-rental.html",
-      "bot-field": "",
-    }),
-    baseDeps({ fetch }),
+test("there is no callback form endpoint", async () => {
+  const names = Object.keys(await import("../netlify/functions/lib/handler.mjs"));
+  assert.equal(names.includes("handleHandoff"), false);
+  assert.equal(names.includes("submitNetlifyForm"), false);
+  const source = await import("node:fs").then((fs) =>
+    fs.readFileSync(new URL("../netlify/functions/lib/handler.mjs", import.meta.url), "utf8"),
   );
-  const sentBody = await sent.json();
-  assert.equal(sentBody.ok, true);
-  assert.match(sentBody.reply, /not a confirmed appointment/);
-  assert.equal(fetch.calls.length, 1);
-  assert.equal(fetch.calls[0].raw.includes("4242424242424242"), false);
-  assert.match(fetch.calls[0].raw, /Ada\+Lovelace|Ada%20Lovelace/);
-  assert.match(fetch.calls[0].raw, /form-name=chat-handoff/);
-  assert.match(fetch.calls[0].raw, /removed/);
-  assert.equal(fetch.calls[0].raw.includes(KEY), false);
-
-  const honeyFetch = fetchMock(async () => ({ body: { ok: true } }));
-  const honey = await handleHandoff(
-    request("POST", "https://riversideautorental.com/api/chat-handoff", {
-      name: "Bot",
-      phone: "7155550100",
-      question: "hi",
-      "bot-field": "https://spam.example",
-    }),
-    baseDeps({ fetch: honeyFetch }),
-  );
-  assert.equal((await honey.json()).ok, true);
-  assert.equal(honeyFetch.calls.length, 0);
-
-  const off = await handleHandoff(
-    request("POST", "https://riversideautorental.com/api/chat-handoff", {
-      name: "Ada Lovelace",
-      phone: "7155550100",
-      question: "Please call",
-    }),
-    baseDeps({ env: { CHAT_ENABLED: "false", OPENAI_API_KEY: KEY }, fetch: honeyFetch }),
-  );
-  assert.equal(off.status, 403);
+  assert.equal(source.includes("chat-handoff"), false);
+  assert.equal(source.includes("form-name"), false);
 });

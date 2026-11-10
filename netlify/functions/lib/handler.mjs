@@ -1,18 +1,14 @@
 /**
- * HTTP handlers for status, chat, and the callback handoff.
+ * HTTP handlers for status and chat.
  * Dependencies are injected so tests can run without Netlify or OpenAI.
  */
 import {
-  BOOKING_SAFE,
-  CARRIER_SAFE,
-  DEPOSIT_SAFE,
   LIMITS,
-  ONEWAY_SAFE,
   PHONE_FALLBACK,
   SENSITIVE_SAFE,
+  TEXT_US,
   applyOutputGuards,
   chatEnabled,
-  cleanPageUrl,
   clientIp,
   costMicro,
   estimateCallMicro,
@@ -20,7 +16,6 @@ import {
   hasApiKey,
   looksLikeInjection,
   originAllowed,
-  plain,
   primaryModel,
   requestHost,
   requestOrigin,
@@ -161,7 +156,7 @@ export async function handleChat(request, deps = {}) {
   if (looksLikeInjection(message)) {
     log(deps, { fn: "chat", blocked: "injection" });
     return chatReply(
-      "I can only answer questions about Riverside Auto Rental from our website. Call or text 715-396-1466 if you need the desk.",
+      `I can only answer questions about Riverside Auto Rental from our website. ${TEXT_US}`,
       { fallback: true },
       origin,
     );
@@ -171,7 +166,7 @@ export async function handleChat(request, deps = {}) {
   const meaningful = stripped.text.replace(/\[removed\]/g, "").trim();
   if (!meaningful) {
     log(deps, { fn: "chat", blocked: "sensitive" });
-    return chatReply(SENSITIVE_SAFE, { fallback: true }, origin);
+    return chatReply(SENSITIVE_SAFE, { fallback: true, showHandoff: true }, origin);
   }
 
   if (mode === "fallback" || !hasApiKey(env)) {
@@ -232,7 +227,7 @@ export async function handleChat(request, deps = {}) {
   if (flagged) {
     log(deps, { fn: "chat", blocked: "moderation" });
     return chatReply(
-      "I can't help with that. Call or text 715-396-1466 if you have a rental question.",
+      `I can't help with that. ${TEXT_US}`,
       { fallback: true },
       origin,
     );
@@ -273,116 +268,3 @@ export async function handleChat(request, deps = {}) {
   log(deps, { fn: "chat", model, guarded: guarded.reason || "ok" });
   return chatReply(guarded.text, { fallback: Boolean(guarded.reason), showHandoff: Boolean(guarded.reason) }, origin);
 }
-
-function phoneDigits(value) {
-  return plain(value).replace(/\D/g, "");
-}
-
-export async function handleHandoff(request, deps = {}) {
-  const started = begin(request, deps);
-  if (started.early) return started.early;
-  const { env, origin } = started;
-  if (request.method !== "POST") return json({ error: "method" }, 405, origin);
-  if (!chatEnabled(env)) {
-    log(deps, { fn: "chat-handoff", mode: "hidden" });
-    return json({ error: "disabled" }, 403, origin);
-  }
-
-  let raw = "";
-  try {
-    raw = await request.text();
-  } catch {
-    return json({ error: "body" }, 400, origin);
-  }
-  if (raw.length > LIMITS.maxBodyChars) return json({ error: "too_large" }, 413, origin);
-  let body;
-  try {
-    body = JSON.parse(raw);
-  } catch {
-    return json({ error: "json" }, 400, origin);
-  }
-
-  const honeypot = plain(body["bot-field"] || body.company || body.website || "");
-  if (honeypot) {
-    log(deps, { fn: "chat-handoff", dropped: "honeypot" });
-    return json({ ok: true }, 200, origin);
-  }
-
-  const now = typeof deps.now === "function" ? deps.now() : Date.now();
-  const store = deps.store;
-  if (store && store.persistent) {
-    const count = await bumpWindow(store, `handoff:${hashKey(clientIp(request))}`, LIMITS.handoffWindowMs, now);
-    if (count > LIMITS.handoffPerHour) {
-      log(deps, { fn: "chat-handoff", limited: "ip" });
-      return json({ ok: false, error: "limited", reply: PHONE_FALLBACK }, 429, origin);
-    }
-  }
-
-  const name = stripSensitive(plain(body.name)).text.slice(0, 80);
-  const phone = stripSensitive(plain(body.phone)).text.slice(0, 30);
-  const email = stripSensitive(plain(body.email)).text.slice(0, 120);
-  const preferred = stripSensitive(plain(body.preferred_time || body.preferredTime)).text.slice(0, 120);
-  const question = stripSensitive(plain(body.question)).text.slice(0, 1000);
-  const transcript = stripSensitive(plain(body.transcript)).text.slice(0, LIMITS.maxTranscriptChars);
-  const pageUrl = cleanPageUrl(body.page_url || body.pageUrl);
-
-  if (name.length < 2 || !/[a-z]/i.test(name)) return json({ error: "name" }, 400, origin);
-  const digits = phoneDigits(phone);
-  if (digits.length < 10 || digits.length > 15) return json({ error: "phone" }, 400, origin);
-  if (question.length < 2) return json({ error: "question" }, 400, origin);
-  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ error: "email" }, 400, origin);
-
-  const fields = {
-    name,
-    phone,
-    email,
-    preferred_time: preferred,
-    question,
-    transcript,
-    page_url: pageUrl,
-  };
-  const submit = deps.submitForm || ((siteEnv, payload) => submitNetlifyForm(deps.fetch, siteEnv, payload));
-  try {
-    await submit(env, fields);
-  } catch {
-    log(deps, { fn: "chat-handoff", error: "delivery" });
-    return json(
-      {
-        ok: false,
-        reply: "We couldn't send that from the website. Please call or text 715-396-1466.",
-      },
-      502,
-      origin,
-    );
-  }
-  log(deps, { fn: "chat-handoff", ok: true });
-  return json(
-    {
-      ok: true,
-      reply:
-        "Thanks. This is a callback request, not a confirmed appointment. We'll call during business hours (Monday–Friday 8:00 AM–5:00 PM, Saturday 8:00 AM–noon), or the next business day if we're closed.",
-    },
-    200,
-    origin,
-  );
-}
-
-export async function submitNetlifyForm(fetchImpl, env, fields) {
-  if (typeof fetchImpl !== "function") throw new Error("no_fetch");
-  const site = String((env && (env.DEPLOY_PRIME_URL || env.URL)) || "").replace(/\/$/, "");
-  if (!site) throw new Error("no_site_url");
-  const params = new URLSearchParams();
-  params.set("form-name", "chat-handoff");
-  params.set("bot-field", "");
-  for (const [key, value] of Object.entries(fields)) {
-    params.set(key, value || "");
-  }
-  const response = await fetchImpl(`${site}/`, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: params.toString(),
-  });
-  if (!response.ok) throw new Error("form_failed");
-}
-
-export const SAFE_REPLIES = { PHONE_FALLBACK, DEPOSIT_SAFE, ONEWAY_SAFE, CARRIER_SAFE, BOOKING_SAFE, SENSITIVE_SAFE };

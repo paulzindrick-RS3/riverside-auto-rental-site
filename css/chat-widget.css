@@ -1,13 +1,8 @@
-/* Launcher sits above the existing #sms-bubble. Hidden until /api/chat-status says to show it. */
-.rar-chat {
-  font-family: "Source Sans 3", "Segoe UI", sans-serif;
-  color: #333b4a;
-  line-height: 1.45;
-}
-.rar-chat__launcher {
+/* One Help control. It is an sms: link until chat is confirmed available. */
+#rar-help {
   position: fixed;
   right: 20px;
-  bottom: 84px;
+  bottom: 24px;
   z-index: 9999;
   display: inline-flex;
   align-items: center;
@@ -16,34 +11,65 @@
   background: #304b78;
   color: #fff;
   border-radius: 999px;
-  padding: 12px 18px;
+  padding: 13px 20px;
   font-family: Archivo, "Segoe UI", sans-serif;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1;
   letter-spacing: 0.01em;
+  text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 18px rgba(48, 75, 120, 0.45);
 }
-.rar-chat__launcher:hover { transform: translateY(-2px); }
-.rar-chat__launcher-kicker {
-  background: #c41e3a;
-  color: #fff;
-  border-radius: 999px;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  padding: 2px 6px;
+#rar-help:hover { color: #fff; transform: translateY(-2px); }
+#rar-help-menu {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 180px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(45, 49, 66, 0.16);
+}
+#rar-help-menu[hidden] { display: none; }
+#rar-help-menu a,
+#rar-help-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: #e8edf4;
+  color: #1e3050;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.rar-chat {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  color: #333b4a;
+  line-height: 1.45;
 }
 .rar-chat__panel[hidden],
 .rar-chat__log[hidden],
 .rar-chat__chips[hidden],
 .rar-chat__composer[hidden],
-.rar-chat__handoff[hidden] {
+.rar-chat__textus[hidden] {
   display: none;
 }
 .rar-chat__panel {
   position: fixed;
   right: 20px;
-  bottom: 146px;
+  bottom: 84px;
   z-index: 9999;
   width: min(380px, calc(100vw - 32px));
   max-height: min(640px, calc(100vh - 160px));
@@ -145,8 +171,7 @@
   color: #333b4a;
   background: #fff;
 }
-.rar-chat__send,
-.rar-chat__submit {
+.rar-chat__send {
   border: 0;
   background: #c41e3a;
   color: #fff;
@@ -156,37 +181,27 @@
   font-weight: 700;
   cursor: pointer;
 }
-.rar-chat__send:disabled,
-.rar-chat__submit:disabled { opacity: 0.6; cursor: default; }
+.rar-chat__send:disabled { opacity: 0.6; cursor: default; }
 .rar-chat__helper { padding-bottom: 12px; }
-.rar-chat__handoff { padding: 0 16px 12px; display: flex; flex-direction: column; gap: 6px; }
-.rar-chat__handoff[hidden] { display: none; }
-.rar-chat__field { display: flex; flex-direction: column; gap: 2px; font-size: 0.8rem; font-weight: 600; }
-.rar-chat__check { display: flex; gap: 8px; align-items: flex-start; font-size: 0.85rem; }
-.rar-chat__phone a { color: #304b78; font-weight: 700; }
-.rar-chat__error:empty { display: none; }
-.rar-chat__error { color: #9e1830; padding-left: 0; padding-right: 0; }
-.rar-chat__hours { padding: 0; }
-.rar-chat__trap {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.rar-chat__textus { padding: 0 16px 14px; }
+.rar-chat__textus-lead { margin: 0 0 8px; font-size: 0.95rem; }
+.rar-chat__number {
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-weight: 700;
+  color: #1e3050;
 }
-.rar-chat--no-sms .rar-chat__launcher { bottom: 24px; }
-.rar-chat--no-sms .rar-chat__panel { bottom: 84px; }
+.rar-chat__phone { margin: 0; }
+.rar-chat__phone a { color: #304b78; font-weight: 700; }
+a.rar-chat__chip { text-decoration: none; display: inline-flex; }
 @media (max-width: 768px) {
-  .rar-chat__launcher { right: 16px; bottom: 132px; }
+  #rar-help { right: 16px; bottom: 72px; }
+  #rar-help-menu { right: 16px; bottom: 128px; }
   .rar-chat__panel {
     right: 16px;
-    bottom: 188px;
-    max-height: calc(100vh - 220px);
+    bottom: 132px;
+    max-height: calc(100vh - 210px);
   }
-  .rar-chat--no-sms .rar-chat__launcher { bottom: 84px; }
-  .rar-chat--no-sms .rar-chat__panel { bottom: 144px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .rar-chat__launcher { transition: none; }
+  #rar-help { transition: none; }
 }

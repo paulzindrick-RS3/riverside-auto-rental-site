@@ -169,6 +169,7 @@ def visible_text(source):
     text = re.sub(r"(?is)<footer\b[^>]*>.*?</footer>", " ", text)
     text = re.sub(r"(?is)<div\b[^>]*\bcall-banner\b[^>]*>.*?</div>", " ", text)
     text = re.sub(r"(?is)<div\b[^>]*\bid=[\"']sms-bubble[\"'][^>]*>.*?</div>", " ", text)
+    text = re.sub(r"(?is)<a\b[^>]*\bid=[\"']rar-help[\"'][^>]*>.*?</a>", " ", text)
     text = re.sub(r"(?is)<!--.*?-->", " ", text)
     text = re.sub(r"(?i)<br\s*/?>", "\n", text)
     text = re.sub(r"(?i)</t[dh]>", " | ", text)

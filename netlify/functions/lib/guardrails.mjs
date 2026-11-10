@@ -5,23 +5,27 @@
 
 export const PHONE = "715-396-1466";
 
-export const PHONE_FALLBACK =
-  "I don't have that on our website. Call or text 715-396-1466, or leave your name and number and we'll get back to you.";
+export const TEXT_US = "Text us at 715-396-1466, or call the same number.";
+
+export const PHONE_FALLBACK = `I don't have that on our website. ${TEXT_US}`;
+
+export const IDENTITY_SAFE = `I'm an automated assistant, not a person. ${TEXT_US}`;
 
 export const DEPOSIT_SAFE =
-  "A security deposit starts at $300 and is held separately on a credit or debit card (Visa, Mastercard, or Discover; no American Express). We'll confirm the exact amount when you book. Call or text 715-396-1466 if you need more detail.";
+  "A security deposit starts at $300 and is held separately on a credit or debit card (Visa, Mastercard, or Discover; no American Express). We'll confirm the exact amount when you book. " +
+  TEXT_US;
 
 export const ONEWAY_SAFE =
-  "We don't offer one-way rentals. Pick up and return the vehicle in Black River Falls. Call or text 715-396-1466 with questions.";
+  "We don't offer one-way rentals. Pick up and return the vehicle in Black River Falls. " + TEXT_US;
 
 export const CARRIER_SAFE =
-  "We work with most major carriers. Insurance replacement rates are quoted by phone. Call or text 715-396-1466.";
+  "We work with most major carriers. Insurance replacement rates are quoted by phone. " + TEXT_US;
 
 export const BOOKING_SAFE =
-  "I can't confirm a booking or whether a vehicle is free. Call or text 715-396-1466 and the desk can check.";
+  "I can't confirm a booking or whether a vehicle is free. " + TEXT_US;
 
 export const SENSITIVE_SAFE =
-  "Please don't send card numbers, license numbers, or Social Security numbers in chat. Call or text 715-396-1466.";
+  "Please don't send card numbers, license numbers, or Social Security numbers in chat. " + TEXT_US;
 
 export const LIMITS = {
   messageChars: 500,
@@ -31,10 +35,7 @@ export const LIMITS = {
   ipWindowMs: 10 * 60 * 1000,
   firstMessageDelayMs: 1000,
   maxLoadedAgeMs: 2 * 24 * 60 * 60 * 1000,
-  handoffPerHour: 5,
-  handoffWindowMs: 60 * 60 * 1000,
   maxBodyChars: 20000,
-  maxTranscriptChars: 8000,
   maxKnowledgeChars: 480000,
 };
 
@@ -125,7 +126,7 @@ export function hasApiKey(env) {
   return Boolean(env && env.OPENAI_API_KEY && String(env.OPENAI_API_KEY).trim());
 }
 
-/** hidden: draw nothing. fallback: phone + callback form. chat: model answers. */
+/** hidden: draw nothing. fallback: text us and the phone number. chat: model answers. */
 export function resolveMode(env) {
   if (!chatEnabled(env)) return "hidden";
   if (!hasApiKey(env)) return "fallback";
@@ -283,6 +284,13 @@ export function sanitizeHistory(history) {
   return cleaned.slice(-LIMITS.historyTurns);
 }
 
+function callsItselfAiOrPerson(text) {
+  return (
+    /\b(?:i(?:'m| am)|as) (?:an? )?(?:ai|a\.i\.|artificial intelligence)\b/i.test(text) ||
+    /\bi(?:'m| am) (?:a )?(?:real )?(?:person|human)\b/i.test(text)
+  );
+}
+
 function namesInsurer(text) {
   const lower = text.toLowerCase();
   return INSURERS.some((name) => lower.includes(name));
@@ -323,6 +331,7 @@ function confirmsBooking(text) {
 export function applyOutputGuards(reply, allowedCents) {
   const original = String(reply || "").trim();
   if (!original) return { text: PHONE_FALLBACK, reason: "empty" };
+  if (callsItselfAiOrPerson(original)) return { text: IDENTITY_SAFE, reason: "identity" };
   const allowed = allowedCents instanceof Set ? allowedCents : new Set(allowedCents || []);
   const amounts = new Set([...dollarCents(original), ...wordMoneyCents(original)]);
   for (const cents of amounts) {

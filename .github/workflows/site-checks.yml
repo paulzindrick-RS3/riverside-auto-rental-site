@@ -22,5 +22,7 @@ jobs:
         run: python3 scripts/test_chat_knowledge.py
       - name: Chat function guardrails
         run: node --test scripts/test_chat_guardrails.mjs
+      - name: Help button still texts when chat is off
+        run: python3 scripts/test_help_button.py
       - name: Scheduled publish does not restamp unchanged lastmods
         run: python3 scripts/test_publish_lastmod.py
