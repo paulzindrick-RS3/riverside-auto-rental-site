@@ -191,7 +191,7 @@ export async function handleChat(request, deps = {}) {
     return chatReply(PHONE_FALLBACK, { fallback: true, showHandoff: true }, origin);
   }
 
-  const fetchImpl = deps.fetch;
+  const fetchImpl = typeof deps.fetch === "function" ? deps.fetch : globalThis.fetch;
   if (typeof fetchImpl !== "function") {
     return chatReply(PHONE_FALLBACK, { fallback: true }, origin);
   }

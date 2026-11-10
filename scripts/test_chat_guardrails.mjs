@@ -377,6 +377,29 @@ test("weekly rates chip keeps the extracted /fleet figures", async () => {
   assert.match(body.reply, /\$\d+\/week/);
 });
 
+test("a chat call uses the runtime fetch when the entry does not inject one", async () => {
+  const previous = globalThis.fetch;
+  const fetch = openaiFetch(() => ({ body: completion("The rate is $55/day.") }));
+  globalThis.fetch = fetch;
+  try {
+    const res = await handleChat(
+      request("POST", "https://riversideautorental.com/api/chat", chatPayload("What are the weekly rates?")),
+      baseDeps(),
+    );
+    const body = await res.json();
+    assert.equal(body.reply, "The rate is $55/day.");
+    assert.equal(body.fallback, false);
+    assert.equal(fetch.calls.some((call) => String(call.url).includes("chat/completions")), true);
+  } finally {
+    globalThis.fetch = previous;
+  }
+});
+
+test("the chat entrypoint passes the runtime fetch into the handler", () => {
+  const source = readFileSync("netlify/functions/chat.mts", "utf8");
+  assert.match(source, /fetch:\s*globalThis\.fetch/);
+});
+
 test("the spend store is the installed Netlify Blobs client", () => {
   const pkg = JSON.parse(readFileSync("package.json", "utf8"));
   assert.ok(pkg.dependencies["@netlify/blobs"]);

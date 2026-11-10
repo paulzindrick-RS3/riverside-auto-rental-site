@@ -6,6 +6,7 @@ export default async (request, context) => {
   return handleChat(request, {
     env: { ...process.env, CONTEXT: process.env.CONTEXT || context?.deploy?.context || "" },
     store,
+    fetch: globalThis.fetch,
   });
 };
 
