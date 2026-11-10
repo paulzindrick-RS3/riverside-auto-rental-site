@@ -6,6 +6,7 @@ import {
   LIMITS,
   PHONE_FALLBACK,
   SENSITIVE_SAFE,
+  SERVICE_TROUBLE,
   TEXT_US,
   applyOutputGuards,
   chatEnabled,
@@ -77,6 +78,49 @@ function begin(request, deps) {
 
 function chatReply(text, extra, origin) {
   return json({ reply: text, ...extra }, 200, origin);
+}
+
+function safeDetail(value) {
+  const text = String(value || "");
+  return /^[A-Za-z0-9_:-]{1,80}$/.test(text) ? text : "";
+}
+
+function trouble(deps, reason, origin, extra = {}) {
+  const event = { fn: "chat", reason };
+  const detail = safeDetail(extra.detail);
+  if (detail) event.detail = detail;
+  log(deps, event);
+  const payload = { fallback: true, showHandoff: true, reason };
+  if (extra.limited) payload.limited = true;
+  if (detail) payload.detail = detail;
+  return chatReply(SERVICE_TROUBLE, payload, origin);
+}
+
+function isTimeout(error) {
+  return Boolean(error && (error.name === "TimeoutError" || error.name === "AbortError"));
+}
+
+function statusDetail(error) {
+  return error && Number.isFinite(error.status) ? String(error.status) : "";
+}
+
+function runModel(run, fetchImpl, apiKey, model, messages, timeoutMs) {
+  const controller = new AbortController();
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => {
+      controller.abort();
+      const error = new Error("timeout");
+      error.name = "TimeoutError";
+      error.status = 504;
+      reject(error);
+    }, timeoutMs);
+  });
+  const attempt = Promise.resolve()
+    .then(() => run(fetchImpl, apiKey, model, messages, { signal: controller.signal }))
+    .finally(() => clearTimeout(timer));
+  attempt.catch(() => {});
+  return Promise.race([attempt, timeout]);
 }
 
 function loadKnowledge(deps) {
@@ -175,25 +219,22 @@ export async function handleChat(request, deps = {}) {
   }
 
   if (!store || !store.persistent) {
-    log(deps, { fn: "chat", blocked: "spend_store" });
-    return chatReply(PHONE_FALLBACK, { fallback: true, showHandoff: true }, origin);
+    return trouble(deps, "store", origin, { detail: store && store.reason });
   }
 
   let knowledge;
   try {
     knowledge = loadKnowledge(deps);
-  } catch {
-    log(deps, { fn: "chat", blocked: "knowledge" });
-    return chatReply(PHONE_FALLBACK, { fallback: true, showHandoff: true }, origin);
+  } catch (error) {
+    return trouble(deps, "knowledge", origin, { detail: error && error.name });
   }
   if (knowledgeText(knowledge).length > LIMITS.maxKnowledgeChars) {
-    log(deps, { fn: "chat", blocked: "knowledge_size" });
-    return chatReply(PHONE_FALLBACK, { fallback: true, showHandoff: true }, origin);
+    return trouble(deps, "knowledge_size", origin);
   }
 
-  const fetchImpl = typeof deps.fetch === "function" ? deps.fetch : globalThis.fetch;
+  const fetchImpl = typeof deps.fetch === "function" ? deps.fetch : deps.fetch === undefined ? globalThis.fetch : undefined;
   if (typeof fetchImpl !== "function") {
-    return chatReply(PHONE_FALLBACK, { fallback: true }, origin);
+    return trouble(deps, "fetch", origin);
   }
   const apiKey = String(env.OPENAI_API_KEY).trim();
   const history = sanitizeHistory(body.history);
@@ -218,8 +259,7 @@ export async function handleChat(request, deps = {}) {
   if (spent + preferredCost > cap) {
     if (backup !== preferred && spent + backupCost <= cap) model = backup;
     else {
-      log(deps, { fn: "chat", limited: "spend" });
-      return chatReply(PHONE_FALLBACK, { limited: true, fallback: true, showHandoff: true }, origin);
+      return trouble(deps, "spend", origin, { limited: true });
     }
   }
 
@@ -234,26 +274,28 @@ export async function handleChat(request, deps = {}) {
   }
 
   const run = deps.complete || complete;
+  const timeoutMs = Number(deps.openaiTimeoutMs) > 0 ? Number(deps.openaiTimeoutMs) : LIMITS.openaiTimeoutMs;
   let result;
   try {
-    result = await run(fetchImpl, apiKey, model, messages);
-  } catch {
+    result = await runModel(run, fetchImpl, apiKey, model, messages, timeoutMs);
+  } catch (error) {
+    if (isTimeout(error)) {
+      return trouble(deps, "timeout", origin);
+    }
     if (model !== backup) {
       try {
         model = backup;
         const retryCost = estimateCallMicro(backup, system.length + stripped.text.length);
         if (spent + retryCost > cap) {
-          log(deps, { fn: "chat", limited: "spend" });
-          return chatReply(PHONE_FALLBACK, { limited: true, fallback: true, showHandoff: true }, origin);
+          return trouble(deps, "spend", origin, { limited: true });
         }
-        result = await run(fetchImpl, apiKey, model, messages);
-      } catch {
-        log(deps, { fn: "chat", error: "model" });
-        return chatReply(PHONE_FALLBACK, { fallback: true, showHandoff: true }, origin);
+        result = await runModel(run, fetchImpl, apiKey, model, messages, timeoutMs);
+      } catch (retryError) {
+        if (isTimeout(retryError)) return trouble(deps, "timeout", origin);
+        return trouble(deps, "model", origin, { detail: statusDetail(retryError) });
       }
     } else {
-      log(deps, { fn: "chat", error: "model" });
-      return chatReply(PHONE_FALLBACK, { fallback: true, showHandoff: true }, origin);
+      return trouble(deps, "model", origin, { detail: statusDetail(error) });
     }
   }
 
@@ -265,6 +307,9 @@ export async function handleChat(request, deps = {}) {
 
   const allowed = allowedCentsFromKnowledge(knowledge);
   const guarded = applyOutputGuards(result.text, allowed);
-  log(deps, { fn: "chat", model, guarded: guarded.reason || "ok" });
-  return chatReply(guarded.text, { fallback: Boolean(guarded.reason), showHandoff: Boolean(guarded.reason) }, origin);
+  const guardReason = guarded.reason || "ok";
+  log(deps, { fn: "chat", model, reason: guardReason });
+  const extra = { fallback: Boolean(guarded.reason), showHandoff: Boolean(guarded.reason) };
+  if (guarded.reason) extra.reason = guarded.reason;
+  return chatReply(guarded.text, extra, origin);
 }

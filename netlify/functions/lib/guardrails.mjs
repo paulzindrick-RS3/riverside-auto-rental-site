@@ -9,6 +9,9 @@ export const TEXT_US = "Text us at 715-396-1466, or call the same number.";
 
 export const PHONE_FALLBACK = `I don't have that on our website. ${TEXT_US}`;
 
+export const SERVICE_TROUBLE =
+  "Riverside Rental Help is having trouble right now. Text or call us at 715-396-1466.";
+
 export const IDENTITY_SAFE = `I'm an automated assistant, not a person. ${TEXT_US}`;
 
 export const DEPOSIT_SAFE =
@@ -37,6 +40,7 @@ export const LIMITS = {
   maxLoadedAgeMs: 2 * 24 * 60 * 60 * 1000,
   maxBodyChars: 20000,
   maxKnowledgeChars: 480000,
+  openaiTimeoutMs: 20000,
 };
 
 /** Dollars per 1M tokens. Unknown models use gpt-5-mini rates (the cap stays conservative). */
@@ -335,7 +339,7 @@ export function applyOutputGuards(reply, allowedCents) {
   const allowed = allowedCents instanceof Set ? allowedCents : new Set(allowedCents || []);
   const amounts = new Set([...dollarCents(original), ...wordMoneyCents(original)]);
   for (const cents of amounts) {
-    if (!allowed.has(cents)) return { text: PHONE_FALLBACK, reason: "dollar" };
+    if (!allowed.has(cents)) return { text: PHONE_FALLBACK, reason: "dollar", detail: String(cents) };
   }
   if (namesInsurer(original)) return { text: CARRIER_SAFE, reason: "insurer" };
   if (badDepositClaim(original)) {

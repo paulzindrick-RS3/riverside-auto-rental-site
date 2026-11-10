@@ -13,6 +13,7 @@ export default async (request, context) => {
 export const config = {
   path: "/api/chat",
   includedFiles: ["data/chat-knowledge.json"],
+  timeout: 26,
   rateLimit: {
     windowLimit: 10,
     windowSize: 600,

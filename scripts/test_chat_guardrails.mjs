@@ -5,6 +5,7 @@ import siteKnowledge from "../data/chat-knowledge.json" with { type: "json" };
 import {
   IDENTITY_SAFE,
   PHONE_FALLBACK,
+  SERVICE_TROUBLE,
   applyOutputGuards,
   costMicro,
   dollarCents,
@@ -12,7 +13,7 @@ import {
 } from "../netlify/functions/lib/guardrails.mjs";
 import { handleChat, handleStatus } from "../netlify/functions/lib/handler.mjs";
 import { spendKey } from "../netlify/functions/lib/limits.mjs";
-import { createMemoryStore } from "../netlify/functions/lib/store.mjs";
+import { createMemoryStore, normalizeBlobsContext } from "../netlify/functions/lib/store.mjs";
 
 const ORIGIN = "https://riversideautorental.com";
 const SESSION = "11111111-1111-4111-8111-111111111111";
@@ -107,7 +108,10 @@ function baseDeps(extra = {}) {
     now: () => NOW,
     knowledge: extra.knowledge === undefined ? knowledge() : extra.knowledge,
     fetch: extra.fetch,
-    log: () => {},
+    log: extra.log || (() => {}),
+    complete: extra.complete,
+    openaiTimeoutMs: extra.openaiTimeoutMs,
+    loadKnowledge: extra.loadKnowledge,
   };
 }
 
@@ -398,6 +402,85 @@ test("a chat call uses the runtime fetch when the entry does not inject one", as
 test("the chat entrypoint passes the runtime fetch into the handler", () => {
   const source = readFileSync("netlify/functions/chat.mts", "utf8");
   assert.match(source, /fetch:\s*globalThis\.fetch/);
+});
+
+test("infrastructure failures are not described as missing website content", async () => {
+  const secret = "Weekly rates for the unmarked blue van at lot 9";
+  const logs = [];
+  const log = (entry) => {
+    logs.push(entry);
+    const encoded = JSON.stringify(entry);
+    assert.equal(encoded.includes(secret), false);
+    assert.equal(encoded.includes("unmarked"), false);
+  };
+  async function expectTrouble(res, reason) {
+    const body = await res.json();
+    assert.equal(body.reply, SERVICE_TROUBLE);
+    assert.notEqual(body.reply, PHONE_FALLBACK);
+    assert.equal(body.reason, reason);
+    assert.match(body.reply, /having trouble right now/);
+    assert.match(body.reply, /715-396-1466/);
+    return body;
+  }
+  const ask = (extra) =>
+    handleChat(
+      request("POST", "https://riversideautorental.com/api/chat", chatPayload(secret)),
+      baseDeps({ log, ...extra }),
+    );
+
+  const closed = await ask({
+    store: { persistent: false, reason: "MissingBlobsEnvironmentError", async get() { return null; }, async set() {} },
+  });
+  const closedBody = await expectTrouble(closed, "store");
+  assert.equal(closedBody.detail, "MissingBlobsEnvironmentError");
+
+  await expectTrouble(await ask({ fetch: null }), "fetch");
+
+  const failing = openaiFetch(() => ({ status: 503, body: { error: secret } }));
+  const failed = await expectTrouble(await ask({ fetch: failing }), "model");
+  assert.equal(failed.detail, "503");
+  assert.equal(JSON.stringify(failed).includes(secret), false);
+
+  const hung = () => new Promise(() => {});
+  await expectTrouble(await ask({ complete: hung, openaiTimeoutMs: 30 }), "timeout");
+
+  const capped = createMemoryStore();
+  await capped.set(spendKey("2026-11-10"), 5_000_000);
+  const spend = await expectTrouble(
+    await ask({ store: capped, fetch: openaiFetch(() => ({ body: completion("The rate is $55/day.") })) }),
+    "spend",
+  );
+  assert.equal(spend.limited, true);
+
+  const broken = await ask({
+    knowledge: null,
+    loadKnowledge() {
+      const error = new Error(secret);
+      error.name = "knowledge_missing";
+      throw error;
+    },
+  });
+  await expectTrouble(broken, "knowledge");
+
+  const reasons = logs.map((entry) => entry.reason);
+  for (const reason of ["store", "fetch", "model", "timeout", "spend", "knowledge"]) {
+    assert.equal(reasons.includes(reason), true);
+  }
+});
+
+test("a decoded blobs context is encoded before the store client reads it", () => {
+  const previous = globalThis.netlifyBlobsContext;
+  globalThis.netlifyBlobsContext = { siteID: "site-1", token: "token-1" };
+  try {
+    normalizeBlobsContext();
+    assert.equal(typeof globalThis.netlifyBlobsContext, "string");
+    const decoded = JSON.parse(Buffer.from(globalThis.netlifyBlobsContext, "base64").toString());
+    assert.equal(decoded.siteID, "site-1");
+    assert.equal(decoded.token, "token-1");
+  } finally {
+    if (previous === undefined) delete globalThis.netlifyBlobsContext;
+    else globalThis.netlifyBlobsContext = previous;
+  }
 });
 
 test("the spend store is the installed Netlify Blobs client", () => {

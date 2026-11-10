@@ -3,7 +3,7 @@
  * never written to a response or a log line.
  */
 
-async function postJson(fetchImpl, url, apiKey, body) {
+async function postJson(fetchImpl, url, apiKey, body, signal) {
   const response = await fetchImpl(url, {
     method: "POST",
     headers: {
@@ -11,6 +11,7 @@ async function postJson(fetchImpl, url, apiKey, body) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(body),
+    signal,
   });
   let data = {};
   try {
@@ -34,7 +35,7 @@ export async function moderate(fetchImpl, apiKey, text) {
   }
 }
 
-async function completeOnce(fetchImpl, apiKey, model, messages, extra) {
+async function completeOnce(fetchImpl, apiKey, model, messages, extra, signal) {
   const { ok, status, data } = await postJson(
     fetchImpl,
     "https://api.openai.com/v1/chat/completions",
@@ -45,6 +46,7 @@ async function completeOnce(fetchImpl, apiKey, model, messages, extra) {
       max_completion_tokens: 1500,
       ...extra,
     },
+    signal,
   );
   if (!ok) {
     const error = new Error("openai_error");
@@ -62,9 +64,10 @@ async function completeOnce(fetchImpl, apiKey, model, messages, extra) {
   };
 }
 
-export async function complete(fetchImpl, apiKey, model, messages) {
+export async function complete(fetchImpl, apiKey, model, messages, options = {}) {
+  const signal = options && options.signal;
   try {
-    const result = await completeOnce(fetchImpl, apiKey, model, messages, { reasoning_effort: "minimal" });
+    const result = await completeOnce(fetchImpl, apiKey, model, messages, { reasoning_effort: "minimal" }, signal);
     if (!result.text) {
       const error = new Error("empty_completion");
       error.status = 502;
@@ -73,7 +76,7 @@ export async function complete(fetchImpl, apiKey, model, messages) {
     return result;
   } catch (error) {
     if (error.status !== 400) throw error;
-    const result = await completeOnce(fetchImpl, apiKey, model, messages, {});
+    const result = await completeOnce(fetchImpl, apiKey, model, messages, {}, signal);
     if (!result.text) {
       const empty = new Error("empty_completion");
       empty.status = 502;
