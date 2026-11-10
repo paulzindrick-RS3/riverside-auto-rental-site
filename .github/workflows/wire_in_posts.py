@@ -17,6 +17,8 @@ the homepage Latest guides block, sitemap.xml, and llms.txt. Run from repo root.
   that comes only from that shallow boundary is ignored and the existing
   lastmod is kept.
 - Adds a line under "## Live Blog Posts" in llms.txt.
+- Inserts the chat widget snippet into a newly published post. It does not
+  rewrite pages that are already live, so their sitemap lastmods stay put.
 All wiring steps are idempotent (skipped if the slug is already present) and
 non-fatal: a wiring failure prints ::warning:: but never blocks publishing.
 Exits 0 always; writes published count to the file named in $COUNT_FILE.
@@ -124,6 +126,20 @@ def refresh_latest_guides():
         print("homepage: Latest guides already current")
 
 
+def inject_chat_widget(body):
+    """New posts should carry the same launcher snippet as the rest of the site."""
+    try:
+        here = os.path.dirname(os.path.abspath(__file__))
+        scripts = os.path.abspath(os.path.join(here, "..", "..", "scripts"))
+        if scripts not in sys.path:
+            sys.path.insert(0, scripts)
+        import chat_widget_snippet
+        return chat_widget_snippet.inject(body)
+    except Exception as e:
+        warn(f"chat widget snippet skipped: {e}")
+        return body
+
+
 def rebuild_sitemap():
     sys.path.insert(0, os.path.join(os.getcwd(), "scripts"))
     import build_sitemap
@@ -157,7 +173,7 @@ def main():
         real = os.path.join("blog", slug)
         # Public date is the day it goes live, never an earlier header date.
         public = TODAY
-        body = stamp_public_date("".join(lines[body_start:]), public)
+        body = inject_chat_widget(stamp_public_date("".join(lines[body_start:]), public))
         with open(real, "w", encoding="utf-8", newline="") as f:
             f.write(body)
         os.remove(sched)

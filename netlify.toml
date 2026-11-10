@@ -1,3 +1,11 @@
+[build]
+  command = "python3 scripts/build_chat_knowledge.py"
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  included_files = ["data/chat-knowledge.json"]
+
 [[redirects]]
   from = "/fleet"
   to = "/fleet.html"
@@ -61,6 +69,13 @@
 # end of the path, which is the form Netlify actually matches.
 [[redirects]]
   from = "/.scheduled/*"
+  to = "/404"
+  status = 404
+  force = true
+
+# Function source is deployed by Netlify's functions runtime, not as a static file.
+[[redirects]]
+  from = "/netlify/*"
   to = "/404"
   status = 404
   force = true
