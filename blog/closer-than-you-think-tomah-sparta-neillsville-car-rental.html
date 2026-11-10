@@ -284,5 +284,23 @@ var f=document.getElementsByClassName("faq-question");
 for(var j=0;j<f.length;j++){f[j].onclick=function(){var p=this.parentElement;var x=p.className.indexOf("active")!==-1;var all=document.getElementsByClassName("faq-item");for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}}}
 })();
 </script>
+
+<!-- rar-chat-widget -->
+<link rel="stylesheet" href="/css/chat-widget.css">
+<form name="chat-handoff" method="POST" action="/" data-netlify="true" netlify netlify-honeypot="bot-field" hidden aria-hidden="true">
+  <input type="hidden" name="form-name" value="chat-handoff">
+  <p hidden>
+    <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+  </p>
+  <input name="name" autocomplete="name">
+  <input name="phone" autocomplete="tel">
+  <input name="email" autocomplete="email">
+  <input name="preferred_time" autocomplete="off">
+  <textarea name="question"></textarea>
+  <textarea name="transcript"></textarea>
+  <input name="page_url">
+</form>
+<script src="/js/chat-widget.js" defer></script>
+<!-- /rar-chat-widget -->
 </body>
 </html>
