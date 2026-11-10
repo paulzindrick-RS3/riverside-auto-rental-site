@@ -22,6 +22,19 @@ async function postJson(fetchImpl, url, apiKey, body, signal) {
   return { ok: response.ok, status: response.status, data };
 }
 
+function errorDetail(status, data) {
+  const err = data && data.error;
+  const code = err && typeof err.code === "string" && /^[a-z0-9_]{1,40}$/i.test(err.code) ? err.code : "";
+  const type = err && typeof err.type === "string" && /^[a-z0-9_]{1,40}$/i.test(err.type) ? err.type : "";
+  const token = code || type;
+  let limit = "";
+  const message = err && typeof err.message === "string" ? err.message : "";
+  const match = message.match(/Limit[:\s]*([0-9,]+).{0,40}Requested[:\s]*([0-9,]+)/i);
+  if (match) limit = `:${match[1].replace(/,/g, "")}-${match[2].replace(/,/g, "")}`;
+  if (!token && !limit) return String(status);
+  return `${status}${token ? `:${token}` : ""}${limit}`.slice(0, 80);
+}
+
 export async function moderate(fetchImpl, apiKey, text) {
   try {
     const { ok, data } = await postJson(fetchImpl, "https://api.openai.com/v1/moderations", apiKey, {
@@ -51,6 +64,7 @@ async function completeOnce(fetchImpl, apiKey, model, messages, extra, signal) {
   if (!ok) {
     const error = new Error("openai_error");
     error.status = status;
+    error.detail = errorDetail(status, data);
     throw error;
   }
   const text = String((data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) || "").trim();

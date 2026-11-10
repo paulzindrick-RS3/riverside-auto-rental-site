@@ -101,6 +101,8 @@ function isTimeout(error) {
 }
 
 function statusDetail(error) {
+  const detail = error && error.detail;
+  if (typeof detail === "string" && /^[A-Za-z0-9_:-]{1,80}$/.test(detail)) return detail;
   return error && Number.isFinite(error.status) ? String(error.status) : "";
 }
 
@@ -281,6 +283,9 @@ export async function handleChat(request, deps = {}) {
   } catch (error) {
     if (isTimeout(error)) {
       return trouble(deps, "timeout", origin);
+    }
+    if (error.status === 429 || model === backup) {
+      return trouble(deps, "model", origin, { detail: statusDetail(error) });
     }
     if (model !== backup) {
       try {

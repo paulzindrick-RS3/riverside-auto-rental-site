@@ -441,6 +441,21 @@ test("infrastructure failures are not described as missing website content", asy
   assert.equal(failed.detail, "503");
   assert.equal(JSON.stringify(failed).includes(secret), false);
 
+  const limited = openaiFetch(() => ({
+    status: 429,
+    body: {
+      error: {
+        message: `You exceeded your current quota. ${secret}`,
+        type: "insufficient_quota",
+        code: "insufficient_quota",
+      },
+    },
+  }));
+  const quota = await expectTrouble(await ask({ fetch: limited }), "model");
+  assert.equal(quota.detail, "429:insufficient_quota");
+  assert.equal(JSON.stringify(quota).includes(secret), false);
+  assert.equal(limited.calls.filter((call) => call.url.includes("chat/completions")).length, 1);
+
   const hung = () => new Promise(() => {});
   await expectTrouble(await ask({ complete: hung, openaiTimeoutMs: 30 }), "timeout");
 
