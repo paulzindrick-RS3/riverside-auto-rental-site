@@ -1,4 +1,5 @@
 /** Rate-limit and spend counters. Tests inject a memory store. */
+import { getStore } from "@netlify/blobs";
 
 export function createMemoryStore() {
   const map = new Map();
@@ -15,18 +16,12 @@ export function createMemoryStore() {
 
 export async function openRuntimeStore() {
   try {
-    const { getStore } = await import("@netlify/blobs");
-    let blobs;
-    try {
-      blobs = getStore({ name: "chat-limits", consistency: "strong" });
-    } catch {
-      blobs = getStore("chat-limits");
-    }
-    await blobs.get("__probe");
+    const blobs = getStore("chat-limits");
+    await blobs.get("__probe", { type: "text" });
     return {
       persistent: true,
       async get(key) {
-        const raw = await blobs.get(key);
+        const raw = await blobs.get(key, { type: "text" });
         if (raw == null || raw === "") return null;
         try {
           return JSON.parse(raw);

@@ -5,6 +5,7 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import bundledKnowledge from "../../../data/chat-knowledge.json" with { type: "json" };
 import { dollarCents } from "./guardrails.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -16,7 +17,7 @@ export function buildSystemPrompt(knowledge) {
     .join("\n\n");
   return [
     "You are Riverside Rental Help, the automated assistant for the Riverside Auto Rental website. You are not a person. Never call yourself AI, and never pretend to be a person. If someone asks whether you are a person, say honestly that you are an automated assistant and tell them to text us at 715-396-1466 or call the same number.",
-    "Answer only from the SITE CONTENT block below. If the content does not contain the answer, say you don't have that and tell the visitor to text us at 715-396-1466, or call the same number. Do not offer a form, and do not ask for a name or a phone number. Do not guess miles, taxes, availability, which vehicle is free, or what an insurer will pay.",
+    "Answer only from the SITE CONTENT block below. If the content does not contain the answer, say you don't have that and tell the visitor to text us at 715-396-1466, or call the same number. Do not offer a form, and do not ask for a name or a phone number. Do not guess miles, taxes, availability, which vehicle is free, or what an insurer will pay. If a figure is not written for that case, including a non-local per-mile amount or a non-local weekly rate for a van or minivan, do not calculate or reuse a different rate. Say to text or call instead.",
     "Quote posted rates exactly as written, including any local or unlimited-miles qualifier that appears next to that rate. If two pages disagree, say so and offer 715-396-1466. Do not pick a winner and do not change a rate.",
     "Never invent facts. Never offer a discount, a coupon, or a one-way rental. Never call a deposit refundable. Never give a deposit-hold release time. Say \"most major carriers\" and never name an insurer. Do not confirm a reservation or say a vehicle is held. Insurance add-on prices are quoted by phone, not by you.",
     "Desk hours are Monday–Friday 8:00 AM–5:00 PM and Saturday 8:00 AM–noon. Sunday is closed. Do not promise that someone will call the visitor back.",
@@ -50,6 +51,9 @@ export function knowledgeText(knowledge) {
 }
 
 export function loadKnowledgeFromDisk() {
+  if (bundledKnowledge && Array.isArray(bundledKnowledge.pages) && bundledKnowledge.pages.length > 0) {
+    return bundledKnowledge;
+  }
   const candidates = [
     join(process.cwd(), "data", "chat-knowledge.json"),
     join(here, "..", "..", "..", "data", "chat-knowledge.json"),

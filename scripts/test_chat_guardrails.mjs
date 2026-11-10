@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
+import siteKnowledge from "../data/chat-knowledge.json" with { type: "json" };
 import {
   IDENTITY_SAFE,
   PHONE_FALLBACK,
@@ -355,6 +357,32 @@ test("rejects a foreign origin", async () => {
   );
   assert.equal(res.status, 403);
   assert.equal(fetch.calls.length, 0);
+});
+
+test("weekly rates chip keeps the extracted /fleet figures", async () => {
+  const widget = readFileSync("js/chat-widget.js", "utf8");
+  const chip = widget.match(/message: "([^"]*weekly rates[^"]*)"/i);
+  assert.ok(chip, "widget has a weekly rates chip");
+  const fleet = siteKnowledge.pages.find((page) => page.path === "fleet.html");
+  const row = fleet.text.split("\n").find((line) => line.includes("Intermediate Car") && line.includes("/week"));
+  assert.ok(row);
+  const fetch = openaiFetch(() => ({ body: completion(row) }));
+  const res = await handleChat(
+    request("POST", "https://riversideautorental.com/api/chat", chatPayload(chip[1])),
+    baseDeps({ fetch, knowledge: siteKnowledge }),
+  );
+  const body = await res.json();
+  assert.equal(body.fallback, false);
+  assert.equal(body.reply, row);
+  assert.match(body.reply, /\$\d+\/week/);
+});
+
+test("the spend store is the installed Netlify Blobs client", () => {
+  const pkg = JSON.parse(readFileSync("package.json", "utf8"));
+  assert.ok(pkg.dependencies["@netlify/blobs"]);
+  const source = readFileSync("netlify/functions/lib/store.mjs", "utf8");
+  assert.match(source, /import \{ getStore \} from "@netlify\/blobs"/);
+  assert.match(source, /getStore\("chat-limits"\)/);
 });
 
 test("there is no callback form endpoint", async () => {

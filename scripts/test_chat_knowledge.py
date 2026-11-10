@@ -2,6 +2,7 @@
 """Knowledge extraction: A1 slice, no drafts, no refundable/hold-release claims."""
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -50,6 +51,18 @@ def main():
     expect("security deposit" in blob, "deposit wording remains", failures)
     expect("$55" in text and "$135" in text and "$300" in text, "posted rates remain", failures)
     expect("715-396-1466" in text, "desk phone remains", failures)
+    fleet_html = open("fleet.html", encoding="utf-8").read()
+    fleet_visible = knowledge.visible_text(fleet_html)
+    fleet_figures = sorted(set(re.findall(r"\$\d+(?:\.\d+)?/(?:day|week|mi)", fleet_visible)))
+    fleet_page = next(page for page in data["pages"] if page["path"] == "fleet.html")
+    expect(len(fleet_figures) > 0, "fleet.html publishes rate figures", failures)
+    for figure in fleet_figures:
+        expect(figure in fleet_page["text"], f"/fleet knowledge keeps {figure}", failures)
+    expect(
+        "Intermediate Car | $55/day | $330/week" in fleet_page["text"],
+        "/fleet weekly table row survives extraction",
+        failures,
+    )
     expect("21" in text, "minimum age remains", failures)
 
     joined = "\n".join(page["text"] for page in data["pages"])
