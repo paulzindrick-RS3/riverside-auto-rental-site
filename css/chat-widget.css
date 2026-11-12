@@ -1,0 +1,207 @@
+/* One Help control. It is an sms: link until chat is confirmed available. */
+#rar-help {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: #304b78;
+  color: #fff;
+  border-radius: 999px;
+  padding: 13px 20px;
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(48, 75, 120, 0.45);
+}
+#rar-help:hover { color: #fff; transform: translateY(-2px); }
+#rar-help-menu {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 180px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(45, 49, 66, 0.16);
+}
+#rar-help-menu[hidden] { display: none; }
+#rar-help-menu a,
+#rar-help-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: #e8edf4;
+  color: #1e3050;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.rar-chat {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  color: #333b4a;
+  line-height: 1.45;
+}
+.rar-chat__panel[hidden],
+.rar-chat__log[hidden],
+.rar-chat__chips[hidden],
+.rar-chat__composer[hidden],
+.rar-chat__textus[hidden] {
+  display: none;
+}
+.rar-chat__panel {
+  position: fixed;
+  right: 20px;
+  bottom: 84px;
+  z-index: 9999;
+  width: min(380px, calc(100vw - 32px));
+  max-height: min(640px, calc(100vh - 160px));
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #333b4a;
+  border: 1px solid #eef1f6;
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(45, 49, 66, 0.18);
+  overflow: auto;
+}
+.rar-chat__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #304b78;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.rar-chat__title {
+  margin: 0;
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+.rar-chat__close {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+.rar-chat__disclosure,
+.rar-chat__helper,
+.rar-chat__hours,
+.rar-chat__phone,
+.rar-chat__error {
+  margin: 0;
+  padding: 8px 16px 0;
+  font-size: 0.82rem;
+  color: #4a5568;
+}
+.rar-chat__disclosure { padding-top: 12px; }
+.rar-chat__log {
+  overflow: visible;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rar-chat__msg {
+  max-width: 92%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.rar-chat__msg--assistant { background: #e8edf4; align-self: flex-start; }
+.rar-chat__msg--user { background: #304b78; color: #fff; align-self: flex-end; }
+.rar-chat__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 16px 8px;
+}
+.rar-chat__chip {
+  border: 1px solid #304b78;
+  background: #fff;
+  color: #304b78;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.rar-chat__chip--quiet { border-style: dashed; }
+.rar-chat__composer {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 8px;
+}
+.rar-chat__input,
+.rar-chat__field input,
+.rar-chat__field textarea {
+  width: 100%;
+  border: 1px solid #eef1f6;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+  color: #333b4a;
+  background: #fff;
+}
+.rar-chat__send {
+  border: 0;
+  background: #c41e3a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+.rar-chat__send:disabled { opacity: 0.6; cursor: default; }
+.rar-chat__helper { padding-bottom: 12px; }
+.rar-chat__textus { padding: 0 16px 14px; }
+.rar-chat__textus-lead { margin: 0 0 8px; font-size: 0.95rem; }
+.rar-chat__number {
+  font-family: Archivo, "Segoe UI", sans-serif;
+  font-weight: 700;
+  color: #1e3050;
+}
+.rar-chat__phone { margin: 0; }
+.rar-chat__phone a { color: #304b78; font-weight: 700; }
+a.rar-chat__chip { text-decoration: none; display: inline-flex; }
+@media (max-width: 768px) {
+  #rar-help { right: 16px; bottom: 72px; }
+  #rar-help-menu { right: 16px; bottom: 128px; }
+  .rar-chat__panel {
+    right: 16px;
+    bottom: 132px;
+    max-height: calc(100vh - 210px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #rar-help { transition: none; }
+}
