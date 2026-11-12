@@ -44,9 +44,9 @@ jobs:
         run: |
           git config user.name "Scheduled Publisher"
           git config user.email "action@github.com"
-          # Importing the sitemap builder writes scripts/__pycache__. Do not
-          # commit that bytecode with the published post.
-          git add -A -- . ':(exclude)scripts/__pycache__'
+          # Importing the sitemap builder writes scripts/__pycache__. .gitignore
+          # keeps it out. Naming it in a pathspec makes git add exit 1 (Oct 27, Nov 3).
+          git add -A
           git commit -m "Auto-publish + wire in scheduled post(s) — $(date -u +%Y-%m-%d)"
           git pull --rebase origin main
           git push
