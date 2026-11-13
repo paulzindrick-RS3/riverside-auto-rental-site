@@ -49,9 +49,7 @@ POLICY_BLOGS = [
     "blog/what-you-need-to-rent-a-car-black-river-falls.html",
     "blog/daily-vs-weekly-car-rental-rates.html",
     "blog/weekly-car-rental-rates-when-7-days-beats-daily.html",
-    "blog/insurance-replacement-rental-cars-black-river-falls.html",
     "blog/does-car-insurance-cover-rental-car-wisconsin.html",
-    "blog/same-day-insurance-replacement-rental-black-river-falls.html",
 ]
 
 BANNED_PHRASES = (
