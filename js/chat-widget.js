@@ -112,7 +112,11 @@
     header.appendChild(title);
     header.appendChild(closeBtn);
 
-    var disclosure = el("p", "rar-chat__disclosure", DISCLOSURE);
+    var disclosure = el("p", "rar-chat__disclosure");
+    disclosure.appendChild(document.createTextNode(DISCLOSURE + " "));
+    var privacy = el("a", null, "Privacy");
+    privacy.href = "/privacy.html";
+    disclosure.appendChild(privacy);
     var log = el("div", "rar-chat__log");
     log.setAttribute("role", "log");
     log.setAttribute("aria-live", "polite");
