@@ -81,7 +81,10 @@ async function completeOnce(fetchImpl, apiKey, model, messages, extra, signal) {
 export async function complete(fetchImpl, apiKey, model, messages, options = {}) {
   const signal = options && options.signal;
   try {
-    const result = await completeOnce(fetchImpl, apiKey, model, messages, { reasoning_effort: "minimal" }, signal);
+    // gpt-6.1-terra and gpt-6-luna do not list "minimal". OpenAI's GPT-6
+    // migration says to start at "low" when leaving "minimal". Chat
+    // Completions still uses reasoning_effort and max_completion_tokens.
+    const result = await completeOnce(fetchImpl, apiKey, model, messages, { reasoning_effort: "low" }, signal);
     if (!result.text) {
       const error = new Error("empty_completion");
       error.status = 502;

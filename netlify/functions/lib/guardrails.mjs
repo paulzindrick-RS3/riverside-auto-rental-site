@@ -43,10 +43,14 @@ export const LIMITS = {
   openaiTimeoutMs: 20000,
 };
 
-/** Dollars per 1M tokens. Unknown models use gpt-5-mini rates (the cap stays conservative). */
+/**
+ * Standard short-context dollars per 1M tokens, from OpenAI's pricing page
+ * (checked Nov 17, 2026). Cached input is the published cached-input rate.
+ * Unknown models use gpt-6.1-terra rates so the daily cap never treats them as free.
+ */
 export const MODEL_PRICES = {
-  "gpt-5-mini": { input: 0.25, cached: 0.025, output: 2 },
-  "gpt-5-nano": { input: 0.05, cached: 0.005, output: 0.4 },
+  "gpt-6.1-terra": { input: 1, cached: 0.05, output: 5 },
+  "gpt-6-luna": { input: 0.1, cached: 0.01, output: 0.5 },
   "gpt-4o-mini": { input: 0.15, cached: 0.075, output: 0.6 },
 };
 
@@ -89,7 +93,7 @@ const INJECTION = [
 ];
 
 export function pricesFor(model) {
-  return MODEL_PRICES[model] || MODEL_PRICES["gpt-5-mini"];
+  return MODEL_PRICES[model] || MODEL_PRICES["gpt-6.1-terra"];
 }
 
 export function costMicro(model, usage) {
@@ -137,14 +141,19 @@ export function resolveMode(env) {
   return "chat";
 }
 
+// Defaults replace gpt-5-mini and gpt-5-nano, which OpenAI shuts down on
+// Dec 11, 2026. CHAT_MODEL and CHAT_MODEL_FALLBACK override these when set.
+// If either Netlify value is still gpt-5-mini or gpt-5-nano, that call keeps
+// using the retired model and stops working on Dec 11 until the value is
+// changed or removed.
 export function primaryModel(env) {
   const name = String((env && env.CHAT_MODEL) || "").trim();
-  return name || "gpt-5-mini";
+  return name || "gpt-6.1-terra";
 }
 
 export function fallbackModel(env) {
   const name = String((env && env.CHAT_MODEL_FALLBACK) || "").trim();
-  return name || "gpt-5-nano";
+  return name || "gpt-6-luna";
 }
 
 export function utcDay(ms) {

@@ -9,9 +9,11 @@ import {
   applyOutputGuards,
   costMicro,
   dollarCents,
+  estimateCallMicro,
   originAllowed,
 } from "../netlify/functions/lib/guardrails.mjs";
 import { handleChat, handleStatus } from "../netlify/functions/lib/handler.mjs";
+import { buildSystemPrompt } from "../netlify/functions/lib/knowledge.mjs";
 import { spendKey } from "../netlify/functions/lib/limits.mjs";
 import { createMemoryStore, normalizeBlobsContext } from "../netlify/functions/lib/store.mjs";
 
@@ -115,12 +117,19 @@ function baseDeps(extra = {}) {
   };
 }
 
-test("dollar amounts and mini token cost", () => {
+test("dollar amounts and replacement-model token cost", () => {
   assert.deepEqual([...dollarCents("Local rate $55/day, van $135/day + $0.10/mi, deposit $1,048.25")], [5500, 13500, 10, 104825]);
-  assert.equal(costMicro("gpt-5-mini", { promptTokens: 1_000_000, cachedTokens: 0, completionTokens: 0 }), 250_000);
-  assert.equal(costMicro("gpt-5-mini", { promptTokens: 1_000_000, cachedTokens: 1_000_000, completionTokens: 0 }), 25_000);
-  assert.equal(costMicro("gpt-5-mini", { promptTokens: 0, completionTokens: 1_000_000 }), 2_000_000);
-  assert.equal(costMicro("gpt-5-nano", { promptTokens: 1_000_000, cachedTokens: 0, completionTokens: 0 }), 50_000);
+  assert.equal(costMicro("gpt-6.1-terra", { promptTokens: 1_000_000, cachedTokens: 0, completionTokens: 0 }), 1_000_000);
+  assert.equal(costMicro("gpt-6.1-terra", { promptTokens: 1_000_000, cachedTokens: 1_000_000, completionTokens: 0 }), 50_000);
+  assert.equal(costMicro("gpt-6.1-terra", { promptTokens: 0, completionTokens: 1_000_000 }), 5_000_000);
+  assert.equal(costMicro("gpt-6-luna", { promptTokens: 1_000_000, cachedTokens: 0, completionTokens: 0 }), 100_000);
+  assert.equal(costMicro("gpt-6-luna", { promptTokens: 1_000_000, cachedTokens: 1_000_000, completionTokens: 0 }), 10_000);
+  assert.equal(costMicro("gpt-6-luna", { promptTokens: 0, completionTokens: 1_000_000 }), 500_000);
+  assert.equal(
+    costMicro("not-a-published-model", { promptTokens: 1_000_000, cachedTokens: 0, completionTokens: 1_000_000 }),
+    costMicro("gpt-6.1-terra", { promptTokens: 1_000_000, cachedTokens: 0, completionTokens: 1_000_000 }),
+  );
+  assert.ok(costMicro("not-a-published-model", { promptTokens: 1, completionTokens: 0 }) > 0);
 });
 
 test("output guards keep posted rates and replace invented ones", () => {
@@ -239,7 +248,7 @@ test("a posted rate is returned and an invented price is replaced", async () => 
   assert.doesNotMatch(prompt.messages[0].content, /callback request|in-chat callback/i);
   assert.match(prompt.messages.at(-1).content, /untrusted visitor input/);
   assert.equal(JSON.stringify(prompt).includes(KEY), false);
-  assert.equal(prompt.model, "gpt-5-mini");
+  assert.equal(prompt.model, "gpt-6.1-terra");
 });
 
 test("prompt injection and card numbers never reach the model", async () => {
@@ -301,7 +310,9 @@ test("per-IP rate limit and daily spend cap skip the model", async () => {
 
 test("near the spend cap, a mini error, moderation, and a missing store do not leak the key", async () => {
   const near = createMemoryStore();
-  await near.set(spendKey("2026-11-10"), 5_000_000 - 300);
+  const sampleChars = buildSystemPrompt(knowledge()).length + "Rate?".length;
+  const lunaRoom = estimateCallMicro("gpt-6-luna", sampleChars);
+  await near.set(spendKey("2026-11-10"), 5_000_000 - lunaRoom);
   let nanoCalls = 0;
   const nearFetch = openaiFetch(() => {
     nanoCalls += 1;
@@ -313,7 +324,7 @@ test("near the spend cap, a mini error, moderation, and a missing store do not l
   );
   assert.match((await switched.json()).reply, /\$55/);
   const modelCall = nearFetch.calls.find((call) => call.url.includes("chat/completions"));
-  assert.equal(modelCall.body.model, "gpt-5-nano");
+  assert.equal(modelCall.body.model, "gpt-6-luna");
   assert.equal(nanoCalls, 1);
 
   let attempts = 0;
@@ -330,7 +341,7 @@ test("near the spend cap, a mini error, moderation, and a missing store do not l
   assert.match(recoveredBody.reply, /\$55/);
   assert.equal(JSON.stringify(recoveredBody).includes("upstream"), false);
   const models = flaky.calls.filter((call) => call.url.includes("chat/completions")).map((call) => call.body.model);
-  assert.deepEqual(models, ["gpt-5-mini", "gpt-5-nano"]);
+  assert.deepEqual(models, ["gpt-6.1-terra", "gpt-6-luna"]);
 
   const flagged = fetchMock(async (url) => {
     if (url.includes("/moderations")) return { body: { results: [{ flagged: true }] } };
