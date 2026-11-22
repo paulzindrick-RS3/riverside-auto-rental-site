@@ -19,6 +19,8 @@ instead of Retell's default gradient orb and logo.
 
 More rules in the same block polish the open chat:
 - "Riverside Rental Help" next to the R in the chat header.
+- A navy outline on the message box and a solid navy Send button (Retell's
+  defaults were a faint gray outline and a half-faded button).
 - A welcome note. Retell chats always wait for the visitor to speak first
   and show an empty first agent bubble; the rule writes the welcome text
   into that empty bubble (only while it is empty, only the first one).
@@ -62,6 +64,8 @@ SNIPPET = """<!-- rar-retell-chat -->
         '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
         '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
         '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
+        '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
         '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
         '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
         '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
