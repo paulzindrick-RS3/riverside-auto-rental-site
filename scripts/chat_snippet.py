@@ -16,6 +16,14 @@ the button goes back to Retell's default look in the corner - nothing breaks.
 
 The button and chat header use the Riverside "R" (images/chat-icon.png)
 instead of Retell's default gradient orb and logo.
+
+More rules in the same block polish the open chat:
+- "Riverside Rental Help" next to the R in the chat header.
+- A welcome note. Retell chats always wait for the visitor to speak first
+  and show an empty first agent bubble; the rule writes the welcome text
+  into that empty bubble (only while it is empty, only the first one).
+- The open-chat collapse button: navy arrow on computers; hidden on phones,
+  where it sat on top of the Send button (the header X closes the chat).
 """
 import re
 
@@ -52,7 +60,13 @@ SNIPPET = """<!-- rar-retell-chat -->
       style.textContent =
         '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
         '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
-        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}';
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
+        '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
+        '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty::before{display:block;white-space:normal;' +
+        'content:"Hi! I’m Riverside’s automated assistant. I can quote rates, explain what you need to rent, or take a rental request for the team. What can I help with?"}';
       shadow.appendChild(style);
     }
     if (shadow || ++tries > 80) clearInterval(timer);
