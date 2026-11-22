@@ -21,6 +21,8 @@ More rules in the same block polish the open chat:
 - "Riverside Rental Help" next to the R in the chat header.
 - A navy outline on the message box and a solid navy Send button (Retell's
   defaults were a faint gray outline and a half-faded button).
+- Bigger navy "typing" dots in a light bubble while a reply is on its way
+  (Retell's were three tiny gray dots with no bubble, easy to miss).
 - A welcome note. Retell chats always wait for the visitor to speak first
   and show an empty first agent bubble; the rule writes the welcome text
   into that empty bubble (only while it is empty, only the first one).
@@ -66,6 +68,9 @@ SNIPPET = """<!-- rar-retell-chat -->
         '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
         '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
         '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
+        '[class*="_typingBubble_"]{display:inline-flex!important;align-items:center;background:#E8EDF4!important;border-radius:18px!important;padding:12px 16px!important;margin:4px 0 4px 14px!important;width:auto!important}' +
+        '[class*="_dots_"]{display:inline-flex!important;gap:5px!important}' +
+        '[class*="_dots_"]>span{width:9px!important;height:9px!important;background:#304B78!important;border-radius:50%!important}' +
         '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
         '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
         '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
