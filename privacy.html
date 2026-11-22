@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy | Riverside Auto Rental</title>
-  <meta name="description" content="What riversideautorental.com collects on the contact form and, when chat is on, in chat. Call 715-396-1466 or email contact@riversideautorental.com.">
+  <meta name="description" content="What riversideautorental.com collects on the contact form. Call 715-396-1466 or email contact@riversideautorental.com.">
   <link rel="canonical" href="https://riversideautorental.com/privacy.html">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Privacy | Riverside Auto Rental">
-  <meta property="og:description" content="What this website collects on the contact form and, when chat is on, in chat. Call 715-396-1466 or email contact@riversideautorental.com.">
+  <meta property="og:description" content="What this website collects on the contact form. Call 715-396-1466 or email contact@riversideautorental.com.">
   <meta property="og:url" content="https://riversideautorental.com/privacy.html">
   <meta property="og:image" content="https://riversideautorental.com/images/logo.png">
   <meta property="og:locale" content="en_US">
@@ -95,7 +95,7 @@
 
     <section class="section">
       <div class="container" style="max-width:800px;">
-        <p>Riverside Auto Rental is at N5856 WI-54, Black River Falls, WI 54615. This page describes the contact form on this website and, once it is turned on, Riverside Rental Help. Until that automated assistant is turned on, this website does not send chat messages to OpenAI.</p>
+        <p>Riverside Auto Rental is at N5856 WI-54, Black River Falls, WI 54615. This page describes the contact form on this website.</p>
         <p>This website uses Google Analytics to understand how visitors use the site.</p>
 
         <h2>Contact form</h2>
@@ -103,26 +103,15 @@
         <!-- CONFIRM: How long contact@riversideautorental.com keeps mail is not set in this repo. -->
 
         <h2>Reaching a person</h2>
-        <p>When Riverside Rental Help is turned on, a visitor who wants a person can text or call <a href="tel:+17153961466">715-396-1466</a>. That text or call goes to the business directly, not through this website.</p>
+        <p>To reach a person, text or call <a href="tel:+17153961466">715-396-1466</a>. That text or call goes to the business directly, not through this website.</p>
 
-        <h2>Chat messages</h2>
-        <p>When Riverside Rental Help is turned on, the question you type is sent to OpenAI so it can write a reply from the pages published on this website. The question is sent with up to the eight most recent messages already in that conversation. Before the reply is written, the question is also sent to OpenAI for a moderation check. Numbers that look like a payment card or a Social Security number are removed first.</p>
-        <p>This website's code does not set how long OpenAI keeps those requests. The key used to call OpenAI stays in the site's hosting settings. It is not placed in the page you see.</p>
-        <!-- CONFIRM: OpenAI API retention, including any zero-retention setting, is chosen in the OpenAI project, not in this repo. -->
-
-        <p>While the chat window is open, the conversation stays in the browser for that visit. A session id is stored in the browser's session storage and is removed when you close the tab. The chat code does not set a cookie for that id.</p>
-
-        <p>Each chat request writes a short status line, such as whether a limit was hit or which model answered. That line does not include your message. The host may still record the time of the request and a status in its own logs. How long those logs are kept is not set in this website's code.</p>
-        <!-- CONFIRM: Netlify function log retention depends on the Netlify plan and is not configured in the repo. -->
-
-        <p>The chat function also stores counters so it can limit how many messages are sent and the daily cost of answers. A counter is a count and a time, or a daily total. It is tied to a shortened hash of the network address or the session id, not to your name. The counters do not include the text of your messages. The code does not delete old counters.</p>
-        <!-- CONFIRM: Netlify Blobs store "chat-limits" has no expiration in the code. Any platform retention is not set in the repo. -->
+        <!-- TODO: Add the new chat vendor's privacy disclosure here (what the chat collects, who processes it, how long it is kept) before the new chat goes live. -->
 
         <h2>Sensitive numbers</h2>
-        <p>Don't type a driver's license number, a payment card number, a Social Security number, or other sensitive numbers into the chat or into the contact form. The chat function removes a number that looks like a payment card or a Social Security number before it is sent on. Don't rely on that to catch every number.</p>
+        <p>Don't type a driver's license number, a payment card number, a Social Security number, or other sensitive numbers into the contact form.</p>
 
         <h2>Privacy questions</h2>
-        <p>For a privacy question, call or text <a href="tel:+17153961466">715-396-1466</a> or email <a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a>. This website does not keep a copy of the chat, and it does not have a button that deletes a question sent to OpenAI.</p>
+        <p>For a privacy question, call or text <a href="tel:+17153961466">715-396-1466</a> or email <a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a>.</p>
       </div>
     </section>
   </main>
@@ -210,13 +199,5 @@
   </script>
 
   
-<!-- rar-chat-widget -->
-<link rel="stylesheet" href="/css/chat-widget.css">
-<a id="rar-help" class="rar-help" href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-  Help
-</a>
-<script src="/js/chat-widget.js" defer></script>
-<!-- /rar-chat-widget -->
 </body>
 </html>
