@@ -6,8 +6,11 @@ The agent version is pinned so edits in the Retell dashboard do not reach
 the site until a version is published and this number is changed.
 
 On phones (768px and narrower) the site shows a fixed red "Call" banner at
-the bottom of the screen, so the small style rule lifts the chat button
-above it instead of covering it.
+the bottom of the screen. Retell's widget has no setting for its position
+and draws its button inside its own shadow root, so a small script adds one
+style rule there that lifts the button (and the open chat) 76px above the
+banner on those screens. If Retell renames its classes, the rule simply
+stops matching and the button goes back to the corner - nothing breaks.
 """
 import re
 
@@ -29,7 +32,23 @@ SNIPPET = """<!-- rar-retell-chat -->
   data-show-ai-popup="false"
   defer
 ></script>
-<style>@media (max-width:768px){#retell-widget-root{bottom:76px!important}}</style>
+<script>
+(function () {
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById("retell-widget-root");
+    var host = root && root.firstElementChild;
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById("rar-lift")) {
+      var style = document.createElement("style");
+      style.id = "rar-lift";
+      style.textContent = '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}';
+      shadow.appendChild(style);
+    }
+    if (shadow || ++tries > 80) clearInterval(timer);
+  }, 250);
+})();
+</script>
 <!-- /rar-retell-chat -->
 """
 
