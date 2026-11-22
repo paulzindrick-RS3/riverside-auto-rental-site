@@ -190,7 +190,9 @@
   data-agent-version="1"
   data-title="Riverside Rental Help"
   data-bot-name="Riverside Rental Help"
-  data-fab-text="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
   data-color="#304B78"
   data-chat-font-size="large"
   data-show-ai-popup="false"
@@ -206,7 +208,10 @@
     if (shadow && !shadow.getElementById("rar-lift")) {
       var style = document.createElement("style");
       style.id = "rar-lift";
-      style.textContent = '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}';
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}';
       shadow.appendChild(style);
     }
     if (shadow || ++tries > 80) clearInterval(timer);

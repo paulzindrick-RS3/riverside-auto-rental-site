@@ -9,8 +9,13 @@ On phones (768px and narrower) the site shows a fixed red "Call" banner at
 the bottom of the screen. Retell's widget has no setting for its position
 and draws its button inside its own shadow root, so a small script adds one
 style rule there that lifts the button (and the open chat) 76px above the
-banner on those screens. If Retell renames its classes, the rule simply
-stops matching and the button goes back to the corner - nothing breaks.
+banner on those screens. The same rule block turns the button white with
+navy text and border, so it stands out against the navy hero and red
+banner. If Retell renames its classes, the rules simply stop matching and
+the button goes back to Retell's default look in the corner - nothing breaks.
+
+The button and chat header use the Riverside "R" (images/chat-icon.png)
+instead of Retell's default gradient orb and logo.
 """
 import re
 
@@ -26,7 +31,9 @@ SNIPPET = """<!-- rar-retell-chat -->
   data-agent-version="1"
   data-title="Riverside Rental Help"
   data-bot-name="Riverside Rental Help"
-  data-fab-text="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
   data-color="#304B78"
   data-chat-font-size="large"
   data-show-ai-popup="false"
@@ -42,7 +49,10 @@ SNIPPET = """<!-- rar-retell-chat -->
     if (shadow && !shadow.getElementById("rar-lift")) {
       var style = document.createElement("style");
       style.id = "rar-lift";
-      style.textContent = '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}';
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}';
       shadow.appendChild(style);
     }
     if (shadow || ++tries > 80) clearInterval(timer);
