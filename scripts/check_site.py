@@ -115,6 +115,11 @@ def main():
             if not name.endswith(".html") or name.endswith(".scheduled") or ".scheduled" in name:
                 errors.append(f"blog/ is public and contains a non-page file: {path}")
 
+    for path in build_sitemap.iter_html():
+        text = open(path, encoding="utf-8").read()
+        if text.count("<!-- rar-retell-chat -->") != 1 or "<!-- /rar-retell-chat -->" not in text:
+            errors.append(f"{path}: needs exactly one Riverside Rental Help chat tag (run scripts/inject_chat.py)")
+
     if errors:
         print(f"{len(errors)} site check(s) failed:")
         for err in errors:

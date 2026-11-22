@@ -19,6 +19,8 @@ the homepage Latest guides block, sitemap.xml, and llms.txt. Run from repo root.
 - Adds a line under "## Live Blog Posts" in llms.txt.
 - Adds the footer Privacy link on a newly published post when that post
   uses the shared footer. Other pages are not rewritten.
+- Adds the Riverside Rental Help chat tag to a newly published post. It does
+  not rewrite pages that are already live.
 All wiring steps are idempotent (skipped if the slug is already present) and
 non-fatal: a wiring failure prints ::warning:: but never blocks publishing.
 Exits 0 always; writes published count to the file named in $COUNT_FILE.
@@ -140,6 +142,20 @@ def ensure_privacy_footer(body):
         return body
 
 
+def add_chat_tag(body):
+    """New posts carry the same chat tag as the rest of the site."""
+    try:
+        here = os.path.dirname(os.path.abspath(__file__))
+        scripts = os.path.abspath(os.path.join(here, "..", "..", "scripts"))
+        if scripts not in sys.path:
+            sys.path.insert(0, scripts)
+        import chat_snippet
+        return chat_snippet.inject(body)
+    except Exception as e:
+        warn(f"chat tag skipped: {e}")
+        return body
+
+
 def rebuild_sitemap():
     sys.path.insert(0, os.path.join(os.getcwd(), "scripts"))
     import build_sitemap
@@ -175,6 +191,7 @@ def main():
         public = TODAY
         body = stamp_public_date("".join(lines[body_start:]), public)
         body = ensure_privacy_footer(body)
+        body = add_chat_tag(body)
         with open(real, "w", encoding="utf-8", newline="") as f:
             f.write(body)
         os.remove(sched)
