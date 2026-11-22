@@ -4,6 +4,10 @@ The tag goes just before </head>, as Retell's widget docs require. It is
 wrapped in markers so it can be found, replaced, or removed in one step.
 The agent version is pinned so edits in the Retell dashboard do not reach
 the site until a version is published and this number is changed.
+
+On phones (768px and narrower) the site shows a fixed red "Call" banner at
+the bottom of the screen, so the small style rule lifts the chat button
+above it instead of covering it.
 """
 import re
 
@@ -25,6 +29,7 @@ SNIPPET = """<!-- rar-retell-chat -->
   data-show-ai-popup="false"
   defer
 ></script>
+<style>@media (max-width:768px){#retell-widget-root{bottom:76px!important}}</style>
 <!-- /rar-retell-chat -->
 """
 
