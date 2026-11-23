@@ -124,7 +124,7 @@ gtag('config', 'G-EDMLSNJ4B9');
   "name": "Who can drive the rental van?",
   "acceptedAnswer": {
    "@type": "Answer",
-   "text": "Drivers must be 21 or older with a valid U.S. driver's license. Plan on one designated driver who doesn't drink."
+   "text": "Drivers must be 18 or older with a valid U.S. driver's license. Plan on one designated driver who doesn't drink."
   }
  },
  {
@@ -184,7 +184,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <h2>Plan pickup and return around the holiday</h2>
 <p>Hours can change around New Year's Eve and New Year's Day, so <strong>confirm pickup and return times when you book</strong>. After-hours drop-off returns are available, which makes a January 1 or January 2 return easy. Our regular hours are Monday to Friday 8:00 AM to 5:00 PM, Saturday 8:00 AM to noon, and Sunday closed. After-hours drop-off returns are available.</p>
 <h2>What the driver needs</h2>
-<p>The driver must be 21 or older with a valid U.S. driver's license, and there's no young-driver fee. The renter brings a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. Riverside doesn't sell insurance.</p>
+<p>The driver must be 18 or older with a valid U.S. driver's license, and there's no young-driver fee. The renter brings a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. Riverside doesn't sell insurance.</p>
 <p>We have one 15-passenger van, and New Year's weekend is a popular one. <strong>Call or text 715-396-1466</strong> to reserve. Happy New Year from the Riverside crew.</p>
 <div style="margin-top:48px;">
 <h2>Frequently Asked Questions</h2>
@@ -205,7 +205,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">Who can drive the rental van?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>Drivers must be 21 or older with a valid U.S. driver&#x27;s license. Plan on one designated driver who doesn&#x27;t drink.</p></div>
+<div class="faq-answer"><p>Drivers must be 18 or older with a valid U.S. driver&#x27;s license. Plan on one designated driver who doesn&#x27;t drink.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">How early should we book a van for New Year&#x27;s Eve?

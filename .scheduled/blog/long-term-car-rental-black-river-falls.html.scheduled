@@ -116,7 +116,7 @@ gtag('config', 'G-EDMLSNJ4B9');
   "name": "What do I need for a long-term rental?",
   "acceptedAnswer": {
    "@type": "Answer",
-   "text": "A valid U.S. driver's license, a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. A security deposit starting at $300 is held separately. Renters must be 21 or older."
+   "text": "A valid U.S. driver's license, a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. A security deposit starting at $300 is held separately. Renters must be 18 or older."
   }
  },
  {
@@ -188,7 +188,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <h2>Which vehicle makes sense for months, not days</h2>
 <p>For commuting, the <a href="/cheap-car-rental.html" style="color:var(--navy);font-weight:600;">intermediate car</a> is the most economical choice, at up to 37 MPG. If you're driving rural roads all winter, a <a href="/suv-rental.html" style="color:var(--navy);font-weight:600;">Ford Edge or the AWD Outback</a> is worth considering. Families settling in for a while usually land on the minivan.</p>
 <h2>What to bring</h2>
-<p>The same three things as any rental: a valid U.S. driver's license, a credit or debit card (Visa, Mastercard, or Discover) linked to a checking account, and proof of full-coverage auto insurance with the policy number and expiration date. A security deposit, starting at $300, is held separately from your rental charges. Renters must be 21 or older.</p>
+<p>The same three things as any rental: a valid U.S. driver's license, a credit or debit card (Visa, Mastercard, or Discover) linked to a checking account, and proof of full-coverage auto insurance with the policy number and expiration date. A security deposit, starting at $300, is held separately from your rental charges. Renters must be 18 or older.</p>
 <h2>Shopping for a car while you rent?</h2>
 <p>If the rental is a bridge to buying, Riverside Auto Sales shares our location on Highway 54. It's a separate business, run by the same family that's been in Black River Falls since 1983.</p>
 <h2>Already renting by the week?</h2>
@@ -207,7 +207,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">What do I need for a long-term rental?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>A valid U.S. driver&#x27;s license, a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. A security deposit starting at $300 is held separately. Renters must be 21 or older.</p></div>
+<div class="faq-answer"><p>A valid U.S. driver&#x27;s license, a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. A security deposit starting at $300 is held separately. Renters must be 18 or older.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Can I extend a weekly rental into a long-term rental?

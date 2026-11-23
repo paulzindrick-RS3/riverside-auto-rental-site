@@ -116,7 +116,7 @@ gtag('config', 'G-EDMLSNJ4B9');
   "name": "Can a parent or coach drive the rental van?",
   "acceptedAnswer": {
    "@type": "Answer",
-   "text": "Yes, if they are 21 or older with a valid U.S. driver's license. Check your school or club's policy on who may drive athletes."
+   "text": "Yes, if they are 18 or older with a valid U.S. driver's license. Check your school or club's policy on who may drive athletes."
   }
  },
  {
@@ -184,7 +184,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <h2>Pack for a full van</h2>
 <p>When every seat is filled, there's less room for gear. Pack soft duffels instead of hard cases, keep the aisle clear, and put the team bag of balls or the mat tape where it won't slide. If the equipment list is long, send it in a parent's car and keep the athletes in the van.</p>
 <h2>Who drives</h2>
-<p>Drivers must be 21 or older with a valid U.S. driver's license, and there's no young-driver fee. The renter brings a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. Riverside doesn't sell insurance. Check your school district's or club's policy on who's allowed to drive athletes before you book.</p>
+<p>Drivers must be 18 or older with a valid U.S. driver's license, and there's no young-driver fee. The renter brings a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. Riverside doesn't sell insurance. Check your school district's or club's policy on who's allowed to drive athletes before you book.</p>
 <h2>Winter road sense</h2>
 <p>Leave earlier than you think. Check <a href="https://511wi.gov" style="color:var(--navy);font-weight:600;" rel="noopener">511 Wisconsin</a> the night before and the morning of, give the van extra stopping room, and keep speeds down on overpasses. A late weigh-in beats an accident.</p>
 <p><strong>Call or text 715-396-1466</strong> with your schedule. We have one 15-passenger van, and tournament weekends go fast. Our hours are Monday to Friday 8:00 AM to 5:00 PM, Saturday 8:00 AM to noon, and Sunday closed. After-hours drop-off returns are available.</p>
@@ -201,7 +201,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">Can a parent or coach drive the rental van?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>Yes, if they are 21 or older with a valid U.S. driver&#x27;s license. Check your school or club&#x27;s policy on who may drive athletes.</p></div>
+<div class="faq-answer"><p>Yes, if they are 18 or older with a valid U.S. driver&#x27;s license. Check your school or club&#x27;s policy on who may drive athletes.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Is there a minivan option for a small team?
