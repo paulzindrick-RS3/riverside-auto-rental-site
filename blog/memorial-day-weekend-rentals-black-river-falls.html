@@ -31,6 +31,55 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://riversideautorental.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://riversideautorental.com/blog/"},{"@type":"ListItem","position":3,"name":"Memorial Day Weekend Rentals","item":"https://riversideautorental.com/blog/memorial-day-weekend-rentals-black-river-falls.html"}]}
   </script>
+<!-- rar-retell-chat -->
+<script
+  id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget-v2.js"
+  data-public-key="public_key_da95ba4dc7db83fda9dc7"
+  data-agent-id="agent_75575d6baed61e400b9d29a6a1"
+  data-agent-version="10"
+  data-title="Riverside Rental Help"
+  data-bot-name="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
+  data-color="#304B78"
+  data-chat-font-size="large"
+  data-show-ai-popup="false"
+  defer
+></script>
+<script>
+(function () {
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById("retell-widget-root");
+    var host = root && root.firstElementChild;
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById("rar-lift")) {
+      var style = document.createElement("style");
+      style.id = "rar-lift";
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
+        '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
+        '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
+        '[class*="_typingBubble_"]{display:inline-flex!important;align-items:center;background:#E8EDF4!important;border-radius:18px!important;padding:12px 16px!important;margin:4px 0 4px 14px!important;width:auto!important}' +
+        '[class*="_dots_"]{display:inline-flex!important;gap:5px!important}' +
+        '[class*="_dots_"]>span{width:9px!important;height:9px!important;background:#304B78!important;border-radius:50%!important}' +
+        '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
+        '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty::before{display:block;white-space:normal;' +
+        'content:"Hi! I’m Ann, Riverside’s automated assistant. I can quote rates, explain what you need to rent, or take a rental request for the team. What can I help with?"}';
+      shadow.appendChild(style);
+    }
+    if (shadow || ++tries > 80) clearInterval(timer);
+  }, 250);
+})();
+</script>
+<!-- /rar-retell-chat -->
 </head>
 <body>
   <header class="header" id="header">
@@ -90,12 +139,12 @@
             <tr><td><strong>Cabin trip, family of 4</strong></td><td>Full-Size Car or Minivan</td><td>Full-size if luggage is the main load; minivan if you're hauling kayaks, bikes, or coolers.</td></tr>
             <tr><td><strong>Lake weekend, 5&ndash;7 people</strong></td><td>7-Passenger Minivan</td><td>Three rows, sliding doors, room for floats and the cooler in back.</td></tr>
             <tr><td><strong>Big family gathering, 8&ndash;15 people</strong></td><td>15-Passenger Van</td><td>One vehicle for the day trip to a winery, lake, or restaurant. Easier than a 3-car caravan.</td></tr>
-            <tr><td><strong>Long road trip, 2&ndash;4 people</strong></td><td>Intermediate or Full-Size, local rate</td><td>Local renters get unlimited mileage. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</td></tr>
+            <tr><td><strong>Long road trip, 2&ndash;4 people</strong></td><td>Intermediate or Full-Size, local rate</td><td>Local renters get unlimited mileage. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</td></tr>
           </tbody>
         </table>
 
         <h2>Mileage matters more than usual on holiday weekends</h2>
-        <p>Memorial Day weekend road trips burn through miles fast. Local car renters get unlimited mileage on the published local rates, including Hayward, the Dells, the Mississippi River bluffs, or the Twin Cities. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p>
+        <p>Memorial Day weekend road trips burn through miles fast. Local car renters get unlimited mileage on the published local rates, including Hayward, the Dells, the Mississippi River bluffs, or the Twin Cities. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p>
         <ul style="margin-bottom:24px;padding-left:20px;">
           <li style="margin-bottom:10px;"><strong>Local daily rates</strong> &mdash; $55/day intermediate or $65/day full-size, with unlimited mileage for local renters.</li>
           <li style="margin-bottom:10px;"><strong>Weekly rate</strong> &mdash; If you're keeping the vehicle Friday through Tuesday (4&ndash;5 days), the weekly often pencils out cheaper or even, and includes unlimited mileage automatically.</li>
@@ -129,9 +178,9 @@
         <div style="background:var(--off-white);border:1px solid var(--light-gray);border-radius:var(--radius-lg);padding:28px;margin-bottom:32px;">
           <h3 style="margin-bottom:16px;">4-Day Rental &mdash; 7-Passenger Minivan, cabin trip</h3>
           <p style="margin:0 0 12px 0;">Friday pickup &rarr; Tuesday return. Family of 5 + dog + a week's worth of cabin supplies.</p>
-          <p style="margin:0 0 4px 0;"><strong>Daily rate &times; 4:</strong> $78/day &times; 4 = $312, plus $0.10/mile</p>
+          <p style="margin:0 0 4px 0;"><strong>Daily rate &times; 4:</strong> $80/day &times; 4 = $320, plus $0.10/mile</p>
           <p style="margin:0 0 4px 0;"><strong>Estimated miles:</strong> ~250 miles round-trip to a cabin 2 hours north + side trips</p>
-          <p style="margin:0;"><strong>Total estimate:</strong> $312 + $25 = $337 + tax</p>
+          <p style="margin:0;"><strong>Total estimate:</strong> $320 + $25 = $345 + tax</p>
         </div>
         <p>If the trip is closer to 6 or 7 days end-to-end, the <a href="/blog/daily-vs-weekly-car-rental-rates.html" style="color:var(--navy);font-weight:600;">weekly rate</a> at $450 with unlimited mileage for local renters often comes out ahead.</p>
 
@@ -211,13 +260,5 @@
   <script>(function(){var a=document.getElementById("menuToggle"),b=document.getElementById("mainNav");if(a&&b){a.onclick=function(){if(b.className.indexOf("open")===-1){b.className+=" open";a.className+=" active";a.setAttribute("aria-expanded","true")}else{b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}};var c=b.getElementsByTagName("a");for(var i=0;i<c.length;i++){c[i].onclick=function(){b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}}}var h=document.getElementById("header");if(h){window.onscroll=function(){if(window.scrollY>20){if(h.className.indexOf("scrolled")===-1)h.className+=" scrolled"}else{h.className=h.className.replace(" scrolled","")}}}var f=document.getElementsByClassName("faq-question");for(var j=0;j<f.length;j++){f[j].onclick=function(){var p=this.parentElement;var x=p.className.indexOf("active")!==-1;var all=document.getElementsByClassName("faq-item");for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}}}})();</script>
 
 
-<!-- rar-chat-widget -->
-<link rel="stylesheet" href="/css/chat-widget.css">
-<a id="rar-help" class="rar-help" href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-  Help
-</a>
-<script src="/js/chat-widget.js" defer></script>
-<!-- /rar-chat-widget -->
 </body>
 </html>

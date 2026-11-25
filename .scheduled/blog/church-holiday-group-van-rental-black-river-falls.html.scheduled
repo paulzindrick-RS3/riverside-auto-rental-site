@@ -108,7 +108,7 @@ gtag('config', 'G-EDMLSNJ4B9');
   "name": "How much does it cost to rent a van for a church group outing?",
   "acceptedAnswer": {
    "@type": "Answer",
-   "text": "The 15-passenger van is $135/day plus $0.10/mile, or $750/week with unlimited miles for local renters. A 60-mile round trip comes to about $141 before taxes and fees. The 7-passenger minivan is $78/day plus $0.10/mile."
+   "text": "The 15-passenger van is $135/day plus $0.10/mile, or $750/week with unlimited miles for local renters. A 60-mile round trip comes to about $141 before taxes and fees. The 7-passenger minivan is $80/day plus $0.10/mile."
   }
  },
  {
@@ -116,7 +116,7 @@ gtag('config', 'G-EDMLSNJ4B9');
   "name": "Who can drive the 15-passenger van?",
   "acceptedAnswer": {
    "@type": "Answer",
-   "text": "Drivers must be 21 or older with a valid U.S. driver's license. There is no young-driver fee."
+   "text": "Drivers must be 18 or older with a valid U.S. driver's license. There is no young-driver fee."
   }
  },
  {
@@ -177,12 +177,12 @@ gtag('config', 'G-EDMLSNJ4B9');
 <h2>The right van for the group</h2>
 <ul>
 <li><strong>Up to 15 people:</strong> our <a href="/van-rental.html" style="color:var(--navy);font-weight:600;">15-passenger van</a> is $135/day plus $0.10/mile, or $750/week with unlimited miles for local renters. We have one, so book it early.</li>
-<li><strong>Up to 7 people:</strong> the <a href="/blog/7-passenger-minivan-rental-black-river-falls.html" style="color:var(--navy);font-weight:600;">7-passenger minivan</a> is $78/day plus $0.10/mile, or $450/week with unlimited miles for local renters. It's easier to park and to drive in snow.</li>
+<li><strong>Up to 7 people:</strong> the <a href="/blog/7-passenger-minivan-rental-black-river-falls.html" style="color:var(--navy);font-weight:600;">7-passenger minivan</a> is $80/day plus $0.10/mile, or $450/week with unlimited miles for local renters. It's easier to park and to drive in snow.</li>
 </ul>
 <h2>What a December outing costs</h2>
 <p>A choir trip of 60 miles round trip in the 15-passenger van comes to $135 plus $6 in mileage: about $141 before taxes and fees. Split across 12 singers, that's under $12 a person. A two-day retreat of 200 total miles comes to $270 plus $20. The <a href="/blog/15-passenger-van-rental-cost-black-river-falls.html" style="color:var(--navy);font-weight:600;">15-passenger cost guide</a> has more worked examples.</p>
 <h2>Who drives, and whose insurance</h2>
-<p>The driver needs to be 21 or older with a valid U.S. driver's license. The renter brings a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. Riverside doesn't sell insurance. If your church or organization has its own policy, ask your agent whether it covers a rented 15-passenger van. That's the vehicle type where the answer most often changes. Our <a href="/blog/does-car-insurance-cover-rental-car-wisconsin.html" style="color:var(--navy);font-weight:600;">insurance guide</a> lists the questions to ask.</p>
+<p>The driver needs to be 18 or older with a valid U.S. driver's license. The renter brings a Visa, Mastercard, or Discover credit or debit card linked to a checking account, and proof of full-coverage auto insurance. Riverside doesn't sell insurance. If your church or organization has its own policy, ask your agent whether it covers a rented 15-passenger van. That's the vehicle type where the answer most often changes. Our <a href="/blog/does-car-insurance-cover-rental-car-wisconsin.html" style="color:var(--navy);font-weight:600;">insurance guide</a> lists the questions to ask.</p>
 <h2>Driving a big van in winter</h2>
 <p>Give yourself more time and more room. A full 15-passenger van needs longer to stop than a car, takes wider turns, and catches wind on open stretches of I-94. Check <a href="https://511wi.gov" style="color:var(--navy);font-weight:600;" rel="noopener">511 Wisconsin</a> before you leave, keep speeds down on snowy roads, and plan your parking at the venue ahead of time.</p>
 <p><strong>Call or text 715-396-1466</strong> to put your group's date on the calendar. Our hours are Monday to Friday 8:00 AM to 5:00 PM, Saturday 8:00 AM to noon, and Sunday closed. After-hours drop-off returns are available.</p>
@@ -193,13 +193,13 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">How much does it cost to rent a van for a church group outing?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>The 15-passenger van is $135/day plus $0.10/mile, or $750/week with unlimited miles for local renters. A 60-mile round trip comes to about $141 before taxes and fees. The 7-passenger minivan is $78/day plus $0.10/mile.</p></div>
+<div class="faq-answer"><p>The 15-passenger van is $135/day plus $0.10/mile, or $750/week with unlimited miles for local renters. A 60-mile round trip comes to about $141 before taxes and fees. The 7-passenger minivan is $80/day plus $0.10/mile.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Who can drive the 15-passenger van?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>Drivers must be 21 or older with a valid U.S. driver&#x27;s license. There is no young-driver fee.</p></div>
+<div class="faq-answer"><p>Drivers must be 18 or older with a valid U.S. driver&#x27;s license. There is no young-driver fee.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Does our church&#x27;s insurance cover a rented 15-passenger van?

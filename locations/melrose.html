@@ -75,11 +75,11 @@
     "mainEntity": [
       {"@type": "Question", "name": "Where can I rent a car near Melrose, WI?", "acceptedAnswer": {"@type": "Answer", "text": "Riverside Auto Rental is at N5856 WI-54 in Black River Falls, about 15 miles and ~20 minutes via WI-54 from Melrose. We rent intermediate and full-size cars, SUVs including an AWD Subaru Outback, a 7-passenger Chrysler Pacifica, and one 15-passenger van, plus insurance replacement rentals. Call or text 715-396-1466."}},
       {"@type": "Question", "name": "Do Melrose residents get local rates?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Melrose is in Jackson County. Local renters are residents of Black River Falls and Jackson County, WI. Local rates include unlimited miles on published local car and SUV rates and on local weekly van rates. Call 715-396-1466 for details on what counts as proof of residence."}},
-      {"@type": "Question", "name": "How much does it cost to rent a car near Melrose?", "acceptedAnswer": {"@type": "Answer", "text": "Local rates are $55/day or $330/week for an intermediate car, $65/day or $390/week for a full-size car, and $80/day or $480/week for an SUV or AWD, all with unlimited miles. A 7-passenger minivan is $78/day plus $0.10 per mile, or $450/week local with unlimited miles. One 15-passenger van is $135/day plus $0.10 per mile, or $750/week local with unlimited miles. Taxes and fees may apply."}},
+      {"@type": "Question", "name": "How much does it cost to rent a car near Melrose?", "acceptedAnswer": {"@type": "Answer", "text": "Local rates are $55/day or $330/week for an intermediate car, $65/day or $390/week for a full-size car, and $80/day or $480/week for an SUV or AWD, all with unlimited miles. A 7-passenger minivan is $80/day plus $0.10 per mile, or $450/week local with unlimited miles. One 15-passenger van is $135/day plus $0.10 per mile, or $750/week local with unlimited miles. Taxes and fees may apply."}},
       {"@type": "Question", "name": "How do I get from Melrose to Riverside Auto Rental?", "acceptedAnswer": {"@type": "Answer", "text": "Take WI-54 about 15 miles into Black River Falls, about 20 minutes. We're at N5856 WI-54, sharing a building with Riverside Auto Sales. Call 715-396-1466 if you need help finding the lot."}},
       {"@type": "Question", "name": "Can I rent a 15-passenger van near Melrose?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. There is one 15-passenger van, so book early. It is $135/day plus $0.10 per mile, or $750/week for local renters with unlimited miles. No special license is needed. Call 715-396-1466. See our 15-passenger van rental."}},
       {"@type": "Question", "name": "Do you handle insurance replacement rentals for Melrose drivers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work directly with adjusters from most major carriers. We'll call your adjuster to verify direct billing. You pay only the deposit, and you can pay the difference to upgrade. Bring your claim number, the insurer name, and your adjuster's name and phone. Call 715-396-1466."}},
-      {"@type": "Question", "name": "What do I need to rent a vehicle?", "acceptedAnswer": {"@type": "Answer", "text": "You must be 21 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. A digital copy is fine, and Riverside does not sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. We do not accept checks."}},
+      {"@type": "Question", "name": "What do I need to rent a vehicle?", "acceptedAnswer": {"@type": "Answer", "text": "You must be 18 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. A digital copy is fine, and Riverside does not sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. We do not accept checks."}},
       {"@type": "Question", "name": "Do you rent SUVs or AWD for winter?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We have two Ford Edge SUVs and one AWD Subaru Outback. The local rate is $80/day or $480/week, with unlimited miles for Jackson County residents. Call 715-396-1466 to reserve."}},
       {"@type": "Question", "name": "Can I return the car after hours?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. After-hours drop-off returns are available. Call 715-396-1466 for details."}},
       {"@type": "Question", "name": "Are you open on Saturday?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Saturday hours are 8:00 AM to noon. Same-day Saturday rentals are often possible if you call before noon. We are closed Sunday. Weekday hours are Monday through Friday, 8:00 AM to 5:00 PM."}}
@@ -113,6 +113,55 @@
     footer.site{border-top:1px solid var(--line);margin-top:2.5em;padding:24px 0;font-size:.9rem;color:var(--muted);} footer.site a{color:var(--accent);}
     a{color:var(--accent);}
   </style>
+<!-- rar-retell-chat -->
+<script
+  id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget-v2.js"
+  data-public-key="public_key_da95ba4dc7db83fda9dc7"
+  data-agent-id="agent_75575d6baed61e400b9d29a6a1"
+  data-agent-version="10"
+  data-title="Riverside Rental Help"
+  data-bot-name="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
+  data-color="#304B78"
+  data-chat-font-size="large"
+  data-show-ai-popup="false"
+  defer
+></script>
+<script>
+(function () {
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById("retell-widget-root");
+    var host = root && root.firstElementChild;
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById("rar-lift")) {
+      var style = document.createElement("style");
+      style.id = "rar-lift";
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
+        '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
+        '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
+        '[class*="_typingBubble_"]{display:inline-flex!important;align-items:center;background:#E8EDF4!important;border-radius:18px!important;padding:12px 16px!important;margin:4px 0 4px 14px!important;width:auto!important}' +
+        '[class*="_dots_"]{display:inline-flex!important;gap:5px!important}' +
+        '[class*="_dots_"]>span{width:9px!important;height:9px!important;background:#304B78!important;border-radius:50%!important}' +
+        '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
+        '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty::before{display:block;white-space:normal;' +
+        'content:"Hi! I’m Ann, Riverside’s automated assistant. I can quote rates, explain what you need to rent, or take a rental request for the team. What can I help with?"}';
+      shadow.appendChild(style);
+    }
+    if (shadow || ++tries > 80) clearInterval(timer);
+  }, 250);
+})();
+</script>
+<!-- /rar-retell-chat -->
 </head>
 <body>
 
@@ -136,7 +185,7 @@
   <h1>Car Rental Near Melrose, WI</h1>
   <p class="lede">Jackson County local rates with unlimited miles, about 20 minutes away on WI-54.</p>
 
-  <p>Riverside Auto Rental is a family-owned car and van rental in Black River Falls, about 20 minutes from Melrose, Wisconsin, on WI-54. Because Melrose is in Jackson County, Melrose residents get our local rates with unlimited miles: intermediate cars from $55/day or $330/week. We also rent full-size cars, SUVs (including an AWD Subaru Outback), a 7-passenger Chrysler Pacifica, and one 15-passenger van, plus insurance replacement rentals. Renters must be 21 or older. Call or text <a href="tel:+17153961466">715-396-1466</a>.</p>
+  <p>Riverside Auto Rental is a family-owned car and van rental in Black River Falls, about 20 minutes from Melrose, Wisconsin, on WI-54. Because Melrose is in Jackson County, Melrose residents get our local rates with unlimited miles: intermediate cars from $55/day or $330/week. We also rent full-size cars, SUVs (including an AWD Subaru Outback), a 7-passenger Chrysler Pacifica, and one 15-passenger van, plus insurance replacement rentals. Renters must be 18 or older. Call or text <a href="tel:+17153961466">715-396-1466</a>.</p>
 
   <div class="cta">
     <a href="tel:+17153961466">Call to Reserve: 715-396-1466</a>
@@ -154,7 +203,7 @@
       <tr><th>Hours</th><td>Monday–Friday 8:00 AM–5:00 PM. Saturday 8:00 AM–noon. Sunday closed.</td></tr>
       <tr><th>Phone / text</th><td><a href="tel:+17153961466">715-396-1466</a>. Email <a href="mailto:contact@riversideautorental.com">contact@riversideautorental.com</a>.</td></tr>
       <tr><th>Vehicles</th><td>Intermediate and full-size cars, two Ford Edge SUVs, one AWD Subaru Outback, a 7-passenger Chrysler Pacifica, and one 15-passenger van.</td></tr>
-      <tr><th>Who can rent</th><td>Renters must be 21 or older, with a valid U.S. driver's license, proof of full-coverage auto insurance, and every driver listed.</td></tr>
+      <tr><th>Who can rent</th><td>Renters must be 18 or older, with a valid U.S. driver's license, proof of full-coverage auto insurance, and every driver listed.</td></tr>
       <tr><th>Deposit</th><td>A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book.</td></tr>
       <tr><th>Returns</th><td>After-hours drop-off returns are available. Call 715-396-1466 for details.</td></tr>
       <tr><th>Insurance replacement</th><td>We work directly with adjusters from most major carriers. We'll call your adjuster to verify direct billing. You pay the deposit.</td></tr>
@@ -168,14 +217,14 @@
       <tr><th>Vehicle</th><th>Local daily</th><th>Local weekly</th><th>Visiting from outside Jackson County? Daily</th><th>Visiting from outside Jackson County? Weekly</th></tr>
     </thead>
     <tbody>
-      <tr><td>Intermediate car</td><td>$55, unlimited miles</td><td>$330, unlimited miles</td><td>$75, plus a per-mile charge</td><td>$450, plus a per-mile charge</td></tr>
+      <tr><td>Intermediate car</td><td>$55, unlimited miles</td><td>$330, unlimited miles</td><td>$80, plus a per-mile charge</td><td>$450, plus a per-mile charge</td></tr>
       <tr><td><a href="https://riversideautorental.com/full-size-car-rental.html">Full-size car</a></td><td>$65, unlimited miles</td><td>$390, unlimited miles</td><td>$85, plus a per-mile charge</td><td>$510, plus a per-mile charge</td></tr>
       <tr><td>SUV / AWD</td><td>$80, unlimited miles</td><td>$480, unlimited miles</td><td>$100, plus a per-mile charge</td><td>$600, plus a per-mile charge</td></tr>
-      <tr><td>7-passenger minivan</td><td>$78/day + $0.10/mi</td><td>$450, unlimited miles</td><td>Call</td><td>Call</td></tr>
+      <tr><td>7-passenger minivan</td><td>$80/day + $0.10/mi</td><td>$450, unlimited miles</td><td>Call</td><td>Call</td></tr>
       <tr><td>15-passenger van (one)</td><td>$135/day + $0.10/mi</td><td>$750, unlimited miles</td><td>Call</td><td>Call</td></tr>
     </tbody>
   </table>
-  <p>Daily van rates include $0.10 per mile. Unlimited miles on the minivan and the 15-passenger van apply to the local weekly rate. Visiting from outside Jackson County? Use the non-local columns. Call 715-396-1466 for the per-mile rate. Weekly car and SUV rates are pay 6 days, get the 7th free. For a longer rental, call or text for a quote. Taxes and fees may apply. Rates subject to availability. <a href="https://riversideautorental.com/fleet">Full fleet and rates</a>. <a href="https://riversideautorental.com/blog/daily-vs-weekly-car-rental-rates.html">Daily vs. weekly rates</a>.</p>
+  <p>Daily van rates include $0.10 per mile. Unlimited miles on the minivan and the 15-passenger van apply to the local weekly rate. Visiting from outside Jackson County? Use the non-local columns. Call 715-396-1466 for the per-mile rate. Weekly rates: 7 days for the price of 6 or less. For a longer rental, call or text for a quote. Taxes and fees may apply. Rates subject to availability. <a href="https://riversideautorental.com/fleet">Full fleet and rates</a>. <a href="https://riversideautorental.com/blog/daily-vs-weekly-car-rental-rates.html">Daily vs. weekly rates</a>.</p>
 
   <h2>Serving Melrose &amp; Jackson County</h2>
   <p>Melrose and our lot are in the same county, connected by WI-54, with no interstate in between. Most Melrose rentals come down to a few practical needs:</p>
@@ -193,24 +242,24 @@
   <h3>SUV / AWD</h3>
   <p>Two Ford Edge SUVs and one AWD Subaru Outback, useful for winter roads and gravel. The local rate is $80/day or $480/week, with unlimited miles. <a href="https://riversideautorental.com/suv-rental.html">SUV and AWD rental</a>.</p>
   <h3>7-passenger Chrysler Pacifica</h3>
-  <p>$78/day plus $0.10 per mile, or $450/week for local renters with unlimited miles.</p>
+  <p>$80/day plus $0.10 per mile, or $450/week for local renters with unlimited miles.</p>
   <h3>15-passenger van</h3>
   <p>There is one 15-passenger van. It is $135/day plus $0.10 per mile, or $750/week for local renters with unlimited miles. No special license is needed. Book early. <a href="https://riversideautorental.com/van-rental.html">15-passenger van rental</a>.</p>
-  <p>Family-owned since 1983. You reach a person, not a 1-800 number.</p>
+  <p>Family-owned since 1983. You reach our local team, not a 1-800 number.</p>
 
   <h2>Insurance Replacement for Jackson County Drivers</h2>
   <p>We work directly with adjusters from most major carriers. We'll call your adjuster to verify direct billing. You pay only the deposit, and you can pay the difference to upgrade. Bring the claim number, the insurer name, and the adjuster's name and phone. <a href="https://riversideautorental.com/insurance-replacement-rental.html">Insurance replacement rentals</a>.</p>
 
   <h2>What You Need to Rent</h2>
   <ul>
-    <li>You must be 21 or older. <a href="https://riversideautorental.com/young-driver-car-rental.html">Renting at 21 to 24</a>.</li>
+    <li>You must be 18 or older. <a href="https://riversideautorental.com/young-driver-car-rental.html">Renting at 18 to 24</a>.</li>
     <li>A valid U.S. driver's license.</li>
     <li>Proof of full-coverage auto insurance. A digital copy is fine. Riverside doesn't sell insurance.</li>
     <li>A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. We do not accept checks.</li>
     <li>Every driver must be listed.</li>
     <li>No pets. A cleaning charge applies.</li>
-    <li>Non-smoking. A $100 cleaning charge applies if someone smokes in the vehicle.</li>
-    <li>Return the vehicle with a full tank.</li>
+    <li>Non-smoking. No smoking under any circumstances; a cleaning charge applies.</li>
+    <li>Return the vehicle with at least as much fuel as it had at pickup ($6 per gallon if it's short).</li>
     <li>Cancellation needs 24 hours' notice.</li>
     <li>After-hours drop-off returns are available. Call 715-396-1466 for details.</li>
   </ul>
@@ -246,7 +295,7 @@
   <details><summary>Do Melrose residents get local rates?</summary>
     <p>Yes. Melrose is in Jackson County. Local renters are residents of Black River Falls and Jackson County, WI. Local rates include unlimited miles on published local car and SUV rates and on local weekly van rates. Call 715-396-1466 for details on what counts as proof of residence.</p></details>
   <details><summary>How much does it cost to rent a car near Melrose?</summary>
-    <p>Local rates are $55/day or $330/week for an intermediate car, $65/day or $390/week for a full-size car, and $80/day or $480/week for an SUV or AWD, all with unlimited miles. A 7-passenger minivan is $78/day plus $0.10 per mile, or $450/week local with unlimited miles. One 15-passenger van is $135/day plus $0.10 per mile, or $750/week local with unlimited miles. Taxes and fees may apply.</p></details>
+    <p>Local rates are $55/day or $330/week for an intermediate car, $65/day or $390/week for a full-size car, and $80/day or $480/week for an SUV or AWD, all with unlimited miles. A 7-passenger minivan is $80/day plus $0.10 per mile, or $450/week local with unlimited miles. One 15-passenger van is $135/day plus $0.10 per mile, or $750/week local with unlimited miles. Taxes and fees may apply.</p></details>
   <details><summary>How do I get from Melrose to Riverside Auto Rental?</summary>
     <p>Take WI-54 about 15 miles into Black River Falls, about 20 minutes. We're at N5856 WI-54, sharing a building with Riverside Auto Sales. Call 715-396-1466 if you need help finding the lot.</p></details>
   <details><summary>Can I rent a 15-passenger van near Melrose?</summary>
@@ -254,7 +303,7 @@
   <details><summary>Do you handle insurance replacement rentals for Melrose drivers?</summary>
     <p>Yes. We work directly with adjusters from most major carriers. We'll call your adjuster to verify direct billing. You pay only the deposit, and you can pay the difference to upgrade. Bring your claim number, the insurer name, and your adjuster's name and phone. Call 715-396-1466.</p></details>
   <details><summary>What do I need to rent a vehicle?</summary>
-    <p>You must be 21 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. A digital copy is fine, and Riverside does not sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. We do not accept checks.</p></details>
+    <p>You must be 18 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. A digital copy is fine, and Riverside does not sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. We do not accept checks.</p></details>
   <details><summary>Do you rent SUVs or AWD for winter?</summary>
     <p>Yes. We have two Ford Edge SUVs and one AWD Subaru Outback. The local rate is $80/day or $480/week, with unlimited miles for Jackson County residents. Call 715-396-1466 to reserve.</p></details>
   <details><summary>Can I return the car after hours?</summary>
@@ -290,13 +339,5 @@
 
 
 
-<!-- rar-chat-widget -->
-<link rel="stylesheet" href="/css/chat-widget.css">
-<a id="rar-help" class="rar-help" href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-  Help
-</a>
-<script src="/js/chat-widget.js" defer></script>
-<!-- /rar-chat-widget -->
 </body>
 </html>

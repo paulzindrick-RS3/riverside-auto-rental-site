@@ -80,7 +80,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 {
 "@type": "Question",
 "name": "Can I fit kayaks in a rental minivan or van?",
-"acceptedAnswer": {"@type": "Answer", "text": "Shorter kayaks and inflatables fit inside a minivan with the third row folded or a 15-passenger van with the rear rows configured for cargo. Longer hard-shell kayaks usually need a roof rack. Tell us what you're hauling when you reserve so we can confirm the right vehicle and any roof considerations."}
+"acceptedAnswer": {"@type": "Answer", "text": "Shorter kayaks and inflatables fit inside a minivan with the third row folded or a 15-passenger van with the rear rows configured for cargo. Our vehicles don't have roof racks or trailer hitches, so long hard-shell kayaks and canoes won't work. Tell us what you're hauling when you reserve so we can confirm the right vehicle."}
 },
 {
 "@type": "Question",
@@ -90,7 +90,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 {
 "@type": "Question",
 "name": "Can I haul bikes inside a rental?",
-"acceptedAnswer": {"@type": "Answer", "text": "Yes. With the rear seats folded, a minivan fits two to three bikes with front wheels removed, and a 15-passenger van fits several standing up. If you'd rather use a hitch or roof bike rack, mention it when reserving and we'll confirm what's possible with the vehicle."}
+"acceptedAnswer": {"@type": "Answer", "text": "Yes. With the rear seats folded, a minivan fits two to three bikes with front wheels removed, and a 15-passenger van fits several standing up. Our vehicles don't have hitches or roof racks, so bikes ride inside."}
 },
 {
 "@type": "Question",
@@ -100,6 +100,55 @@ gtag('config', 'G-EDMLSNJ4B9');
 ]
 }
 </script>
+<!-- rar-retell-chat -->
+<script
+  id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget-v2.js"
+  data-public-key="public_key_da95ba4dc7db83fda9dc7"
+  data-agent-id="agent_75575d6baed61e400b9d29a6a1"
+  data-agent-version="10"
+  data-title="Riverside Rental Help"
+  data-bot-name="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
+  data-color="#304B78"
+  data-chat-font-size="large"
+  data-show-ai-popup="false"
+  defer
+></script>
+<script>
+(function () {
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById("retell-widget-root");
+    var host = root && root.firstElementChild;
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById("rar-lift")) {
+      var style = document.createElement("style");
+      style.id = "rar-lift";
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
+        '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
+        '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
+        '[class*="_typingBubble_"]{display:inline-flex!important;align-items:center;background:#E8EDF4!important;border-radius:18px!important;padding:12px 16px!important;margin:4px 0 4px 14px!important;width:auto!important}' +
+        '[class*="_dots_"]{display:inline-flex!important;gap:5px!important}' +
+        '[class*="_dots_"]>span{width:9px!important;height:9px!important;background:#304B78!important;border-radius:50%!important}' +
+        '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
+        '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty::before{display:block;white-space:normal;' +
+        'content:"Hi! I’m Ann, Riverside’s automated assistant. I can quote rates, explain what you need to rent, or take a rental request for the team. What can I help with?"}';
+      shadow.appendChild(style);
+    }
+    if (shadow || ++tries > 80) clearInterval(timer);
+  }, 250);
+})();
+</script>
+<!-- /rar-retell-chat -->
 </head>
 <body>
 <header class="header" id="header">
@@ -148,14 +197,14 @@ gtag('config', 'G-EDMLSNJ4B9');
 </thead>
 <tbody>
 <tr><td><strong>Couple, weekend camp</strong></td><td>Full-Size Car or Minivan</td><td>Tent, 2 bags, cooler, 2 bikes (seats down)</td></tr>
-<tr><td><strong>Family of 4&ndash;5</strong></td><td>7-Passenger Minivan</td><td>Camp kit, cooler, bikes, kayak (inside or roof)</td></tr>
+<tr><td><strong>Family of 4&ndash;5</strong></td><td>7-Passenger Minivan</td><td>Camp kit, cooler, bikes, short kayak (inside)</td></tr>
 <tr><td><strong>Multi-family / big group</strong></td><td>15-Passenger Van</td><td>The whole expedition &mdash; people and a wall of gear</td></tr>
 </tbody>
 </table>
 <h2>What actually fits where</h2>
 <p><strong>7-passenger minivan, third row folded.</strong> This is the camping sweet spot for most families. Seats five, and the folded third row opens up a deep cargo well. Realistic load: tent, sleeping bags for the family, a big cooler, a tote of camp kitchen gear, and two bikes with front wheels off. Shorter kayaks and inflatables slide in too.</p>
 <p><strong>15-passenger van, rear rows configured for cargo.</strong> Now you're hauling an expedition. Drop the back two rows and you've got room for several bikes standing up, multiple coolers, a full camp setup, and gear for a group — while still seating the front rows. This is the multi-family-cabin-trip vehicle.</p>
-<p><strong>The roof question.</strong> Long hard-shell kayaks and canoes usually want a roof rack. If that's your situation, call before you reserve — we'll talk through what works with the vehicle so you're not improvising in the parking lot.</p>
+<p><strong>The roof question.</strong> None of our vehicles have roof racks or trailer hitches, and towing isn't allowed. Long hard-shell kayaks and canoes won't fit inside, so plan on inflatables or shorter boats, or rent a boat where you're headed.</p>
 <h2>Smart packing for a gear-heavy trip</h2>
 <ul style="margin-bottom:24px;padding-left:20px;">
 <li style="margin-bottom:10px;"><strong>Load heavy and low first.</strong> Coolers and water jugs on the floor, gear stacked on top. Keeps the center of gravity sane on the highway.</li>
@@ -167,7 +216,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <h2>Why rent instead of cramming your own car</h2>
 <p><strong>Save your own vehicle the wear.</strong> Hauling sandy, wet, muddy gear is hard on a personal car. A rental takes the abuse and goes back when you're done.</p>
 <p><strong>Right-size for the trip.</strong> You don't own a van, but you need one for this weekend. Renting gives you the big hauler for exactly the days you need it.</p>
-<p><strong>Mileage handled.</strong> Camping trips rack up miles to trailheads and put-ins. Local weekly rates include unlimited mileage for cars and vans. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI. See the <a href="/blog/weekly-car-rental-rates-when-7-days-beats-daily.html" style="color:var(--navy);font-weight:600;">weekly rate guide</a>.</p>
+<p><strong>Mileage handled.</strong> Camping trips rack up miles to trailheads and put-ins. Local weekly rates include unlimited mileage for cars and vans. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI. See the <a href="/blog/weekly-car-rental-rates-when-7-days-beats-daily.html" style="color:var(--navy);font-weight:600;">weekly rate guide</a>.</p>
 <h2>A note on returning the vehicle</h2>
 <p>Camping gets things dirty — that's expected and totally fine. We just ask you return the vehicle reasonably clean: shake out the worst of the dirt, pull the trash, wipe up any big spills. A few minutes at the end of the trip keeps everything simple and avoids cleaning fees. The tarp trick above makes this easy.</p>
 <h2>What our renters say</h2>
@@ -185,7 +234,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 </div>
 <p style="margin-bottom:32px;"><a href="https://search.google.com/local/reviews?placeid=ChIJe_gqTAjn_ocRVVpllXYH-zQ" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Read all reviews on Google &rarr;</a></p>
 <h2>Gear up and go</h2>
-<p>Tell us what you're hauling and where you're headed, and we'll line up the right vehicle &mdash; and flag anything about kayaks or roof loads before you arrive. Call <a href="tel:+17153961466"><strong>715-396-1466</strong></a>.</p>
+<p>Tell us what you're hauling and where you're headed, and we'll line up the right vehicle and make sure your gear fits inside before you arrive. Call <a href="tel:+17153961466"><strong>715-396-1466</strong></a>.</p>
 <div style="margin-top:48px;">
 <h2>Frequently Asked Questions</h2>
 <div class="faq-list">
@@ -193,7 +242,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">Can I fit kayaks in a rental minivan or van?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>Shorter kayaks and inflatables fit inside with the rear rows folded. Longer hard-shells usually need a roof rack — tell us what you're hauling when you reserve and we'll confirm the right setup.</p></div>
+<div class="faq-answer"><p>Shorter kayaks and inflatables fit inside with the rear rows folded. Our vehicles don't have roof racks or hitches, so long hard-shell kayaks and canoes won't work. Tell us what you're hauling when you reserve.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">What's the best rental for a camping trip?
@@ -205,7 +254,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">Can I haul bikes inside?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>Yes — minivan fits 2–3 bikes with front wheels removed; a 15-passenger van fits several standing up. Hitch or roof rack? Mention it when reserving and we'll confirm.</p></div>
+<div class="faq-answer"><p>Yes — minivan fits 2–3 bikes with front wheels removed; a 15-passenger van fits several standing up. Our vehicles don't have hitches or roof racks, so bikes ride inside.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Is dirty gear and a leaky cooler okay?
@@ -298,13 +347,5 @@ for(var j=0;j<f.length;j++){f[j].onclick=function(){var p=this.parentElement;var
 </script>
 
 
-<!-- rar-chat-widget -->
-<link rel="stylesheet" href="/css/chat-widget.css">
-<a id="rar-help" class="rar-help" href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-  Help
-</a>
-<script src="/js/chat-widget.js" defer></script>
-<!-- /rar-chat-widget -->
 </body>
 </html>

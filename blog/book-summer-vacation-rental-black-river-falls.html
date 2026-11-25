@@ -31,6 +31,55 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://riversideautorental.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://riversideautorental.com/blog/"},{"@type":"ListItem","position":3,"name":"Pre-Plan Summer Vacation Rental","item":"https://riversideautorental.com/blog/book-summer-vacation-rental-black-river-falls.html"}]}
   </script>
+<!-- rar-retell-chat -->
+<script
+  id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget-v2.js"
+  data-public-key="public_key_da95ba4dc7db83fda9dc7"
+  data-agent-id="agent_75575d6baed61e400b9d29a6a1"
+  data-agent-version="10"
+  data-title="Riverside Rental Help"
+  data-bot-name="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
+  data-color="#304B78"
+  data-chat-font-size="large"
+  data-show-ai-popup="false"
+  defer
+></script>
+<script>
+(function () {
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById("retell-widget-root");
+    var host = root && root.firstElementChild;
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById("rar-lift")) {
+      var style = document.createElement("style");
+      style.id = "rar-lift";
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
+        '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
+        '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
+        '[class*="_typingBubble_"]{display:inline-flex!important;align-items:center;background:#E8EDF4!important;border-radius:18px!important;padding:12px 16px!important;margin:4px 0 4px 14px!important;width:auto!important}' +
+        '[class*="_dots_"]{display:inline-flex!important;gap:5px!important}' +
+        '[class*="_dots_"]>span{width:9px!important;height:9px!important;background:#304B78!important;border-radius:50%!important}' +
+        '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
+        '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty::before{display:block;white-space:normal;' +
+        'content:"Hi! I’m Ann, Riverside’s automated assistant. I can quote rates, explain what you need to rent, or take a rental request for the team. What can I help with?"}';
+      shadow.appendChild(style);
+    }
+    if (shadow || ++tries > 80) clearInterval(timer);
+  }, 250);
+})();
+</script>
+<!-- /rar-retell-chat -->
 </head>
 <body>
   <header class="header" id="header">
@@ -128,14 +177,14 @@
           <li style="margin-bottom:10px;"><strong>2. How many people are riding</strong> &mdash; the actual headcount, not "a family of five-ish with maybe my brother-in-law."</li>
           <li style="margin-bottom:10px;"><strong>3. Approximate total miles</strong> &mdash; local renters get unlimited mileage; on vans, miles help decide daily vs. weekly.</li>
           <li style="margin-bottom:10px;"><strong>4. Who's driving</strong> &mdash; just the renter, or additional drivers? Each driver needs license, insurance, and to be present at pickup.</li>
-          <li style="margin-bottom:10px;"><strong>5. Cargo or special needs</strong> &mdash; kayaks on the roof? Bike rack? Car seats? Mobility-related accommodations? Tell us when you reserve, not at pickup.</li>
+          <li style="margin-bottom:10px;"><strong>5. Cargo or special needs</strong> &mdash; bikes or kayaks that need to fit inside (our vehicles have no roof racks or hitches)? Car seats? Mobility-related accommodations? Tell us when you reserve, not at pickup.</li>
         </ul>
 
         <h2>Daily vs. weekly: when to pay for the week</h2>
         <p>For summer vacations, more rentals than people realize cross the weekly-rate breakeven point. The math:</p>
         <ul style="margin-bottom:24px;padding-left:20px;">
-          <li style="margin-bottom:10px;"><strong>Intermediate car, local rate:</strong> 7 daily days = $385. Weekly = $330, with unlimited mileage. <strong>Weekly saves $55</strong> — pay for 6 days, get the 7th free. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</li>
-          <li style="margin-bottom:10px;"><strong>7-passenger minivan:</strong> 7 daily days = $546 + mileage. Weekly = $450 unlimited for local renters. <strong>Weekly wins past 5 days for most trips with real driving.</strong></li>
+          <li style="margin-bottom:10px;"><strong>Intermediate car, local rate:</strong> 7 daily days = $385. Weekly = $330, with unlimited mileage. <strong>Weekly saves $55.</strong> Weekly rates: 7 days for the price of 6 or less. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</li>
+          <li style="margin-bottom:10px;"><strong>7-passenger minivan:</strong> 7 daily days = $560 + mileage. Weekly = $450 unlimited for local renters. <strong>Weekly wins past 5 days for most trips with real driving.</strong></li>
           <li style="margin-bottom:10px;"><strong>15-passenger van:</strong> 5 daily days = $675 + mileage. Weekly = $750 unlimited for local renters. <strong>Weekly wins past 5&ndash;6 days for high-mileage trips</strong>, and is much simpler to budget.</li>
         </ul>
         <p>Full breakdown in our <a href="/blog/daily-vs-weekly-car-rental-rates.html" style="color:var(--navy);font-weight:600;">daily vs. weekly post</a>.</p>
@@ -153,7 +202,7 @@
         <ul style="margin-bottom:24px;padding-left:20px;">
           <li style="margin-bottom:10px;">Valid U.S. driver's license</li>
           <li style="margin-bottom:10px;">Major credit card or bank-issued debit card linked to a checking account</li>
-          <li style="margin-bottom:10px;">Proof of auto insurance (policy number and expiration date)</li>
+          <li style="margin-bottom:10px;">Proof of full-coverage auto insurance (policy number and expiration date)</li>
         </ul>
         <p>Same checklist as any rental. See the <a href="/blog/what-you-need-to-rent-a-car-black-river-falls.html" style="color:var(--navy);font-weight:600;">first-timer's guide</a> if you need detail.</p>
 
@@ -230,13 +279,5 @@
   <script>(function(){var a=document.getElementById("menuToggle"),b=document.getElementById("mainNav");if(a&&b){a.onclick=function(){if(b.className.indexOf("open")===-1){b.className+=" open";a.className+=" active";a.setAttribute("aria-expanded","true")}else{b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}};var c=b.getElementsByTagName("a");for(var i=0;i<c.length;i++){c[i].onclick=function(){b.className=b.className.replace(" open","");a.className=a.className.replace(" active","");a.setAttribute("aria-expanded","false")}}}var h=document.getElementById("header");if(h){window.onscroll=function(){if(window.scrollY>20){if(h.className.indexOf("scrolled")===-1)h.className+=" scrolled"}else{h.className=h.className.replace(" scrolled","")}}}var f=document.getElementsByClassName("faq-question");for(var j=0;j<f.length;j++){f[j].onclick=function(){var p=this.parentElement;var x=p.className.indexOf("active")!==-1;var all=document.getElementsByClassName("faq-item");for(var k=0;k<all.length;k++){all[k].className=all[k].className.replace(" active","");var btn=all[k].getElementsByClassName("faq-question")[0];if(btn)btn.setAttribute("aria-expanded","false")}if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}}}})();</script>
 
 
-<!-- rar-chat-widget -->
-<link rel="stylesheet" href="/css/chat-widget.css">
-<a id="rar-help" class="rar-help" href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-  Help
-</a>
-<script src="/js/chat-widget.js" defer></script>
-<!-- /rar-chat-widget -->
 </body>
 </html>

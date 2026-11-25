@@ -75,7 +75,7 @@
         },
         {
           "@type": "UnitPriceSpecification",
-          "price": "75",
+          "price": "80",
           "priceCurrency": "USD",
           "unitText": "DAY",
           "description": "Non-local renters; plus a per-mile charge"
@@ -102,7 +102,7 @@
         "name": "How much does it cost to rent your intermediate car?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The intermediate car: $55 per day or $330 per week for local renters, with unlimited miles. Non-local renters pay $75 per day or $450 per week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate."
+          "text": "The intermediate car: $55 per day or $330 per week for local renters, with unlimited miles. Non-local renters pay $80 per day or $450 per week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate."
         }
       },
       {
@@ -126,7 +126,7 @@
         "name": "Is there a young-driver fee?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Renters must be 21 or older. There is no young-driver fee, and renters 21 to 24 can rent any vehicle. See renting at 21 to 24, no young-driver fee."
+          "text": "No. Renters must be 18 or older. There is no young-driver fee, and renters 18 to 24 can rent any vehicle. See renting at 18 to 24, no young-driver fee."
         }
       },
       {
@@ -158,7 +158,7 @@
         "name": "How can I keep the cost down?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The local weekly rate is pay for 6 days, get the 7th free: $330 per week for local renters, versus $385 if you paid $55 a day for seven days. Unlimited miles for local renters means a long drive doesn't add a mileage charge. See the daily vs. weekly rates breakdown."
+          "text": "Weekly rates: 7 days for the price of 6 or less. Local renters pay $330 per week, versus $385 if you paid $55 a day for seven days. Unlimited miles for local renters means a long drive doesn't add a mileage charge. See the daily vs. weekly rates breakdown."
         }
       },
       {
@@ -174,7 +174,7 @@
         "name": "What do I need to rent?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Be 21 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside Auto Rental doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. No pets, no smoking, return it full, and give 24-hour cancellation notice."
+          "text": "Be 18 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside Auto Rental doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. No pets, no smoking, return fuel at the pickup level, and give 24-hour cancellation notice."
         }
       }
     ]
@@ -200,6 +200,55 @@
     gtag('js', new Date());
     gtag('config', 'G-EDMLSNJ4B9');
   </script>
+<!-- rar-retell-chat -->
+<script
+  id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget-v2.js"
+  data-public-key="public_key_da95ba4dc7db83fda9dc7"
+  data-agent-id="agent_75575d6baed61e400b9d29a6a1"
+  data-agent-version="10"
+  data-title="Riverside Rental Help"
+  data-bot-name="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
+  data-color="#304B78"
+  data-chat-font-size="large"
+  data-show-ai-popup="false"
+  defer
+></script>
+<script>
+(function () {
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById("retell-widget-root");
+    var host = root && root.firstElementChild;
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById("rar-lift")) {
+      var style = document.createElement("style");
+      style.id = "rar-lift";
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
+        '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
+        '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
+        '[class*="_typingBubble_"]{display:inline-flex!important;align-items:center;background:#E8EDF4!important;border-radius:18px!important;padding:12px 16px!important;margin:4px 0 4px 14px!important;width:auto!important}' +
+        '[class*="_dots_"]{display:inline-flex!important;gap:5px!important}' +
+        '[class*="_dots_"]>span{width:9px!important;height:9px!important;background:#304B78!important;border-radius:50%!important}' +
+        '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
+        '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty::before{display:block;white-space:normal;' +
+        'content:"Hi! I’m Ann, Riverside’s automated assistant. I can quote rates, explain what you need to rent, or take a rental request for the team. What can I help with?"}';
+      shadow.appendChild(style);
+    }
+    if (shadow || ++tries > 80) clearInterval(timer);
+  }, 250);
+})();
+</script>
+<!-- /rar-retell-chat -->
 </head>
 <body>
 
@@ -232,7 +281,7 @@
 <div class="hero__content">
 <h1>Cheap Car Rental in Black River Falls, WI</h1>
 <p class="hero__text">An intermediate car is $55/day or $330/week, with unlimited miles for local renters. Family-owned since 1983.</p>
-<p>Riverside Auto Rental rents an intermediate car for $55 a day or $330 a week, with unlimited miles for local renters (residents of Black River Falls and Jackson County, Wisconsin). Non-local renters pay $75 a day or $450 a week plus a per-mile charge. The intermediate is a 5-passenger automatic rated up to 37 MPG. Renters must be 21 or older, with no young-driver fee. We're a family-owned rental in Black River Falls since 1983, just off I-94 at Exit 116. Call or text <a href="tel:+17153961466">715-396-1466</a>.</p>
+<p>Riverside Auto Rental rents an intermediate car for $55 a day or $330 a week, with unlimited miles for local renters (residents of Black River Falls and Jackson County, Wisconsin). Non-local renters pay $80 a day or $450 a week plus a per-mile charge. The intermediate is a 5-passenger automatic rated up to 37 MPG. Renters must be 18 or older, with no young-driver fee. We're a family-owned rental in Black River Falls since 1983, just off I-94 at Exit 116. Call or text <a href="tel:+17153961466">715-396-1466</a>.</p>
 <div class="hero__actions">
 <a href="tel:+17153961466" class="btn btn--primary btn--large">Call to Reserve: 715-396-1466</a>
 <a href="sms:+17153961466" class="btn btn--outline btn--large">Text Us</a>
@@ -267,7 +316,7 @@
 <tr><td>Fuel economy</td><td>Up to 37 MPG</td></tr>
 <tr><td>Model</td><td>Models vary</td></tr>
 <tr><td>Local</td><td>$55/day or $330/week for local renters, unlimited miles</td></tr>
-<tr><td>Non-local</td><td>$75/day or $450/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate.</td></tr>
+<tr><td>Non-local</td><td>$80/day or $450/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate.</td></tr>
 <tr><td>Pickup</td><td>N5856 WI-54, Black River Falls, WI 54615, off I-94 at Exit 116</td></tr>
 <tr><td>Hours</td><td>Mon–Fri 8:00 AM–5:00 PM; Sat 8:00 AM–noon; Sun closed</td></tr>
 <tr><td>Phone</td><td><a href="tel:+17153961466">715-396-1466</a> (call or text)</td></tr>
@@ -282,8 +331,8 @@
 <li>Unlimited miles for local renters (residents of Black River Falls and Jackson County, WI) on the published local daily and weekly rates.</li>
 <li>Automatic transmission. All vehicles include automatic transmission.</li>
 <li>Flat, published rates: no surge pricing, no airport markup, no dynamic demand fees. Rates subject to availability. Taxes and fees may apply.</li>
-<li>No young-driver fee. Renters must be 21 or older, and renters 21 to 24 can rent any vehicle. See <a href="/young-driver-car-rental.html">renting at 21 to 24, no young-driver fee</a>.</li>
-<li>Renters are responsible for fuel. Return it full.</li>
+<li>No young-driver fee. Renters must be 18 or older, and renters 18 to 24 can rent any vehicle. See <a href="/young-driver-car-rental.html">renting at 18 to 24, no young-driver fee</a>.</li>
+<li>Renters are responsible for fuel. Return it with at least as much fuel as it had at pickup ($6 per gallon if it's short).</li>
 </ul>
 </div>
 </section>
@@ -291,7 +340,7 @@
 <section class="section">
 <div class="container" style="max-width:800px;">
 <h2 class="section-title">Two Ways to Save</h2>
-<p><strong>Rent by the week if you need it 7 days.</strong> The published local weekly rate is pay for 6 days, get the 7th free. $55 × 7 = $385 at the daily rate, versus $330 per week for local renters. See the full <a href="/blog/daily-vs-weekly-car-rental-rates.html">daily vs. weekly rates</a> breakdown, and <a href="/blog/weekly-car-rental-rates-when-7-days-beats-daily.html">when a weekly rental beats daily</a>.</p>
+<p><strong>Rent by the week if you need it 7 days.</strong> Weekly rates: 7 days for the price of 6 or less. $55 × 7 = $385 at the daily rate, versus $330 per week for local renters. See the full <a href="/blog/daily-vs-weekly-car-rental-rates.html">daily vs. weekly rates</a> breakdown, and <a href="/blog/weekly-car-rental-rates-when-7-days-beats-daily.html">when a weekly rental beats daily</a>.</p>
 <p><strong>Unlimited miles for local renters.</strong> Residents of Black River Falls and Jackson County, WI pay no mileage charge on the published local daily and weekly rates, so a long drive doesn't change the price.</p>
 <p>For a longer rental, call or text 715-396-1466 for a quote.</p>
 </div>
@@ -319,10 +368,10 @@
 <tr><th></th><th>Intermediate</th><th>Full-size</th><th>SUV/AWD</th></tr>
 <tr><td>Seats / bags</td><td>5 / 4</td><td>5 / 5</td><td>5 / extra cargo</td></tr>
 <tr><td>Local rate (unlimited miles)</td><td>$55/day, $330/week</td><td>$65/day, $390/week</td><td>$80/day, $480/week</td></tr>
-<tr><td>Non-local rate (+ per-mile)</td><td>$75/day, $450/week</td><td>$85/day, $510/week</td><td>$100/day, $600/week</td></tr>
+<tr><td>Non-local rate (+ per-mile)</td><td>$80/day, $450/week</td><td>$85/day, $510/week</td><td>$100/day, $600/week</td></tr>
 </table>
 <p class="rates-note">Call 715-396-1466 for the non-local per-mile rate. An intermediate car is for errands and commuting. A <a href="/full-size-car-rental.html">full-size car, $65/day local</a>, is for road trips and extra trunk space. See <a href="/suv-rental.html">SUV and AWD</a> for that class.</p>
-<p class="rates-note">Need 7 seats? The minivan is $78/day + $0.10/mile or $450/week for local renters. Groups: the 15-passenger van. See the <a href="/van-rental.html">7-passenger minivan and 15-passenger van</a>.</p>
+<p class="rates-note">Need 7 seats? The minivan is $80/day + $0.10/mile or $450/week for local renters. Groups: the 15-passenger van. See the <a href="/van-rental.html">7-passenger minivan and 15-passenger van</a>.</p>
 </div>
 </section>
 
@@ -337,7 +386,7 @@
 <section class="section section--gray">
 <div class="container" style="max-width:800px;">
 <h2 class="section-title">What You Need to Rent</h2>
-<p>Be 21 or older. There is no young-driver fee. Bring a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside Auto Rental doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. No pets, no smoking, return it full, and give 24-hour cancellation notice. After-hours drop-off returns are available.</p>
+<p>Be 18 or older. There is no young-driver fee. Bring a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside Auto Rental doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. No pets, no smoking, return fuel at the pickup level, and give 24-hour cancellation notice. After-hours drop-off returns are available.</p>
 <p>Read the <a href="/blog/what-you-need-to-rent-a-car-black-river-falls.html">first-time renter's guide</a> and <a href="/blog/car-rental-deposit-debit-card-black-river-falls.html">deposits and debit cards</a>.</p>
 </div>
 </section>
@@ -363,7 +412,7 @@
 
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">How much does it cost to rent your intermediate car?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-<div class="faq-answer"><p>The intermediate car: $55 per day or $330 per week for local renters, with unlimited miles. Non-local renters pay $75 per day or $450 per week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate.</p></div>
+<div class="faq-answer"><p>The intermediate car: $55 per day or $330 per week for local renters, with unlimited miles. Non-local renters pay $80 per day or $450 per week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate.</p></div>
 </div>
 
 <div class="faq-item">
@@ -378,7 +427,7 @@
 
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Is there a young-driver fee?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-<div class="faq-answer"><p>No. Renters must be 21 or older. There is no young-driver fee, and renters 21 to 24 can rent any vehicle. See <a href="/young-driver-car-rental.html">renting at 21 to 24, no young-driver fee</a>.</p></div>
+<div class="faq-answer"><p>No. Renters must be 18 or older. There is no young-driver fee, and renters 18 to 24 can rent any vehicle. See <a href="/young-driver-car-rental.html">renting at 18 to 24, no young-driver fee</a>.</p></div>
 </div>
 
 <div class="faq-item">
@@ -398,7 +447,7 @@
 
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">How can I keep the cost down?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-<div class="faq-answer"><p>The local weekly rate is pay for 6 days, get the 7th free: $330 per week for local renters, versus $385 if you paid $55 a day for seven days. Unlimited miles for local renters means a long drive doesn't add a mileage charge. See the <a href="/blog/daily-vs-weekly-car-rental-rates.html">daily vs. weekly rates</a> breakdown.</p></div>
+<div class="faq-answer"><p>Weekly rates: 7 days for the price of 6 or less. Local renters pay $330 per week, versus $385 if you paid $55 a day for seven days. Unlimited miles for local renters means a long drive doesn't add a mileage charge. See the <a href="/blog/daily-vs-weekly-car-rental-rates.html">daily vs. weekly rates</a> breakdown.</p></div>
 </div>
 
 <div class="faq-item">
@@ -408,7 +457,7 @@
 
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">What do I need to rent?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-<div class="faq-answer"><p>Be 21 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside Auto Rental doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. No pets, no smoking, return it full, and give 24-hour cancellation notice.</p></div>
+<div class="faq-answer"><p>Be 18 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside Auto Rental doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed. No pets, no smoking, return fuel at the pickup level, and give 24-hour cancellation notice.</p></div>
 </div>
 
 </div>
@@ -502,13 +551,5 @@ if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}
 
 
 
-<!-- rar-chat-widget -->
-<link rel="stylesheet" href="/css/chat-widget.css">
-<a id="rar-help" class="rar-help" href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-  Help
-</a>
-<script src="/js/chat-widget.js" defer></script>
-<!-- /rar-chat-widget -->
 </body>
 </html>

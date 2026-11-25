@@ -60,10 +60,10 @@
       {"@type": "Question", "name": "How many people and bags fit?", "acceptedAnswer": {"@type": "Answer", "text": "Five passengers and 5 bags. For 6 or 7 people, ask about the 7-passenger Chrysler Pacifica. For groups, see the 15-passenger van rental. There is one."}},
       {"@type": "Question", "name": "Is a full-size car worth it over an intermediate?", "acceptedAnswer": {"@type": "Answer", "text": "Locally it is $10/day more ($65 vs $55) and it holds one more bag (5 vs 4). An intermediate car is rated up to 37 MPG, and a full-size car is rated up to 30 MPG. Choose full-size for road trips and extra trunk space."}},
       {"@type": "Question", "name": "Do I get unlimited miles?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if you are a local renter. Local means residents of Black River Falls and Jackson County, WI. Non-local renters pay a per-mile charge. Call 715-396-1466 for the per-mile rate."}},
-      {"@type": "Question", "name": "Is it cheaper to rent by the week?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pay 6 days and get the 7th free. The local weekly rate is $390, compared with $65 times 7, which is $455 if you paid the daily rate all week. The non-local weekly rate is $510."}},
+      {"@type": "Question", "name": "Is it cheaper to rent by the week?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Weekly rates: 7 days for the price of 6 or less. The local weekly rate is $390, compared with $65 times 7, which is $455 if you paid the daily rate all week. The non-local weekly rate is $510."}},
       {"@type": "Question", "name": "Can insurance cover a full-size rental?", "acceptedAnswer": {"@type": "Answer", "text": "Full-size is a standard insurance replacement class. We work directly with adjusters from most major carriers. We'll call your adjuster to verify direct billing. You can pay the difference to upgrade from the class your policy covers. Call 715-396-1466."}},
       {"@type": "Question", "name": "Is the full-size car good for winter driving?", "acceptedAnswer": {"@type": "Answer", "text": "For winter traction, look at the SUV and AWD class: an AWD Subaru Outback and two Ford Edge SUVs. See SUV and AWD rental for those vehicles."}},
-      {"@type": "Question", "name": "What do I need to rent?", "acceptedAnswer": {"@type": "Answer", "text": "You must be 21 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed."}},
+      {"@type": "Question", "name": "What do I need to rent?", "acceptedAnswer": {"@type": "Answer", "text": "You must be 18 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed."}},
       {"@type": "Question", "name": "Can I return it after hours?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. After-hours drop-off returns are available. Call 715-396-1466 for details."}}
     ]
   }
@@ -88,6 +88,55 @@
     gtag('js', new Date());
     gtag('config', 'G-EDMLSNJ4B9');
   </script>
+<!-- rar-retell-chat -->
+<script
+  id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget-v2.js"
+  data-public-key="public_key_da95ba4dc7db83fda9dc7"
+  data-agent-id="agent_75575d6baed61e400b9d29a6a1"
+  data-agent-version="10"
+  data-title="Riverside Rental Help"
+  data-bot-name="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
+  data-color="#304B78"
+  data-chat-font-size="large"
+  data-show-ai-popup="false"
+  defer
+></script>
+<script>
+(function () {
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById("retell-widget-root");
+    var host = root && root.firstElementChild;
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById("rar-lift")) {
+      var style = document.createElement("style");
+      style.id = "rar-lift";
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
+        '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
+        '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
+        '[class*="_typingBubble_"]{display:inline-flex!important;align-items:center;background:#E8EDF4!important;border-radius:18px!important;padding:12px 16px!important;margin:4px 0 4px 14px!important;width:auto!important}' +
+        '[class*="_dots_"]{display:inline-flex!important;gap:5px!important}' +
+        '[class*="_dots_"]>span{width:9px!important;height:9px!important;background:#304B78!important;border-radius:50%!important}' +
+        '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
+        '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty::before{display:block;white-space:normal;' +
+        'content:"Hi! I’m Ann, Riverside’s automated assistant. I can quote rates, explain what you need to rent, or take a rental request for the team. What can I help with?"}';
+      shadow.appendChild(style);
+    }
+    if (shadow || ++tries > 80) clearInterval(timer);
+  }, 250);
+})();
+</script>
+<!-- /rar-retell-chat -->
 </head>
 <body>
 
@@ -120,7 +169,7 @@
 <div class="hero__content">
 <p class="hero__label">A 5-passenger sedan with more room and trunk space. Family-owned since 1983.</p>
 <h1>Full-Size Car Rental in Black River Falls, WI</h1>
-<p class="hero__text">Riverside Auto Rental rents full-size cars in Black River Falls, Wisconsin: 5-passenger automatic sedans with room for 5 bags and up to 30 MPG. Local renters (Black River Falls and Jackson County residents) pay $65/day or $390/week with unlimited miles. Non-local renters pay $85/day or $510/week plus a per-mile charge. Full-size cars are also available as insurance replacement rentals. Renters must be 21 or older. We're family-owned since 1983. Call or text 715-396-1466.</p>
+<p class="hero__text">Riverside Auto Rental rents full-size cars in Black River Falls, Wisconsin: 5-passenger automatic sedans with room for 5 bags and up to 30 MPG. Local renters (Black River Falls and Jackson County residents) pay $65/day or $390/week with unlimited miles. Non-local renters pay $85/day or $510/week plus a per-mile charge. Full-size cars are also available as insurance replacement rentals. Renters must be 18 or older. We're family-owned since 1983. Call or text 715-396-1466.</p>
 <div class="hero__actions">
 <a href="tel:+17153961466" class="btn btn--primary btn--large">Call to Reserve: 715-396-1466</a>
 <a href="sms:+17153961466" class="btn btn--outline btn--large">Text Us</a>
@@ -175,7 +224,7 @@
 <tr><td>Local</td><td>$65/day</td><td>$390/week</td><td>Unlimited miles</td></tr>
 <tr><td>Non-local</td><td>$85/day</td><td>$510/week</td><td>Plus a per-mile charge</td></tr>
 </table>
-<p class="rates-note">Weekly rates are pay 6 days, get the 7th free ($65 × 6 = $390 locally, and $85 × 6 = $510 for non-local renters). For a longer rental, call or text for a quote. Insurance replacement rentals are quoted by phone and billed to the adjuster or shop. Taxes and fees may apply. Rates subject to availability. <a href="/fleet">Compare all rates</a>.</p>
+<p class="rates-note">Weekly rates: 7 days for the price of 6 or less ($65 × 6 = $390 locally, and $85 × 6 = $510 for non-local renters). For a longer rental, call or text for a quote. Insurance replacement rentals are quoted by phone and billed to the adjuster or shop. Taxes and fees may apply. Rates subject to availability. <a href="/fleet">Compare all rates</a>.</p>
 </div>
 </section>
 
@@ -188,7 +237,7 @@
 <tr><td>Seats / bags</td><td>5 / 4</td><td>5 / 5</td></tr>
 <tr><td>Fuel economy</td><td>Up to 37 MPG</td><td>Up to 30 MPG</td></tr>
 <tr><td>Local rate</td><td>$55/day, $330/week</td><td>$65/day, $390/week</td></tr>
-<tr><td>Non-local rate</td><td>$75/day, $450/week, plus a per-mile charge</td><td>$85/day, $510/week, plus a per-mile charge</td></tr>
+<tr><td>Non-local rate</td><td>$80/day, $450/week, plus a per-mile charge</td><td>$85/day, $510/week, plus a per-mile charge</td></tr>
 </table>
 <p class="rates-note">An intermediate car fits errands and commuting. A full-size car is for road trips and families who need extra trunk space. For 6 or 7 people, look at the 7-passenger Chrysler Pacifica on the <a href="/van-rental.html">7-passenger minivan and 15-passenger van</a> page. For groups, the <a href="/van-rental.html">15-passenger van rental</a>. For winter traction, see <a href="/suv-rental.html">SUV and AWD rental</a> (an AWD Subaru Outback and two Ford Edge SUVs). Prefer the lower rate? See the <a href="/cheap-car-rental.html">cheap car rental</a>.</p>
 </div>
@@ -224,14 +273,14 @@
 <p class="section-label">Requirements</p>
 <h2 class="section-title">What You Need to Rent</h2>
 <ul>
-<li>You must be 21 or older. <a href="/young-driver-car-rental.html">Renting at 21 to 24, no young-driver fee</a>.</li>
+<li>You must be 18 or older. <a href="/young-driver-car-rental.html">Renting at 18 to 24, no young-driver fee</a>.</li>
 <li>A valid U.S. driver's license.</li>
 <li>Proof of full-coverage auto insurance. A digital copy is fine. Riverside doesn't sell insurance.</li>
 <li>A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. We do not accept checks.</li>
 <li>Every driver must be listed on the rental.</li>
 <li>No pets. A cleaning charge applies.</li>
-<li>Non-smoking. A $100 cleaning charge applies if someone smokes in the vehicle.</li>
-<li>Return the car with a full tank.</li>
+<li>Non-smoking. No smoking under any circumstances; a cleaning charge applies.</li>
+<li>Return the car with at least as much fuel as it had at pickup ($6 per gallon if it's short).</li>
 <li>Cancellation needs 24 hours' notice.</li>
 <li>After-hours drop-off returns are available. Call 715-396-1466 for details.</li>
 </ul>
@@ -274,7 +323,7 @@
 
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Is it cheaper to rent by the week?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-<div class="faq-answer"><p>Yes. Pay 6 days and get the 7th free. The local weekly rate is $390, compared with $65 times 7, which is $455 if you paid the daily rate all week. The non-local weekly rate is $510.</p></div>
+<div class="faq-answer"><p>Yes. Weekly rates: 7 days for the price of 6 or less. The local weekly rate is $390, compared with $65 times 7, which is $455 if you paid the daily rate all week. The non-local weekly rate is $510.</p></div>
 </div>
 
 <div class="faq-item">
@@ -289,7 +338,7 @@
 
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">What do I need to rent?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-<div class="faq-answer"><p>You must be 21 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed.</p></div>
+<div class="faq-answer"><p>You must be 18 or older, with a valid U.S. driver's license and proof of full-coverage auto insurance. Riverside doesn't sell insurance. A security deposit, starting at $300, is held separately from your rental charges on a credit or debit card (Visa, Mastercard, or Discover; no Amex). We'll confirm the exact amount when you book. All drivers must be listed.</p></div>
 </div>
 
 <div class="faq-item">
@@ -403,13 +452,5 @@ if(!x){p.className+=" active";this.setAttribute("aria-expanded","true")}
 
 
 
-<!-- rar-chat-widget -->
-<link rel="stylesheet" href="/css/chat-widget.css">
-<a id="rar-help" class="rar-help" href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-  Help
-</a>
-<script src="/js/chat-widget.js" defer></script>
-<!-- /rar-chat-widget -->
 </body>
 </html>
