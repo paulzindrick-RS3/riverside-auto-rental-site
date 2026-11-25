@@ -117,24 +117,8 @@ def main():
 
     for path in build_sitemap.iter_html():
         text = open(path, encoding="utf-8").read()
-        if "<!-- rar-chat-widget -->" not in text or "<!-- /rar-chat-widget -->" not in text:
-            errors.append(f"{path}: missing chat widget snippet")
-
-    try:
-        import build_chat_knowledge
-        fresh = build_chat_knowledge.render()
-    except Exception as exc:
-        errors.append(f"chat knowledge failed to build: {exc}")
-    else:
-        knowledge_path = "data/chat-knowledge.json"
-        if not os.path.isfile(knowledge_path):
-            errors.append("data/chat-knowledge.json is missing (run scripts/build_chat_knowledge.py)")
-        else:
-            current = open(knowledge_path, encoding="utf-8").read()
-            if current != fresh:
-                errors.append("data/chat-knowledge.json is stale (run scripts/build_chat_knowledge.py)")
-            if ".scheduled" in current:
-                errors.append("data/chat-knowledge.json contains a .scheduled path")
+        if text.count("<!-- rar-retell-chat -->") != 1 or "<!-- /rar-retell-chat -->" not in text:
+            errors.append(f"{path}: needs exactly one Riverside Rental Help chat tag (run scripts/inject_chat.py)")
 
     if errors:
         print(f"{len(errors)} site check(s) failed:")

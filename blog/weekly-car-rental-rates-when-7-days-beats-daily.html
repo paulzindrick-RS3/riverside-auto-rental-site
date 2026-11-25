@@ -80,12 +80,12 @@ gtag('config', 'G-EDMLSNJ4B9');
 {
 "@type": "Question",
 "name": "Is a weekly rental cheaper than daily?",
-"acceptedAnswer": {"@type": "Answer", "text": "Almost always, yes, for local renters. Weekly local rates ($330 intermediate, $390 full-size, $480 SUV) beat seven daily local rentals because you pay for six days and get the seventh free, with unlimited mileage. The 15-passenger van's $750 local weekly rate beats daily plus mileage on most week-long trips. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI."}
+"acceptedAnswer": {"@type": "Answer", "text": "Almost always, yes, for local renters. Weekly local rates ($330 intermediate, $390 full-size, $480 SUV) beat seven daily local rentals, with unlimited mileage. Weekly rates: 7 days for the price of 6 or less. The 15-passenger van's $750 local weekly rate beats daily plus mileage on most week-long trips. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI."}
 },
 {
 "@type": "Question",
 "name": "Do local weekly rentals include unlimited mileage?",
-"acceptedAnswer": {"@type": "Answer", "text": "Yes. Local weekly rentals include unlimited mileage on the published local rates. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI."}
+"acceptedAnswer": {"@type": "Answer", "text": "Yes. Local weekly rentals include unlimited mileage on the published local rates. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI."}
 },
 {
 "@type": "Question",
@@ -100,6 +100,55 @@ gtag('config', 'G-EDMLSNJ4B9');
 ]
 }
 </script>
+<!-- rar-retell-chat -->
+<script
+  id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget-v2.js"
+  data-public-key="public_key_da95ba4dc7db83fda9dc7"
+  data-agent-id="agent_75575d6baed61e400b9d29a6a1"
+  data-agent-version="10"
+  data-title="Riverside Rental Help"
+  data-bot-name="Riverside Rental Help"
+  data-fab-text="Rental Help"
+  data-fab-icon-url="https://riversideautorental.com/images/chat-icon.png"
+  data-logo-url="https://riversideautorental.com/images/chat-icon.png"
+  data-color="#304B78"
+  data-chat-font-size="large"
+  data-show-ai-popup="false"
+  defer
+></script>
+<script>
+(function () {
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById("retell-widget-root");
+    var host = root && root.firstElementChild;
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById("rar-lift")) {
+      var style = document.createElement("style");
+      style.id = "rar-lift";
+      style.textContent =
+        '@media (max-width:768px){[class*="_container_"]{bottom:76px!important}}' +
+        '[class*="_fabChat_"]{background:#fff!important;border:2px solid #304B78!important;box-shadow:0 4px 14px rgba(0,0,0,.25)!important}' +
+        '[class*="_fabText_"]{color:#304B78!important;font-weight:700!important}' +
+        '[class*="_fabOpen_"] path{stroke:#304B78!important}' +
+        '[class*="_inputShell_"]{border:1.5px solid #304B78!important}' +
+        '[class*="_sendButton_"]{opacity:1!important;background:#304B78!important;color:#fff!important}' +
+        '[class*="_typingBubble_"]{display:inline-flex!important;align-items:center;background:#E8EDF4!important;border-radius:18px!important;padding:12px 16px!important;margin:4px 0 4px 14px!important;width:auto!important}' +
+        '[class*="_dots_"]{display:inline-flex!important;gap:5px!important}' +
+        '[class*="_dots_"]>span{width:9px!important;height:9px!important;background:#304B78!important;border-radius:50%!important}' +
+        '@media (max-width:768px){[class*="_fabWrapChat_"]:has([class*="_fabOpen_"]){display:none!important}}' +
+        '[class*="_headerBrand_"]::after{content:"Riverside Rental Help";font-weight:700;color:#304B78;margin-left:8px;font-size:16px;white-space:nowrap}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty{width:auto!important;max-width:85%}' +
+        '[class*="_messages_"]>[class*="_agentGroup_"]:first-child [class*="_agent_"]:empty::before{display:block;white-space:normal;' +
+        'content:"Hi! I’m Ann, Riverside’s automated assistant. I can quote rates, explain what you need to rent, or take a rental request for the team. What can I help with?"}';
+      shadow.appendChild(style);
+    }
+    if (shadow || ++tries > 80) clearInterval(timer);
+  }, 250);
+})();
+</script>
+<!-- /rar-retell-chat -->
 </head>
 <body>
 <header class="header" id="header">
@@ -136,7 +185,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <div class="container">
 <div style="max-width:800px;margin:0 auto;">
 <p>"Should I rent daily or weekly?" is one of the most common questions we get. The honest answer is: it depends on three things — how many days you actually need the vehicle, how far you plan to drive, and whether you want to lock in a flat price up front or pay as you go.</p>
-<p>Local renters get unlimited mileage on the published local rates, daily or weekly. A weekly rental is pay-for-6, get-the-7th-free. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI. This post walks through the local-rate math.</p>
+<p>Local renters get unlimited mileage on the published local rates, daily or weekly. A weekly rental is pay-for-6, get-the-7th-free. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI. This post walks through the local-rate math.</p>
 <h2>How local pricing works</h2>
 <p><strong>Daily — local.</strong> The published daily price, with unlimited mileage for local renters.</p>
 <p><strong>Weekly — local.</strong> A flat week with unlimited mileage for local renters. It costs the same as six daily rentals.</p>
@@ -163,7 +212,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <div><strong>15-Passenger Van</strong> <span style="font-weight:400;color:var(--text-light);font-size:0.85rem;">(local, unlimited miles)</span></div>
 <div style="text-align:right;font-weight:600;">$750</div>
 </div>
-<p style="margin:20px 0 0;font-size:0.85rem;color:var(--text-light);">Local rates include unlimited mileage. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI. Van daily rates: $78/day (7-pass) or $135/day (15-pass), both plus $0.10/mile from mile one.</p>
+<p style="margin:20px 0 0;font-size:0.85rem;color:var(--text-light);">Local rates include unlimited mileage. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI. Van daily rates: $80/day (7-pass) or $135/day (15-pass), both plus $0.10/mile from mile one.</p>
 </div>
 <h2>Worked example: intermediate car for the week</h2>
 <p>You need a car for 7 days — maybe your spouse is borrowing yours, your car is in the shop, or you're hosting out-of-town family. You'll mostly be running errands and driving around Black River Falls and <a href="/locations/tomah.html">Tomah</a>, with one day-trip to Wausau (~150 miles round trip).</p>
@@ -183,7 +232,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <li style="padding:10px 0;"><strong>Weekly local:</strong> <strong>$330</strong> flat, unlimited miles</li>
 </ul>
 </div>
-<p>The weekly local rate is still $55 less, and a long week does not add a mileage charge. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p>
+<p>The weekly local rate is still $55 less, and a long week does not add a mileage charge. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p>
 <h2>Worked example: 15-passenger van for a family reunion</h2>
 <p>Your extended family is gathering in northern Wisconsin for a long weekend. You need the van for 4 days, expect to drive about 150 miles per day. Daily on the van is $135 + $0.10/mile, weekly is $750 flat with unlimited mileage.</p>
 <div style="background:#f8f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:24px;margin-bottom:32px;">
@@ -199,7 +248,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <li style="margin-bottom:8px;"><strong>Intermediate car ($330/week)</strong> vs. $55/day: saves money on day 7</li>
 <li style="margin-bottom:8px;"><strong>Full-size car ($390/week)</strong> vs. $65/day: saves money on day 7</li>
 <li style="margin-bottom:8px;"><strong>SUV ($480/week)</strong> vs. $80/day: saves money on day 7</li>
-<li style="margin-bottom:8px;"><strong>7-passenger minivan ($450/week, local unlimited miles)</strong> vs. $78/day plus $0.10/mile: usually saves money by day 6, sooner when the miles are high</li>
+<li style="margin-bottom:8px;"><strong>7-passenger minivan ($450/week, local unlimited miles)</strong> vs. $80/day plus $0.10/mile: usually saves money by day 6, sooner when the miles are high</li>
 <li style="margin-bottom:8px;"><strong>15-passenger van ($750/week, local unlimited miles)</strong> vs. $135/day plus $0.10/mile: usually saves money by day 6, sooner when the miles are high</li>
 </ul>
 <p>If you've already passed day 5 and you'll need the vehicle through day 7 or beyond, call us at <a href="tel:+17153961466"><strong>715-396-1466</strong></a> and we'll convert your reservation to weekly pricing. It's not automatic — but we'll do it if you ask.</p>
@@ -221,7 +270,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <p>Most insurance replacement claims default to daily pricing. If your repair will take more than 4-5 days — which is normal for collision work — ask the adjuster whether your policy will cover the weekly rate instead. Most policies will, and you'll often save the insurance company money on the overall claim.</p>
 <h2>The simple version</h2>
 <p>If you'll have the vehicle 4 days or fewer, daily pricing usually wins. If you'll have it 6 days or more, weekly almost always beats daily. Day 5 is a tossup.</p>
-<p>For local renters, the weekly rate includes unlimited mileage whether the week stays close to town or turns into a road trip. For vans, weekly is the better deal for nearly every multi-day rental. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p>
+<p>For local renters, the weekly rate includes unlimited mileage whether the week stays close to town or turns into a road trip. For vans, weekly is the better deal for nearly every multi-day rental. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p>
 <p>Not sure which fits your trip? Call us at <a href="tel:+17153961466"><strong>715-396-1466</strong></a> and we'll do the math with you in two minutes.</p>
 <div style="margin-top:48px;">
 <h2>Frequently Asked Questions</h2>
@@ -236,7 +285,7 @@ gtag('config', 'G-EDMLSNJ4B9');
 <button class="faq-question" aria-expanded="false">Do local weekly rentals include unlimited mileage?
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-answer"><p>Yes. Local weekly rentals include unlimited mileage on the published local rates. Non-local rates are intermediate $75/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p></div>
+<div class="faq-answer"><p>Yes. Local weekly rentals include unlimited mileage on the published local rates. Non-local rates are intermediate $80/day or $450/week, full-size $85/day or $510/week, and SUV/AWD $100/day or $600/week, plus a per-mile charge. Call 715-396-1466 for the per-mile rate. Local means residents of Black River Falls and Jackson County, WI.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-question" aria-expanded="false">Can I convert a daily rental to weekly?
@@ -329,13 +378,5 @@ for(var j=0;j<f.length;j++){f[j].onclick=function(){var p=this.parentElement;var
 </script>
 
 
-<!-- rar-chat-widget -->
-<link rel="stylesheet" href="/css/chat-widget.css">
-<a id="rar-help" class="rar-help" href="sms:+17153961466" aria-label="Text Riverside Auto Rental at 715-396-1466">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-  Help
-</a>
-<script src="/js/chat-widget.js" defer></script>
-<!-- /rar-chat-widget -->
 </body>
 </html>
